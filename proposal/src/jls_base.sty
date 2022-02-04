@@ -1,0 +1,43 @@
+\usepackage{microtype}
+\usepackage[autostyle, english=american]{csquotes}
+\usepackage[usenames, svgnames]{xcolor}
+\usepackage[colorlinks = true,
+            hyperfootnotes=true,
+            urlcolor = Red,
+            citecolor = DarkOrchid]{hyperref}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{fontspec}
+
+
+\geometry{
+    top=1in,
+    left=0.75in,
+    right=0.75in
+}
+
+
+\newfontface\titlefont{Marian 1554}
+
+%% title spacing
+\titlespacing*{\chapter}{0pt}{-10pt}{0pt}
+\titlespacing{\section}{0pt}{5em}{0pt}
+
+%% para spacing instead of indents
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+\pretitle{\vspace{-2em}\noindent\fontsize{48pt}{48pt}\titlefont}
+\posttitle{\hfill}
+\preauthor{\vspace{1em}\break\noindent}
+\postauthor{\hfill\break}
+\predate{\noindent}
+\postdate{\hfill}
+
+\setlength{\droptitle}{-4em}
+
+% format smart quotes
+\MakeOuterQuote{"}
+
+

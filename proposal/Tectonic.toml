@@ -1,0 +1,7 @@
+[doc]
+name = 'proposal'
+bundle = 'https://data1.fullyjustified.net/tlextras-2020.0r0.tar'
+
+[[output]]
+name = 'jls_dissertation_proposal'
+type = 'pdf'
