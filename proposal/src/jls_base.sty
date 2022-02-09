@@ -9,6 +9,15 @@
 \usepackage{titlesec}
 \usepackage{titling}
 \usepackage{fontspec}
+\usepackage{enumitem}
+\usepackage[
+    style=numeric,
+    citestyle=numeric,
+    backref=true,
+    sorting=none
+]{biblatex}
+\usepackage{framed}
+\usepackage{rotating}
 
 
 \geometry{
@@ -19,6 +28,7 @@
 
 
 \newfontface\titlefont{Marian 1554}
+\setsansfont{Nexa Light}
 
 %% title spacing
 \titlespacing*{\chapter}{0pt}{-10pt}{0pt}
@@ -33,11 +43,47 @@
 \preauthor{\vspace{0em}\break\noindent}
 \postauthor{\hfill\break}
 \predate{}
-\postdate{ - \texttt{\input{git-version.tex}}}
+\postdate{ - Version: \texttt{\input{git-version.tex}}}
 
 \setlength{\droptitle}{-4em}
 
 % format smart quotes
 \MakeOuterQuote{"}
+
+%% no spacing in lists
+\setlist{nosep, itemsep=0.5em}
+
+% Print bibliography at end of each subfile when compiling separately,
+% but also in main document when compiling together
+\AtEndDocument{%
+    % \newpage
+    % \section{Notes}
+    % \theendnotes
+    \newpage
+    \section{References}
+    \printbibliography
+}
+
+% ----------------------
+% Environments
+% leftbar for blockquotes
+\renewenvironment{leftbar}{%
+\def\FrameCommand{\hspace{-2em}\hspace{1em}\vrule width 0.5pt \hspace{1em}}\MakeFramed {\advance\hsize-\width \FrameRestore}}
+{\endMakeFramed}
+
+% todo leftbar
+\newenvironment{todo}{%
+\def\FrameCommand{\hspace{-2em}%
+\begin{sideways}%
+\textcolor{red}{\textsf{\small TODO}}%
+\end{sideways}%
+\hspace{0.5em}\textcolor{red}{\vrule width 0.5pt} \hspace{0.5em}}\MakeFramed {\advance\hsize-\width \FrameRestore}}
+{\endMakeFramed}
+
+% todo leftbar
+\newenvironment{done}{%
+\def\FrameCommand{\hspace{-2em}\begin{sideways}\textsf{\small DONE}\end{sideways}\hspace{0.5em}\vrule width 0.5pt \hspace{0.5em}}\MakeFramed {\advance\hsize-\width \FrameRestore}}
+{\endMakeFramed}
+
 
 
