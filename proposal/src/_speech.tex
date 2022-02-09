@@ -13,15 +13,47 @@ The primary analysis in the paper used a generalized linear mixed model with a l
 
 \subsection{Models \& Mechanisms}
 
-This work bookends my PhD, and will be in collaboration with several others in my lab. I will be working on formal modeling of the problem faced by the auditory system, and using the tools I have made to perform a version of the prior experiment such that (a proxy for) the neural activity of the mice can be observed across the learning process. I won't be able to see this project through to completion due to time constraints, but will describe what I will contribute to the work.
+Given our behavioral results, the next step, had I not taken the long way around by building Autopilot, would be to see how the brain learns and processes the phoneme pairs. Systems neuroscience is in the midst of a quiet methodological upheaval, moving beyond characterizing the properties of individual neurons sampled in isolation to modeling the brain as a dynamic organ whose population activity cannot be extrapolated from its individual components. This move pairs nicely with lessons learned from methodological crises in Psychology and related fields that emphasize iterative formal modeling to inform experimental design and interpretation (eg. \cite{vanrooijTheoryTestHow2021}). In this case, we can develop formal models to evaluate observed population activity in auditory cortex by working from the broad and multidisciplinary history of phonetic perception research.
+
+Historically, the work of the Haskins lab (eg. \cite{schertzPhoneticCueWeighting2020}), and their acoustic "cue discovery" paradigm (see \cite[p.~51]{ohalaGuideHistoryPhonetic1999}) characterized auditory processing as some mapping function 
+
+\begin{equation}
+\label{eqn:map}
+M = f: \mathbf{S} \to \mathbf{P}
+\end{equation} 
+
+from some stimulus space $\mathbf{S}$ to a fixed\cite{Liberman1985a} perceptual space $\mathbf{P}$ composed of innate auditory "cues." The auditory act of phonetic perception, then, is determining the phoneme category $c_s \in \mathbf{C}$, the set of possible phonemes in a language, given some perceptual representation $\mathbf{p}$ such that
+
+\clearpage
+
+\begin{equation}
+\label{eqn:pfroms}
+\mathbf{p} = M(\mathbf{s})
+\end{equation}
+
+\begin{equation}
+\label{eqn:infer}
+c_s = max( \{ p(c_i | \mathbf{p}) : c_i \in \mathbf{C} \})
+\end{equation}
+
+Finding no set of cues that uniquely identifies a phoneme, they concluded that phonetic perception cannot be purely auditory and instead arrive at perceptual theory that relies on simulating the motor activity of an utterance\cite{Liberman1985a}. 
+
+Each of the components of this very simple model has been problematized in parallel branches of research: developmental psychologists like Patricia Kuhl studying infant speech acquisition show the clear plasticity of the auditory system \cite{kuhlEarlyLanguageAcquisition2004}, describing a "warped" perceptual space $\mathbf{P}$ that takes advantage of the "big cuts" of the mammalian auditory system to basic sound features like frequency and energy changes. Learning a language's phonemes could then be characterized as learning some weight vector $\mathbf{w}$ as a function of the history of perceptual representations of speech exposure $\mathbf{p}$ and the category structure of the language $\mathbf{C}$ that maximizes the separability of the phonetic categories in perceptual space. 
+
+\begin{equation}
+\label{eqn:w}
+\mathbf{w} = W(\mathbf{p}, \mathbf{C})
+\end{equation}
+
+\begin{equation}
+\label{eqn:infer_2}
+c_s = max\big( \big\{ p(c_i | \mathbf{p} \cdot \mathbf{w}) : c_i \in \mathbf{C} \big\}\big)
+\end{equation}
+
+Cognitive psychologists like Eleanor Rosch studying the nature of cognitive categories emphasize their ill-definedness, that they resemble a Wittgensteinian "game" that does not require a neat mapping from a perceptual space to phonetic category identity\cite{roschWittgensteinCategorizationResearch1987, roschFamilyResemblancesStudies1975}. Rather than a "flat" cue space where all cues are evaluated simultaneously, phonologists have described a hierarchy of contrastive features where "lower" cues are evaluated conditionally on the value of "higher" cues\cite{Dresher2008}. Another perspective dismisses the notion of cues altogether, focusing on the informational content in the temporal dynamics of the whole speech signal\cite{kluenderLongstandingProblemsSpeech2019}.
+
+These theories are more compatible with the deeply nonlinear computation of the brain than a simple linear evaluation of cues. The neuroscientific perspective emphasizes the active nature of perception, where the auditory system is not some passive filterbank, but a plastic organ that adapts over multiple timescales to the statistics of its input\cite{angeloniContextualModulationSound2018, holtTemporallyNonadjacentNonlinguistic2005}. This shifts the focus from learning some pre-existing cues to the process by which the brain adapts to create a joint neural-perceptual space that can serve as a flexible basis set for phonetic categorization. 
 
 \begin{todo}
-test
-
-> Describe modeling work
-
-> Describe behavior task
-
-> Eventually am going to help with analysis and writing.
+Though I won't be able to see this experiment through to its completion, in my last months here, I will be working with my labmates to start mesoscopic calcium imaging, measuring a proxy for neural activity, across the course of learning the phonetic discrimination task above. Imaging across the course of learning will let us not only model the computation of phonetic perception as it happens, but how the brain learns to support it. I won't be able to see the experiment to completion, but I will be responsible for developing the hardware and software to perform the behavior in a head-fixed context, formalizing our models and analytical techniques by reading across the array of disciplines that have studies phonetic perception, and then will be leaving the imaging and data collection to my labmates Sam Mehan and Rocky Penick.
 \end{todo}
-
