@@ -13,7 +13,7 @@ There is far too much work that has gone into Autopilot to summarize here, but t
 It's also designed with the knowledge that experimental software is often the first code that many researchers experience, and aims to scaffold that process and give good examples of code structure --- a process that is under continual development as I myself was learning to program while writing it, and only feel like I've reached a point of being comfort with best principles recently. Rather than a tool that's a black-box behind the scenes, Autopilot is intended to be understood at whatever level you want to engage with it: if you want to just use it as it is, that's fine, but if you want to dig into it the documentation tries to be exhaustive (and is currently a \href{https://docs.auto-pi-lot.com/_/downloads/en/latest/pdf/}{336 page book}, though the \href{https://docs.auto-pi-lot.com/en/latest/}{HTML docs} are considerably more manageable).
 
 \begin{done}
-Autopilot is \href{https://docs.auto-pi-lot.com/en/latest/guide/overview.html}{many things}, a sample of which for illustration include: 
+Autopilot is \href{https://docs.auto-pi-lot.com/en/latest/guide/overview.html}{many things}, a sample of the 2,000-some commits for illustration include: 
 \begin{itemize}
 \item a library of \href{https://docs.auto-pi-lot.com/en/latest/hardware/index.html}{hardware} controllers, including \href{https://docs.auto-pi-lot.com/en/latest/hardware/cameras.html}{cameras}, \href{https://docs.auto-pi-lot.com/en/latest/hardware/gpio.html}{GPIO}-powered components, a few \href{https://docs.auto-pi-lot.com/en/latest/hardware/i2c.html}{sensors} like a 9-degree motion sensor and a 2D heat sensor, and a few more that I haven't had time to add yet.
 \item \href{https://docs.auto-pi-lot.com/en/latest/networking/index.html}{Networking} modules that make it (increasingly) straightforward to link anything to anything else across computers, stream data, etc.
@@ -31,14 +31,17 @@ Autopilot is \href{https://docs.auto-pi-lot.com/en/latest/guide/overview.html}{m
 All of which I did myself starting from zero programming experience at the start of the program. I'm quite proud of it.
 \end{done}
 
-
-
-> DLC collaboration \cite{kaneRealtimeLowlatencyClosedloop2020}
-
-> Wiki and the future
-
+\begin{todo}
+What remains to be done with Autopilot before I graduate is to revise the paper to reflect the development in my thinking (and the development in the software) that has happened since the preprint was posted all these many years ago and submit it for review. 
+\end{todo}
 
 
 \subsection{Interlude: The People's Ventilator Project}
 
-> Description of project, the acute need for scientists to use their expertise for social good, and continuation of work from Autopilot \cite{lachancePVP1PeopleVentilator2020}
+Hopefully we were all a little radicalized in 2020. I always felt that I needed my work to have some practicable impact on the world outside of science, but that feeling grew and became overwhelming and now has largely rewritten the course of my work --- starting with building a piece of open-source medical hardware.
+
+\begin{done}
+I collaborated with a team of engineers and software developers on \href{https://www.peoplesvent.org/en/latest/}{The People's Ventilator Project}\cite{lachancePVP1PeopleVentilator2020}: an inexpensive, fully open, supply chain-resilient pressure-control ventilator. Though there were many open-source ventilator projects, ours was one of the few that was a full replacement for the kind of invasive ventilators in short supply during the pandemic. I was on the software team, and was responsible for much of its \href{https://www.peoplesvent.org/en/latest/software/software_overview.html}{architecture}, the \href{https://www.peoplesvent.org/en/latest/software/gui/index.html}{GUI}, its \href{https://www.peoplesvent.org/en/latest/software/alarm/index.html}{alarm system}, and the \href{https://github.com/CohenLabPrinceton/pvp/tree/master/_docs}{documentation}. The development ventilator was built in New Jersey, so I wasn't able to directly work on the hardware, but I advised on the hardware I/O system "\href{https://github.com/CohenLabPrinceton/pvp/blob/master/pvp/io/hal.py}{hal}," which  was directly inspired by Autopilot -- the ventilator runs on a raspi. Our paper is under consideration at PLoS One, and we just submitted our first round of revisions at the end of January.
+\end{done}
+
+PVP impressed on me the need, and showed me how possible it could be for scientists to use their accrued intellectual capital to unbuild extractive systems that rely on artificial scarcity of "intellectual property\footnote{(fake)}" and technical knowledge to surveil and control us\footnote{(real)}.
