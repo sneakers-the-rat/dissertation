@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "latextools.tex_root": "src/_preamble.tex",
+    "tex_root": "src/_preamble.tex",
+    "output_directory": "build/dissertation_proposal",
+    "latextools.builder": "script",
+    "latextools.builder_settings": {
+      "script_commands": [
+        "tectonic -X build --open --keep-logs"
+      ]
+    },
+    "latextools.output_directory": "build/dissertation_proposal"
+  }
+}

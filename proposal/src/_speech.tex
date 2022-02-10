@@ -1,6 +1,6 @@
+%!TEX root=./_preamble.tex
 \section{Phonetic Perception}
 \label{sec:phonemes}
-
 \subsection{Mice Can Learn Phonetic Categories}
 
 I started my work by teaching mice to generalizably discriminate between two sets of naturally produced pitch-shifted consonant-vowel pairs \cite{saundersMiceCanLearn2019}. The idea was to establish phonetic perception in mice as a model that would be useful for twin problems in auditory neuroscience and phonetics: Auditory neuroscientists need better models to move beyond simple stimuli like tone pips and noise to understand how the mammalian auditory system processes the complexity that defines natural sound environments. The long history of phonetics research provides auditory neuroscience with a rich body of work, largely ungrounded in neurophysiological observation, that can inform our experimental designs and structure our predictions. Reciprocally, animal models can augment phonetic research by isolate the specifically auditory component of phonetic perception from the syntactic, semantic, motor, and social influences intrinsic to human perception; and mice provide access to observe and perturb neurophysiological processes unavailable in humans.
@@ -34,7 +34,7 @@ from some stimulus space $\mathbf{S}$ to a fixed\cite{Liberman1985a} perceptual 
 c_s = max( \{ p(c_i | \mathbf{p}) : c_i \in \mathbf{C} \})
 \end{equation}
 
-Finding no set of cues that uniquely identifies a phoneme, they concluded that phonetic perception cannot be purely auditory and instead arrive at perceptual theory that relies on simulating the motor activity of an utterance\cite{Liberman1985a}. 
+Finding no set of cues that uniquely identifies a phoneme, they concluded that phonetic perception cannot be purely auditory and instead arrive at perceptual theory that relies on simulating the motor activity of an utterance\cite{Liberman1985a}. \cite{}
 
 Each of the components of this very simple model has been problematized in parallel branches of research: developmental psychologists like Patricia Kuhl studying infant speech acquisition show the clear plasticity of the auditory system \cite{kuhlEarlyLanguageAcquisition2004}, describing a "warped" perceptual space $\mathbf{P}$ that takes advantage of the "big cuts" of the mammalian auditory system to basic sound features like frequency and energy changes. Learning a language's phonemes could then be characterized as learning some weight vector $\mathbf{w}$ as a function of the history of perceptual representations of speech exposure $\mathbf{p}$ and the category structure of the language $\mathbf{C}$ that maximizes the separability of the phonetic categories in perceptual space. 
 
