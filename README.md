@@ -2,3 +2,15 @@
 
 # dissertation
 my dissertation!
+
+
+# Folders
+
+## `proposal`
+
+dissertation proposal! written according to the [requirements](forms/dissertation_proposal_form.pdf).
+
+* `build/dissertation_proposal/dissertation_proposal.pdf` - rendered document
+* `src/` - document source, built using [tectonic](https://tectonic-typesetting.github.io/en-US/) (from the proposal directory, run `tectonic -X build`)
+
+
