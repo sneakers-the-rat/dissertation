@@ -26,7 +26,7 @@ theme: uncover
 
 # They can do it, but how?
 
-![bg right:33% contain](images/speech_resuts.png)
+![bg right:33% contain](images/speech_results.png)
 
 ## TODO:
 
