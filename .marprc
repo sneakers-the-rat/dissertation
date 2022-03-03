@@ -1,0 +1,6 @@
+html: true
+pdf: true
+inputDir: ./slides
+output: ./build
+
+
