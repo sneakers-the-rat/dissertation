@@ -35,12 +35,8 @@ theme: uncover
 
 ---
 
-# Autopilot
-
 ![bg contain](images/whole_system_black.svg)
 
 ---
-
-# Infrastructure
 
 ![bg contain](images/infra_bg.png)
