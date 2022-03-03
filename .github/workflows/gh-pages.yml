@@ -13,7 +13,8 @@ jobs:
       - name: Convert Markdown into HTML and PDF
         uses: KoharaKazuya/marp-cli-action@v2
       - name: Move images
-        run: cp -r slides/images build
+        run: |
+          sudo cp -r slides/images build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

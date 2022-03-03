@@ -16,7 +16,7 @@ theme: uncover
 
 # Phonetic Perception
 
-![bg right:66%](images/speech_task.png)
+![bg right:50%](images/speech_task.png)
 
 - Train mice to discriminate between consonant-vowel pairs starting with /b/ or /g/
 - Gradually increasing complexity
