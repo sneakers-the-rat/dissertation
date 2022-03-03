@@ -14,6 +14,16 @@ theme: uncover
 
 ---
 
-# Test heading 2
+# Phonetic Perception
 
-Test text 2
+![bg right:66%](images/speech_task.png)
+
+- Train mice to discriminate between consonant-vowel pairs starting with /b/ or /g/
+- Gradually increasing complexity
+- Test generalization with novel sounds
+
+---
+
+# They can do it, but how?
+
+![bg right:33%](images/speech_resuts.png)
