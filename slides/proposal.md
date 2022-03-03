@@ -16,7 +16,7 @@ theme: uncover
 
 # Phonetic Perception
 
-![bg right:50%](images/speech_task.png)
+![bg right:50% contain](images/speech_task.png)
 
 - Train mice to discriminate between consonant-vowel pairs starting with /b/ or /g/
 - Gradually increasing complexity
@@ -26,7 +26,7 @@ theme: uncover
 
 # They can do it, but how?
 
-![bg right:33%](images/speech_resuts.png)
+![bg right:33% contain](images/speech_resuts.png)
 
 ## TODO:
 
@@ -37,10 +37,10 @@ theme: uncover
 
 # Autopilot
 
-![bg](images/whole_system_black.svg)
+![bg contain](images/whole_system_black.svg)
 
 ---
 
 # Infrastructure
 
-![bg](images/infra_bg.png)
+![bg contain](images/infra_bg.png)
