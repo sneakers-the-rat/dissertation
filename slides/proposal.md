@@ -27,3 +27,14 @@ theme: uncover
 # They can do it, but how?
 
 ![bg right:33%](images/speech_resuts.png)
+
+## TODO:
+
+- Finish theoretical background & model building
+- Lay groundwork for behavioral experiment on mesoscope & analysis
+
+---
+
+# Autopilot
+
+![bg](images/whole_system_black.svg)
