@@ -1,0 +1,27 @@
+%!TEX output_directory = ../build/dissertation_proposal
+
+\documentclass[11pt]{article}
+\usepackage{jls_base}
+\usepackage{fontspec}
+\usepackage{footnote}
+
+% enable footnotes in environments
+\makesavenoteenv{done}
+\makesavenoteenv{todo}
+
+\setmainfont{EBGaramond}[
+	Path = garamond/ ,
+	Extension = .ttf ,
+	UprightFont = *-Regular ,
+	BoldFont = *-Bold ,
+	ItalicFont = *-Italic ,
+	BoldItalicFont = *-BoldItalic
+]
+
+\addbibresource{dissertation.bib}
+
+\title{Content and Style Request Statement}
+\author{Jonny Saunders}
+
+\begin{document}
+\maketitle
