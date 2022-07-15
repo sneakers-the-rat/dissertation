@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 129.6 144" style="enable-background:new 0 0 129.6 144;" xml:space="preserve">
+<style type="text/css">
+	.st0{font-family:'HelveticaNeue-Light';}
+	.st1{font-size:9px;}
+	.st2{fill:#FF191D;}
+	.st3{fill:#1A76CC;}
+	.st4{fill:#A4036F;}
+	.st5{fill:#FF7F00;}
+	.st6{fill:none;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st8{font-family:'HelveticaNeue-CondensedBold';}
+	.st9{font-size:8px;}
+	.st10{font-family:'Helvetica-Light';}
+	.st11{font-family:'HelveticaNeueLTStd-LtCn';}
+</style>
+<g>
+	<rect y="0" width="11.1" height="11.1"/>
+	<text transform="matrix(1 0 0 1 14.1191 8.5976)" class="st0 st1">Learned</text>
+	<rect y="11.1" class="st2" width="11.1" height="11.1"/>
+	<text transform="matrix(1 0 0 1 14.1193 19.7225)" class="st0 st1">Novel Token Only</text>
+	<rect y="22.2" class="st3" width="11.1" height="11.1"/>
+	<rect y="33.4" class="st4" width="11.1" height="11.1"/>
+	<rect x="0" y="44.5" class="st5" width="11.1" height="11.1"/>
+	<text transform="matrix(1 0 0 1 14.1193 30.8477)" class="st0 st1">Novel Vowel</text>
+	<text transform="matrix(1 0 0 1 14.1193 41.9727)" class="st0 st1">Novel Speaker</text>
+	<text transform="matrix(1 0 0 1 14.1193 53.0977)" class="st0 st1">Novel Speaker &amp; Vowel</text>
+	<g>
+		<polyline class="st6" points="130.3,72.5 13.5,72.5 13.5,144.5 		"/>
+	</g>
+	<g>
+		<path class="st7" d="M11.4,144.5"/>
+	</g>
+	<text transform="matrix(1 0 0 1 58.3474 63.5002)" class="st8 st9">Speaker</text>
+	<text transform="matrix(1 0 0 1 22.4927 71.5)" class="st10 st9">1</text>
+	<text transform="matrix(1 0 0 1 92.493 71.5)" class="st10 st9">4</text>
+	<text transform="matrix(1 0 0 1 115.8257 71.3335)" class="st10 st9">5</text>
+	<text transform="matrix(1 0 0 1 69.1595 71.5)" class="st10 st9">3</text>
+	<text transform="matrix(1 0 0 1 45.8258 71.5)" class="st10 st9">2</text>
+	<text transform="matrix(1 0 0 1 5.3537 82.333)" class="st11 st9">/I/</text>
+	<text transform="matrix(1 0 0 1 3.4181 93.7333)" class="st11 st9">/o/</text>
+	<text transform="matrix(1 0 0 1 3.418 127.9327)" class="st11 st9">/e/</text>
+	<text transform="matrix(1 0 0 1 1.6416 116.5327)" class="st11 st9">/æ/</text>
+	<text transform="matrix(1 0 0 1 3.4181 105.1327)" class="st11 st9">/a/</text>
+	<text transform="matrix(1 0 0 1 3.2738 139.333)" class="st11 st9">/u/</text>
+	<rect x="16" y="77.3" width="4.8" height="4.8"/>
+	<rect x="28.6" y="77.3" class="st2" width="4.8" height="4.8"/>
+	<rect x="22.3" y="77.3" width="4.8" height="4.8"/>
+	<rect x="16" y="88.8" width="4.8" height="4.8"/>
+	<rect x="28.6" y="88.8" class="st2" width="4.8" height="4.8"/>
+	<rect x="22.3" y="88.8" width="4.8" height="4.8"/>
+	<rect x="16" y="100.3" width="4.8" height="4.8"/>
+	<rect x="28.6" y="100.3" class="st2" width="4.8" height="4.8"/>
+	<rect x="22.3" y="100.3" class="st2" width="4.8" height="4.8"/>
+	<rect x="16" y="111.9" class="st3" width="4.8" height="4.8"/>
+	<rect x="28.6" y="111.9" class="st3" width="4.8" height="4.8"/>
+	<rect x="22.3" y="111.9" class="st3" width="4.8" height="4.8"/>
+	<rect x="16" y="123.4" class="st3" width="4.8" height="4.8"/>
+	<rect x="28.6" y="123.4" class="st3" width="4.8" height="4.8"/>
+	<rect x="22.3" y="123.4" class="st3" width="4.8" height="4.8"/>
+	<rect x="16" y="134.9" class="st3" width="4.8" height="4.8"/>
+	<rect x="28.6" y="134.9" class="st3" width="4.8" height="4.8"/>
+	<rect x="22.3" y="134.9" class="st3" width="4.8" height="4.8"/>
+	<rect x="39.4" y="77.3" width="4.8" height="4.8"/>
+	<rect x="51.9" y="77.3" class="st2" width="4.8" height="4.8"/>
+	<rect x="45.6" y="77.3" width="4.8" height="4.8"/>
+	<rect x="39.4" y="88.8" width="4.8" height="4.8"/>
+	<rect x="51.9" y="88.8" class="st2" width="4.8" height="4.8"/>
+	<rect x="45.6" y="88.8" width="4.8" height="4.8"/>
+	<rect x="39.4" y="100.3" width="4.8" height="4.8"/>
+	<rect x="51.9" y="100.3" class="st2" width="4.8" height="4.8"/>
+	<rect x="45.6" y="100.3" class="st2" width="4.8" height="4.8"/>
+	<rect x="39.4" y="111.9" class="st3" width="4.8" height="4.8"/>
+	<rect x="51.9" y="111.9" class="st3" width="4.8" height="4.8"/>
+	<rect x="45.6" y="111.9" class="st3" width="4.8" height="4.8"/>
+	<rect x="39.4" y="123.4" class="st3" width="4.8" height="4.8"/>
+	<rect x="51.9" y="123.4" class="st3" width="4.8" height="4.8"/>
+	<rect x="45.6" y="123.4" class="st3" width="4.8" height="4.8"/>
+	<rect x="39.4" y="134.9" class="st3" width="4.8" height="4.8"/>
+	<rect x="51.9" y="134.9" class="st3" width="4.8" height="4.8"/>
+	<rect x="45.6" y="134.9" class="st3" width="4.8" height="4.8"/>
+	<rect x="62.7" y="77.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="75.3" y="77.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="69" y="77.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="62.7" y="88.8" class="st4" width="4.8" height="4.8"/>
+	<rect x="75.3" y="88.8" class="st4" width="4.8" height="4.8"/>
+	<rect x="69" y="88.8" class="st4" width="4.8" height="4.8"/>
+	<rect x="62.7" y="100.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="75.3" y="100.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="69" y="100.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="62.7" y="111.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="75.3" y="111.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="69" y="111.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="62.7" y="123.4" class="st5" width="4.8" height="4.8"/>
+	<rect x="75.3" y="123.4" class="st5" width="4.8" height="4.8"/>
+	<rect x="69" y="123.4" class="st5" width="4.8" height="4.8"/>
+	<rect x="62.7" y="134.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="75.3" y="134.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="69" y="134.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="86" y="77.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="98.6" y="77.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="92.3" y="77.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="86" y="88.8" class="st4" width="4.8" height="4.8"/>
+	<rect x="98.6" y="88.8" class="st4" width="4.8" height="4.8"/>
+	<rect x="92.3" y="88.8" class="st4" width="4.8" height="4.8"/>
+	<rect x="86" y="100.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="98.6" y="100.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="92.3" y="100.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="86" y="111.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="98.6" y="111.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="92.3" y="111.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="86" y="123.4" class="st5" width="4.8" height="4.8"/>
+	<rect x="98.6" y="123.4" class="st5" width="4.8" height="4.8"/>
+	<rect x="92.3" y="123.4" class="st5" width="4.8" height="4.8"/>
+	<rect x="86" y="134.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="98.6" y="134.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="92.3" y="134.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="109.4" y="77.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="121.9" y="77.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="115.6" y="77.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="109.4" y="88.8" class="st4" width="4.8" height="4.8"/>
+	<rect x="121.9" y="88.8" class="st4" width="4.8" height="4.8"/>
+	<rect x="115.6" y="88.8" class="st4" width="4.8" height="4.8"/>
+	<rect x="109.4" y="100.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="121.9" y="100.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="115.6" y="100.3" class="st4" width="4.8" height="4.8"/>
+	<rect x="109.4" y="111.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="121.9" y="111.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="115.6" y="111.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="109.4" y="123.4" class="st5" width="4.8" height="4.8"/>
+	<rect x="121.9" y="123.4" class="st5" width="4.8" height="4.8"/>
+	<rect x="115.6" y="123.4" class="st5" width="4.8" height="4.8"/>
+	<rect x="109.4" y="134.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="121.9" y="134.9" class="st5" width="4.8" height="4.8"/>
+	<rect x="115.6" y="134.9" class="st5" width="4.8" height="4.8"/>
+</g>
+</svg>

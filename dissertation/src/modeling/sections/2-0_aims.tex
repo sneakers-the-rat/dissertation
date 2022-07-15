@@ -1,0 +1,65 @@
+%!TEX root = ../prelims_main.tex
+% \documentclass[../prelims_main.tex]{subfiles}
+
+% \begin{document}
+
+\section{Specific Aims}
+
+\begin{multicols}{2}
+
+\subsection{Scraps}
+
+
+\begin{itemize}
+\item Segmenting strategies \citep{ashwoodMiceAlternateDiscrete2020}
+\item Scrambled vs. unscrambled sounds? (cites 12, 18, and 25 in \citep{norman-haignereHierarchicalIntegrationMultiple2020})
+\item inferring perception-action loops from data \citep{rosasCausalBlanketsTheory2020}
+\item complementary roles of cell types and manifold dynamics \citep{dubreuilComplementaryRolesDimensionality2020}
+\item LFADS for sequential autoencoders \citep{pandarinathInferringSingletrialNeural2018}
+\item modeling auditory waveform with kernels \citep{smithEfficientAuditoryCoding2006a}
+\item brain is actually a dynamic system and need to model the manifold \citep{brembsBrainDynamicallyActive2020} becasue the same brain region does multiple things at the same time with the manifold lol \citep{gallegoCorticalPopulationActivity2018}
+\item ?time constant of auditory sensitivity in STG neurons?
+\item The natural analog of the philosophical problem of universals in the conditioning paradigm is stimulus generalization \citep{roschWittgensteinCategorizationResearch1987}	
+\item Neural nets for estimating nonlinear STRFs, se \citep{kingRecentAdvancesUnderstanding2018a}
+\item extracting maximally informative features \citep{liuOptimalFeaturesAuditory2019}
+\item creating superstimuli \citep{decharmsOptimizingSoundFeatures1998}
+\item estimating nonlinear STRF\citep{ahrensNonlinearitiesContextualInfluences2008}
+\item remember to return to shepard and 2nd order isomorphism stuff
+
+The history of this question includes Shepard and Tversky's multidimensional scaling and its criticisms, and also extends through Shepherds' "second-order isomorphisms" (cite representation is representation of similarity)
+\end{itemize}
+
+
+\draft{arguably the cue-theorists arrived at the wrong conclusions was because of their belief about the innateness of the auditory-perceptual mapping: it must have been genetic, so therefore language is parsimoniously some special module, etc. etc. Research based on synthesized parameters based on cues then carry that error further by not representing the full scope of the problem. like how they eventually discarded the notion of cues (definitely need more detail in that story about specific examples of how cues are conflicting in different contexts) was because they considered their interaction with other cue dimensions. If we instead take the info-theoretic perspective seriously then learning a phoneme should be the act of learning the maximally informative dimensions. since we see individual differences in cue weighting within individuals, we would also expect people's dimensions to be different... but if there is only one or a few carefully parameterized dimensions of variation present in the stimulus set, of course they'll learn those, so we need to instead use a stimulus set that preserves as much of the natural variation within category as possible and allow the animals to learn the contrastive dimensions themselves. using only two categories is of course a simplification, but it still mimics at least the nature of the learning problem in qualitative form, and also [evidence that infants learn stop consonant boundaries early and they are primary and near-universal across languages indicating that they are sorta self-stable system where the big featural distinction of being stops makes it so they are like a `submodule' within a phonetic set.]}
+
+\draft{parameterized vs natural speech is actually reflective of a much larger positivist/naturalist philosophical divide -- they presuppose by testing a parameter of category membership, but postiive evidence is not evidence that parameter is actually constitutive of the category itself -- for example if you had two categories "games" and "cars," "weight" might be a reasonably good way to assign category membership, but it is not at all the only, or even the most salient difference between those categories. Like i feel like I'm crazy sometimes because shouldn't the fact that synthesized speech sounds \textit{sound bad} be a \textit{problem?} They might have all the theoretical justification in the world but the fact that they so badly imitate what even a plausible phoneme would sound like should be like a red flag for the generalizability of the conclusions that can be drawn from them.}
+
+\draft{theoretical problems with simplified stimuli - low-dimensional and linearly-separable stimulus spaces are fundamentally different than the high complexity of naturalistic stimuli... for all we know the computations are just straight up not comparable! \citep{schuesslerInterplayRandomnessStructure2020}}
+
+\subsection{behavior}
+
+
+\draft{If the objective of the listener is to understand, ie. to be able to parse the speech sounds made by their interlocuter, then how is that different than that of the mouse, which is to get water? They are identical when water is only given when knowledge is demonstrated, but that is impossible when the chance of false positive is 50\%. more importantly how that intersects with passive learning/non-rewarded phoeme studies.}
+
+\draft{reasons for speech stimuli: category complexity depends on the density of the space. the competition for desire for rich vocabulary of phonemes with limited articulatory palette means that we need to fit a shitload of acoustic complexity into an extremely small temporal window with a small amount of potential variation. So yeah parameterized mouse calls might work but that's like a feature of the density of the communication space, but they also have extremely subtle cues in their environment that they need to parse... so speech sounds are good because they're not species-specific but also because they're stimuli that we know have a potential subjective categorization structure but one that is sufficiently complex. speech sounds also take advantage of the innate contours of the auditory system, }
+
+\draft{trying a fresh rewrite: q: why use natural speech rather than some other synthesized, complex, high-dimensional acoustic stimulus?
+a: though the question is about auditory category learning in general, the auditory system is not some lockean tabula rasa because natural law dictates that auditory reality isn’t some equiprobable playground where all sounds are possible. the auditory system evolved to be better able to learn certain acoustic contrasts compared to others because the fact that some contrasts are more informative than others is written into the very sinew of natural law (cite patricia kuhl’s ‘basic cuts’ argument, tony zador ‘critique of pure learning’). it is also not sufficient to identify one or a few of these ‘natural auditory-perceptual gradients’ and synthesize stimuli along them: the problem that languages have been solving for <many> years is how to pack many contrasts that are all mutually intelligible at rapid timescales (low … resolution?) across those gradients. Close phonetic contrasts are thus complex stimuli optimized to be discriminable by the mammalian auditory system in a dense category-space, making the reliance on the family resemblance-type structure (rather than a simple rule-based solution) that typifies phonetic identification and other complex category processing necessary}
+
+\draft{The requirement for doing it online is because what you're doing is doing a much more efficient exploration of the massive massive stimulus space-- theoretically if you freaking play a billion phonemes of infinite variation you will just be grid searching all the same space that you would by presenting it online. Sooooo if we can't make online stimulus modulation work, then we just need to make sure we have sufficient samples to tile the space. Importantly though, since we're not necesarily trying to explain speech as such, but rather then learning of some general auditory categories, the degree to which our stimuli (and thus our estimates of perceptual dimension) only really affects the degree to which we simulate the problem of speech. What could be degraded? well, it could be the case that we use too few stimuli to have a sufficiently complex categorization in the first place, but that's pretty unlikely because of the extreme variability of speech across vowel contexts, let alone speakers. Fitting after training, or like even online fitting, or even just like testing their responses to generated stimuli afterwards is totally valid as a test of the validity of the dimensions.}
+
+
+\subsection{imaging}
+
+\subsection{analysis \& modeling}
+
+
+Neuroscientists sorta blithely assume what the features of a stimulus are, from the seemingly harmless and physically based -- frequency, direction, angle, etc. -- to the absurd -- rsa et al. But these dimensions rarely behave like `real' perceptual dimensions \citep{krantzSimilarityRectanglesAnalysis1975a} -- the transformation is actually the critical part. 
+
+assuming feature dimensions is always a bad assumption -- eg what features have the metric structure that measure similarity/dissimilarity of rectangles? \citep{krantzSimilarityRectanglesAnalysis1975a}
+
+Lots of people already talking about this, but even criticisms sorta treat perceptual dimensions as a given, and it is the brain's fault that it doesn't represent them. \citep{goddardInterpretingDimensionsNeural2018a}
+
+\end{multicols}
+
+% \end{document}

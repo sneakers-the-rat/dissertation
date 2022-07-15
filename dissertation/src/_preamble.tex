@@ -1,0 +1,283 @@
+% !TEX options=--shell-escape
+% !TEX jobname = jls_dissertation
+% !TEX output_directory = ../build/jls_dissertation
+
+\documentclass[nohyper, justified, notitlepage, notoc, marginals=raggedright,twoside=false,debug]{styles/tufte-autopilot}
+
+% set PDF version
+\special{pdf:minorversion 7}
+
+%% Package imports
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{booktabs}
+\usepackage{xspace}
+\usepackage{units}
+\usepackage{makeidx}
+\usepackage[framemethod=tikz]{mdframed}% http://ctan.org/pkg/mdframed
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage[cache=true]{minted}
+%\usepackage[usenames, svgnames]{xcolor}
+\usepackage{xr-hyper}
+\usepackage{url}
+\usepackage[colorlinks = true,
+            urlcolor = DarkOrchid,
+            citecolor = DarkOrchid,
+            backref= section,
+            pdfauthor=Jonny L Saunders\, Michael Wehr,
+            pdfcreator={Jonny L Saunders}
+            baseurl=https://www.biorxiv.org/content/10.1101/807693v1
+            ]{hyperref}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{enumitem} % pause itemize env
+\usepackage[font=footnotesize, labelfont=bf]{caption}
+\usepackage{ulem}     % strikeouts
+%\usepackage[english]{babel}
+\usepackage[autostyle, english=american]{csquotes} % styling smart quotes
+\usepackage[titletoc]{appendix} % add appendices
+\usepackage{fontspec}
+\usepackage{styles/listliketab}
+\usepackage{float}
+\usepackage{siunitx}
+
+\usetikzlibrary{tikzmark}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathreplacing}
+
+%% Imports with customizations
+% For graphics / images
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+\usepackage{styles/extra}
+
+\special{pdf:minorversion 6}
+
+% ---------
+% external environments
+% ----------
+
+\input{styles/environments}
+
+% ---------------------------
+% Geometry and spacing
+% -------------------------
+
+\geometry{
+ left=0.9in, % left margin
+ % right=0.8in,
+%  textwidth=27pc, % main text block
+  marginparsep=1pc, % gutter between main text block and margin notes
+ marginparwidth=13pc, % width of margin notes
+ bottom=1.1in
+}
+
+\titlespacing*{\chapter}{0pt}{-10pt}{0pt}
+%\titlespacing{\section}{0pt}{30pt}{0pt}
+\renewcommand{\baselinestretch}{0.9}
+% \setlength{\baselineskip}{9pt}
+
+\setlength{\parskip}{6pt}
+
+% \setlength{\intextsep}{60.0pt plus 2.0pt minus 2.0pt}
+
+
+\setlength{\abovecaptionskip}{3pt plus 2pt minus 3pt}
+\setlength{\belowcaptionskip}{0pt}
+\captionsetup[lstfloat]{skip=0pt}
+
+\lstset{aboveskip=0pt,belowskip=0pt}
+\setlength\intextsep{2pt}
+
+
+% \setlength{\partopsep}{-20pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% enable synctex
+\synctex=1
+
+% fix soul error MakeTextUppercase
+% https://tex.stackexchange.com/a/560793/232585
+\ifdefined\soulregister
+  \soulregister\MakeTextUppercase{1}%
+  \soulregister\MakeTextLowercase{1}%
+\fi
+
+% adding colon to appendix
+% don't ask me what's going on
+% https://tex.stackexchange.com/a/201328
+%\apptocmd{\appendices}{\apptocmd{\thechapter}{: }{}{}}{}{}
+
+\renewcommand\appendixname{Appendix: }
+
+% -------------------------------------
+% Fonts and restyling
+% ------------------------------------
+
+\setmainfont{EBGaramond}[
+	Path = fonts/garamond/ ,
+	Extension = .ttf ,
+	UprightFont = *-Regular ,
+	BoldFont = *-Bold ,
+	ItalicFont = *-Italic ,
+	BoldItalicFont = *-BoldItalic
+]
+
+\setmonofont{FiraCode}[
+  Path = fonts/fira/ ,
+  Extension = .ttf ,
+  UprightFont = *-Retina ,
+  BoldFont = *-Bold ,
+  Scale=MatchLowercase
+]
+
+\setsansfont{WorkSans}[
+  Path = fonts/worksans/ ,
+  Extension = .otf ,
+  UprightFont = *-Regular ,
+  BoldFont = *-SemiBold ,
+  ItalicFont = *-Italic ,
+  BoldItalicFont = *-SemiBoldItalic
+]
+
+
+% restyle captions
+\setcaptionfont{\footnotesize\raggedright}
+\setsidenotefont{\footnotesize}
+\setmarginnotefont{\footnotesize}
+
+
+% style captions
+\captionsetup{justification=raggedright, singlelinecheck=false}
+%\captionsetup[figure]{belowskip=24pt, position=below}
+%\captionsetup[table]{aboveskip=12pt, position=above}
+
+
+% format smart quotes
+\MakeOuterQuote{"}
+
+% Section numbering
+\setcounter{secnumdepth}{1}
+\setcounter{tocdepth}{1}
+
+
+% right aligned tabularx
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+% fix urls in bibtex
+
+\makeatletter
+\AtBeginDocument{%
+  \def\doi#1{\url{https://doi.org/#1}}}
+\makeatother
+
+% ------------------------------------
+% Code blocks
+% ------------------------------------
+
+% Styling for code blocks
+\usemintedstyle{colorful}
+%\setminted{fontsize=\small}
+
+% set escape chars in listing
+\lstset{
+    language = Python,
+    breaklines=true,
+    escapeinside=||
+}
+
+\definecolor{aliceblue}{rgb}{0.98, 0.98, 0.99}
+
+
+\newminted{python}{
+  linenos=true,
+  frame=single,
+  framerule = 1pt,
+  labelposition = topline,
+  bgcolor=aliceblue,
+  escapeinside=||
+}
+
+\newminted{matlab}{
+  linenos=true,
+  frame=single,
+  framerule = 1pt,
+  labelposition = topline,
+  bgcolor=aliceblue,
+  escapeinside=||
+}
+
+
+\newenvironment{abstract}{%
+\vspace{1em}
+\begin{mdframed}[
+     linewidth=1pt,
+     linecolor=black,
+     bottomline=false,topline=false,rightline=false,
+     innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt,
+     innerleftmargin=1em,% Distance between vertical rule & proof content
+     skipabove=0\baselineskip
+   ]
+}{%
+\end{mdframed}
+}
+
+\newenvironment{acknowledgements}{%
+\vspace{1em}
+\par\vspace*{\fill}
+\begin{mdframed}[
+     linewidth=1pt,
+     linecolor=black,
+     leftline=false,bottomline=false,rightline=false,
+     innerrightmargin=0pt,innertopmargin=1em,innerbottommargin=0pt,
+     innerleftmargin=1em,% Distance between vertical rule & proof content
+     skipabove=.5\baselineskip
+   ]
+}{%
+\end{mdframed}\newpage
+}
+
+\newenvironment{thintab}%
+{\begin{itemize}%
+\setlength{\itemsep}{0pt}%
+\setlength{\parskip}{0pt}}%
+{\end{itemize}}
+
+% Define symbols
+% https://tex.stackexchange.com/a/132790
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+
+
+% Generates the index
+
+% environment to center figures
+\newcommand{\linkfigure}[3]{\begingroup
+\setbox0=\hbox{\includegraphics[height=0.75cm,keepaspectratio]{#1}}%
+\parbox{\wd0}{\box0}\endgroup \hspace{6pt} \href{#3}{\sffamily\large\textcolor{red}{\allcaps{#2}}}}
+
+
+
+\definecolor{RED}{HTML}{FF0000}
+%%
+% Book metadata
+\title{Autopilot: Automating behavioral experiments with lots of Raspberry Pis}
+\author{Jonny L. Saunders, Lucas A. Ott, Michael Wehr}
+
+% filthy hack putting the affiliations in the tufte-common.cls file. 
+% goddamn hate latex.
+% what in holy hell...
+
+\begin{document}
+\setlength{\parindent}{0pt}
+\setcitestyle{numbers, compress}

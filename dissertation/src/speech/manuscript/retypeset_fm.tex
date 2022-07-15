@@ -1,0 +1,214 @@
+\documentclass[11pt]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{siunitx}                  % Typesetting SI units
+\usepackage{booktabs}                 % Tables
+\usepackage[autostyle, english=american]{csquotes} % Does smart quotations
+\usepackage{tabularx}
+%\usepackage{capt-of} % figure captions spanning pages
+\usepackage{setspace}
+%\usepackage{todonotes}
+\usepackage{graphicx}
+%\usepackage{alltt}
+\usepackage{microtype}
+\usepackage[english]{babel}           % Various English stylistic things
+\usepackage{amsmath,amsfonts,amsthm}  % Math
+\usepackage{sectsty}                  % Style sections
+\usepackage{geometry}                 % Document reshaping/sizing
+%\usepackage{fontspec}
+%\usepackage{textcomp}
+%\usepackage{cite}                     % Citations
+\usepackage{wrapfig}                  % Wrap text around figures
+%\usepackage{ulem}                     % Strikeouts & Underlines
+%\usepackage{tcolorbox}                % colorful boxes
+\usepackage{stfloats}                 % Image/figure positioning
+\usepackage{titlesec}                 % Allows customization of titles
+\usepackage[colorlinks = true,
+            urlcolor = OrangeRed,
+            citecolor = OrangeRed,
+            backref= section]{hyperref}
+\usepackage{caption}                  % Enable caption styling
+\usepackage{abstract} % to get saythanks
+
+\usepackage{titling}
+
+%\usepackage[amsfonts, amssymb]{concmath} % concrete math type
+\usepackage[default]{lato}
+\usepackage[T1]{fontenc}
+
+\usepackage{float}
+%\usepackage{unicode-math}
+%\usepackage{ccfonts}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setmathfont{CMU Concrete}
+%\renewcommand{\rmdefault}{ccr}
+
+% Formatting
+\MakeOuterQuote{"} % Symbol for smart-quotes
+
+% Set page geometry
+\tolerance=5000 %prevents overfull hboxes
+\geometry{
+  top=43pt,
+  left=40pt,
+  right=40pt,
+  bottom=50pt,
+  headsep=10pt,
+  columnsep=13.5pt,
+  twocolumn=true,
+}
+
+% Set indentation & line spacing
+\setlength{\parindent}{0.5cm}
+\renewcommand{\baselinestretch}{1.3}
+
+% Set space around figures
+\setlength{\floatsep}{0pt}
+\setlength{\dbltextfloatsep}{0pt}
+\setlength{\intextsep}{0pt}
+\setlength{\belowcaptionskip}{0pt}
+
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+% \renewcommand{\topfraction}{0.85}
+% \renewcommand{\bottomfraction}{0.99}
+% \renewcommand{\textfraction}{0.10}
+% \renewcommand{\floatpagefraction}{0.7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Restyling
+
+\pretitle{\fontfamily{Chivo-TLF}\selectfont\Huge\bfseries}
+\posttitle{\normalfont\hfill\break\vspace{14pt}}
+\preauthor{\large\normalfont}
+\postauthor{\hfill\break\vspace{16pt}}
+\predate{}
+\postdate{\hfill\vspace*{-\baselineskip}\break%
+{\fontsize{1pt}{1pt}\noindent\makebox[\linewidth]{\rule{\paperwidth}{1pt}}}}
+
+% Section titles
+\titleformat{\section}
+  {\raggedright\fontfamily{Chivo-TLF}\selectfont\Large\bfseries}
+  {\fontfamily{Chivo-TLF}\Large\thesection}{10pt}{}
+
+% Subsection titles
+\titleformat{\subsection}
+  {\raggedright\fontfamily{Chivo-TLF}\selectfont\bfseries}
+  {\fontfamily{Chivo-TLF}\selectfont\bfseries\thesubsection}{5pt}{}
+
+% Set spacing around section titles
+\titlespacing{\section}
+  {0em}{2em}{0em}
+\titlespacing{\subsection}
+  {0em}{1em}{0em}
+
+% Set figure tags as bold
+\captionsetup[figure]{labelfont=bf,font=small}
+\captionsetup[table]{labelfont=bf,font=small}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+\title{Mice can learn phonetic categories}
+\author{Jonny Saunders, Michael Wehr 
+\thanks{wehr@uoregon.edu} 
+\thanks{University of Oregon, Institute of Neuroscience and Department of Psychology, Eugene, OR 97403, United States.} 
+\thanks{Additional thanks to Aldis Weible, Lucas Ott, and Connor O'Sullivan. This material is based upon work supported by the National Science Foundation Graduate Research Fellowship Program under Grant No. 1309047. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.}}
+\date{\small J. Acoust. Soc. Am. \textbf{145}(3) - \href{https://doi.org/10.1121/1.5091776}{doi:10.1121/1.5091776} - \href{https://github.com/wehr-lab/SaundersWehr-JASA2019}{Author typeset version}, compiled \today }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\twocolumn[
+%\begin{@twocolumnfalse}
+\maketitle
+%\begin{onecolabstract}
+%\end{onecolabstract}
+%\end{@twocolumnfalse}
+]
+\saythanks

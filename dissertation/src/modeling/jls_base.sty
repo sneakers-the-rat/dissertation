@@ -1,0 +1,248 @@
+\ProvidesPackage{jls_base}
+
+% --------------------------------------------------------\
+% imports
+
+\usepackage[english]{babel}
+\usepackage{microtype}
+\usepackage[autostyle, english=american]{csquotes}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[usenames, svgnames]{xcolor}
+\usepackage{geometry}
+\usepackage{framed}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{endnotes}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{zref-savepos}
+\usepackage[savepos]{zref}
+\usepackage[font=footnotesize, labelfont=bf]{caption}
+\usepackage[
+	backend=biber,
+	style=numeric,
+	citestyle=numeric,
+    backref=true,
+    sorting=none
+]{biblatex}
+\usepackage[colorlinks = true,
+            hyperfootnotes=true,
+            urlcolor = DarkOrchid,
+            citecolor = DarkOrchid]{hyperref}
+
+\usepackage{subfiles}
+
+% --------------------------------------------------------
+% Layout
+
+\geometry{
+    top=1in,
+    left=0.75in,
+    right=0.75in
+}
+
+%% title spacing
+\titlespacing*{\chapter}{0pt}{-10pt}{0pt}
+\titlespacing{\section}{0pt}{5em}{0pt}
+
+%% para spacing instead of indents
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+%% no spacing in lists
+\setlist{nosep, itemsep=0.5em}
+% \setlist[1]{labelindent=1em, itemsep=0.5em}
+% \setenum{nosep, itemsep=0.5em}
+
+
+%% Two column  layout
+\setlength{\columnsep}{1.5em}
+% \setlength{\columnseprule}{0.1pt}
+
+% right aligned tabularx
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+% remove "contents" from toc
+\renewcommand{\contentsname}{}
+
+% leftbar for blockquotes
+\renewenvironment{leftbar}
+{\def\FrameCommand{\hspace{0em}\vrule width 0.5pt \hspace{1em}}\MakeFramed {\advance\hsize-\width \FrameRestore}}
+{\endMakeFramed}
+
+\newenvironment{ideabox}
+{\def\FrameCommand{\hspace{0em}{\color{red}\vrule width 0.5pt} \hspace{1em}}\MakeFramed {\advance\hsize-\width \FrameRestore}}
+{\endMakeFramed}
+
+% margin notes for todo items
+% https://tex.stackexchange.com/questions/163567/margin-notes-multicols-tikz-overlay
+\def\MarginNote#1{%
+\zsavepos{#1}%
+%%%%%%--------
+\ifnum17000000<\number\zposx{#1}%
+    \begin{tikzpicture}[remember picture,overlay]
+    \coordinate (here) at (0,0);
+    \draw (current page.east |- here)
+            node[left]{\makebox[1.2cm][l]{#1}};
+    \end{tikzpicture}%to prevent adding extra space before text
+\else
+    \begin{tikzpicture}[remember picture,overlay]
+    \coordinate (here) at (0,0);
+    \draw (current page.west |- here)
+            node[right]{\makebox[1.2cm][r]{#1}};
+    \end{tikzpicture}%to prevent adding extra space before text
+\fi%
+\ignorespaces
+}
+
+
+% --------------------------------------------------------
+% Typography
+\newfontface\titlefont{Marian 1554}
+\newfontface\graphik{Graphik Light}[
+   BoldFont = Graphik Bold,
+   ItalicFont = Graphik Light Italic
+]
+\newfontface\papyrus{Papyrus}
+% \newfontface\minion{Minion Pro Regular}[
+%     BoldFont = Minion Pro Bold,
+%     ItalicFont = Minion Pro Italic,
+%     BoldItalicFont = Minion Pro Bold Italic
+% ]
+
+\setmainfont{Minion Pro}
+
+% restyle captions
+% \setcaptionfont{\footnotesize\raggedright}
+% \setsidenotefont{\footnotesize}
+% \setmarginnotefont{\footnotesize}
+\captionsetup{justification=raggedright, singlelinecheck=false}
+\setlength{\abovecaptionskip}{3pt plus 2pt minus 3pt}
+
+%% restyle sectino headers
+\titleformat{\section}{\normalfont\Huge\bfseries}{\thesection.}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+% \let\clearpage\relax
+
+% Restyle Title
+\pretitle{\noindent\fontsize{48pt}{48pt}\titlefont}
+\posttitle{\hfill}
+\preauthor{\vspace{1em}\break\noindent}
+\postauthor{\hfill\break}
+\predate{\noindent}
+\postdate{\hfill}
+
+% \makeatletter
+% \renewcommand{\maketitle}{\bgroup
+%     \noindent\fontsize{48pt}{48pt}\titlefont\@title\hfill\\
+%     \vspace{-0pt}\\
+%     \normalsize\graphik\appname\hfill\break
+%     \normalsize\graphik\textbf{\@author}\hfill\break
+%     % {\fontsize{1pt}{1pt}\noindent\makebox[\linewidth]{\rule{\textwidth}{1pt}}}
+%     \vspace{12pt}\normalfont
+% }
+% \makeatother
+
+% format smart quotes
+\MakeOuterQuote{"}
+
+% 'draft' command to visually distinguish placehodler text
+\newcommand{\draft}[1]{\textcolor{gray}{\textit{#1}}}
+
+% 'todo' command to mark notes to self
+\newcommand{\todo}[1]{%
+\addcontentsline{lot}{table}{#1}%
+\MarginNote{!!}%
+\textcolor{red}{#1}}
+% and modify toc header
+\addto\captionsenglish{%
+    \renewcommand{\listtablename}{TODO:}
+}
+
+% idea command to indicate a proposed idea
+\newcommand{\idea}[1]{\begin{ideabox}\faLightbulb[regular] - #1\end{ideabox}}
+
+% sarcasm command for uh sarcasm
+\newcommand{\sarcasm}[1]{%
+\includegraphics[height=11pt]{upside_down_smiley.png} %
+\papyrus \textcolor{HotPink}{\char`\~ #1 \char`\~}%
+\includegraphics[height=11pt]{upside_down_smiley.png}%
+\normalfont}
+
+% --------------------------------------------------------
+% Figures
+
+% Set figure path
+\graphicspath{{./figures/}}
+
+% --------------------------------------------------------
+% Bibliography
+
+% Print bibliography at end of each subfile when compiling separately,
+% but also in main document when compiling together
+\AtEndDocument{%
+    % \newpage
+    % \section{Notes}
+    % \theendnotes
+    \newpage
+    \section{References}
+    \printbibliography
+}
+
+
+% --------------------------------------------------------
+% Patch backlinks to go to specific location
+% https://tex.stackexchange.com/a/67852/232585
+
+% %%%% these patches ensure that the backrefs point to the actual occurrences of the citations in the text, not just the page or section in which they appeared
+% %%%% https://tex.stackexchange.com/questions/54541/precise-back-reference-target-with-hyperref-and-backref
+% %%%% BEGIN BACKREF DIRECT PATCH, apply these AFTER loading hyperref package with appropriate backref option
+% % The following options are provided for the patch, currently with a poor interface!
+% % * If there are multiple cites on the same (page|section) (depending on backref mode),
+% %   should we show only the first one or should we show them all?
+% \newif\ifbackrefshowonlyfirst
+% \backrefshowonlyfirstfalse
+% %\backrefshowonlyfirsttrue
+% %%%% end of options
+% %
+% % hyperref is essential for this patch to make any sense, so it is not unreasonable to request it be loaded before applying the patch
+% \makeatletter
+% % 1. insert a phantomsection before every cite, so hyperref has something to target
+% %    * in case natbib is loaded. hyperref provides an appropriate hook so this should be safe, and we don't even need to check if natbib is loaded!
+% \let\BR@direct@old@hyper@natlinkstart\hyper@natlinkstart
+% \renewcommand*{\hyper@natlinkstart}{\phantomsection\BR@direct@old@hyper@natlinkstart}% note that the anchor will appear after any brackets at the start of the citation, but that's not really a big issue?
+% %    * if natbib isn't used, backref lets \@citex to \BR@citex during \AtBeginDocument
+% %      so just patch \BR@citex
+% % \let\BR@direct@oldBR@citex\BR@citex
+% % \renewcommand*{\BR@citex}{\phantomsection\BR@direct@oldBR@citex}%
+
+% % 2. if using page numbers, show the page number but still hyperlink to the phantomsection instead of just the page!
+% \long\def\hyper@page@BR@direct@ref#1#2#3{\hyperlink{#3}{#1}}
+
+% % check which package option the user loaded (pages (hyperpageref) or sections (hyperref)?)
+% \ifx\backrefxxx\hyper@page@backref
+%     % they wanted pages! make sure they get our re-definition
+%     \let\backrefxxx\hyper@page@BR@direct@ref
+%     \ifbackrefshowonlyfirst
+%         %\let\backrefxxxdupe\hyper@page@backref% test only the page number
+%         \newcommand*{\backrefxxxdupe}[3]{#1}% test only the page number
+%     \fi
+% \else
+%     \ifbackrefshowonlyfirst
+%         \newcommand*{\backrefxxxdupe}[3]{#2}% test only the section name
+%     \fi
+% \fi
+
+% % 3. now make sure that even if there is no numbered section, the hyperref's still work instead of going to the start of the document!
+% % \RequirePackage{etoolbox}
+% % \patchcmd{\Hy@backout}{Doc-Start}{\@currentHref}{}{\errmessage{I can't seem to patch backref}}
+% \makeatother
+% %%%% END BACKREF PATCHES

@@ -1,0 +1,18 @@
+\renewenvironment{leftbar}
+{\def\FrameCommand{\hspace{0em}\vrule width 0.5pt \hspace{1em}}\MakeFramed {\advance\hsize-\width \FrameRestore}}
+{\endMakeFramed}
+
+\newenvironment{ideabox}
+{\def\FrameCommand{\hspace{0em}{\color{red}\vrule width 0.5pt} \hspace{1em}}\MakeFramed {\advance\hsize-\width \FrameRestore}}
+{\endMakeFramed}
+
+\newcommand{\draft}[1]{\textcolor{gray}{\textit{#1}}}
+
+% 'todo' command to mark notes to self
+\newcommand{\todo}[1]{%
+\addcontentsline{lot}{table}{#1}%
+\textcolor{red}{#1}}
+
+% idea command to indicate a proposed idea
+\newcommand{\idea}[1]{\begin{ideabox}\faLightbulb[regular] - #1\end{ideabox}}
+
