@@ -1,0 +1,148 @@
+digraph {
+    rankdir="LR"
+    compound=true
+    ranksep="1 equally"
+    node[shape=Mrecord]
+
+    
+    subgraph cluster_sources { 
+        label="Sources"
+        rank="sink"
+        
+        speech_xx[ shape = plaintext, width = 0.01 label=""];
+        ap_xx[ shape = plaintext, width = 0.01 label=""];
+        modeling_xx[ shape = plaintext, width = 0.01 label=""];
+        modeling_xxx[ shape=plaintext, label=""];
+        
+        speech_xx -> speech_rnw[style=invis]
+        ap_xx -> ap_docs[style=invis]
+        modeling_xxx -> modeling_xx[style=invis]
+        modeling_xx -> modeling_tex[style=invis]
+        
+        subgraph cluster_speech {
+            label="Speech"
+            rank="min"
+            
+            speech_tex[label="Text|TeX"]
+            speech_rnw[label="Text|Rnw"]
+            speech_pdf[label="Figures|PDF"]
+            speech_bib[label="Cites|BibTeX"]
+            
+            
+            speech_rnw -> speech_tex [label="knitr"]
+            
+            {rank=same; speech_tex speech_pdf speech_bib}
+            
+        }
+        
+        subgraph cluster_prelims {
+            label="Modeling"
+            
+            modeling_tex[label="Text|TeX"]
+            modeling_bib[label="Cites|BibTeX"]
+            
+        }
+        
+        subgraph cluster_autopilot {
+            label="Autopilot"
+            
+            ap_tex[label="Text|TeX"]
+            ap_figs[label="Figures|PDF|SVG|TikZ"]
+            ap_docs[label="Docs|ReST|MyST"]
+            ap_wiki[label="Wiki|<f0>wikitext|<f1>RDF"]
+            ap_wiki_tex[label="Wiki|<f0>TeX|<f1>dot"]
+            ap_docs_tex[label="Docs|TeX"]
+            
+            ap_docs -> ap_docs_tex [label="Sphinx"]
+            ap_wiki:f0 -> ap_wiki_tex:f0
+            ap_wiki:f1 -> ap_wiki_tex:f1
+            
+            
+            {rank=same; ap_figs ap_docs_tex ap_tex}
+            
+        }
+        
+        subgraph cluster_infrastructure{
+            rankdir="LR"
+            label="Infrastructure"
+            
+            infra_text[label="Text|Liquid"]
+            infra_md[label="Text|Markdown"]
+            infra_tex[label="Text|TeX"]
+            infra_bib[label="Cites|BibTex"]
+            infra_figs_src[label="Figures|React|D3"]
+            infra_figs_svg[label="Figures|SVG"]
+            
+            infra_text -> infra_md
+            infra_md -> infra_tex
+            infra_figs_src -> infra_figs_svg [label="Freeze"]
+            
+            {rank=same; infra_tex infra_bib infra_figs_svg}
+        }
+        
+        
+        
+    }
+    
+    subgraph cluster_dissertation {
+        label="Compilation"
+        rankdir="TB"
+        
+        
+        dis_sections[label="<f00>TeX|<f0>Speech|<f1>Modeling|<f2>Autopilot|<f3>Infrastructure"]
+        dis_cites[label="<f00>Cites|<f0>BibTeX"]
+        dis_figs[label="<f0>Figures|<f1>PDF|<f2>SVG"]
+        dis_appendix[label="<f00>Appendices|<f0>Docs|<f1>Wiki"]
+        
+        
+        
+    }
+    
+    subgraph cluster_render{
+        label="Render"
+        
+        
+        render_pdf[label="Tectonic"]
+        render_myst[label="MyST"]
+        render_book[label="Jupyter Book"]
+        render_myst -> render_book
+    }
+    
+    subgraph cluster_output {
+        label="Output"
+        
+        output_pdf[label="PDF"]
+        output_html[label="HTML"]
+    }
+    
+    
+    modeling_tex -> dis_sections:f1
+    ap_tex -> dis_sections:f2
+    infra_tex -> dis_sections:f3
+    speech_tex -> dis_sections:f0
+    
+    speech_bib -> dis_cites:f0
+    infra_bib -> dis_cites:f0
+    modeling_bib -> dis_cites:f0
+    
+    infra_figs_svg -> dis_figs:f2
+    ap_figs -> dis_figs
+    speech_pdf -> dis_figs
+    
+    dis_sections -> render_pdf
+    dis_cites -> render_pdf
+    dis_sections -> render_myst
+    
+    dis_figs:f1 -> render_pdf
+    dis_figs:f2 -> render_myst
+    
+    ap_docs_tex -> dis_appendix:f0
+    ap_wiki_tex -> dis_appendix:f1
+    
+    
+    render_pdf -> output_pdf
+    render_book -> output_html
+    
+
+
+}
