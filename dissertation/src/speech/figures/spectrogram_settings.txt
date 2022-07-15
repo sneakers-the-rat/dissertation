@@ -1,0 +1,10 @@
+preshift:
+window (s): .01
+
+postshift:
+window (s): .001
+
+both:
+n timesteps: 1000
+n freqs    : 250
+window     : gaussian

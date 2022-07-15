@@ -1,0 +1,9 @@
+[submodule "dissertation/infrastructure"]
+	path = dissertation/infrastructure
+	url = https://github.com/sneakers-the-rat/infrastructure
+[submodule "dissertation/src/infrastructure"]
+	path = dissertation/src/infrastructure
+	url = https://github.com/sneakers-the-rat/infrastructure
+[submodule "dissertation/src/autopilot"]
+	path = dissertation/src/autopilot
+	url = https://github.com/auto-pi-lot/autopilot-paper

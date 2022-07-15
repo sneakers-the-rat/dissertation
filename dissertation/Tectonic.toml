@@ -1,0 +1,8 @@
+[doc]
+name = 'dissertation'
+bundle = 'https://data1.fullyjustified.net/tlextras-2021.3r1.tar'
+
+[[output]]
+name = 'jls_dissertation'
+type = 'pdf'
+shell_escape = true

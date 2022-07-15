@@ -1,0 +1,29 @@
+%!TEX jobname = jls_dissertation
+%!TEX output_directory = ../build/jls_dissertation
+%!TEX root = _preamble.tex
+
+\tableofcontents%
+%
+% \mainmatter%
+
+\part{Speech}
+
+\chapter{Mice Can Learn Phonetic Categories}
+
+\input{speech/manuscript/SaundersWehr_JASA2019_retypeset.tex}
+
+\chapter{Speech Modeling}
+
+\input{modeling/prelims_main.tex}
+
+\part{Autopilot}
+
+\input{autopilot/autopilot/src/autopilot.tex}
+
+\part{Infrastructure}
+
+\begin{fullwidth}
+\bibliography{bibliographies/dissertation_combined}
+\bibliographystyle{unsrtnat}
+
+\end{fullwidth}
