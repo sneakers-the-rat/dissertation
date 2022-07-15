@@ -1,0 +1,458 @@
+<svg width="936" height="854" viewBox="0 0 702 640.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="translate(2.2691092632338608,623.7433639575288) scale(0.5672773158084652)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-1074 1233.49,-1074 1233.49,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_sources</title>
+<polygon fill="none" stroke="black" points="8,-8 8,-1062 475.77,-1062 475.77,-8 8,-8"/>
+<text text-anchor="middle" x="241.89" y="-1045.4" font-family="Times,serif" font-size="14.00">Sources</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_speech</title>
+<polygon fill="none" stroke="black" points="205.11,-800 205.11,-1029 467.77,-1029 467.77,-800 205.11,-800"/>
+<text text-anchor="middle" x="336.44" y="-1012.4" font-family="Times,serif" font-size="14.00">Speech</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_prelims</title>
+<polygon fill="none" stroke="black" points="390.67,-632 390.67,-792 467.77,-792 467.77,-632 390.67,-632"/>
+<text text-anchor="middle" x="429.22" y="-775.4" font-family="Times,serif" font-size="14.00">Modeling</text>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_autopilot</title>
+<polygon fill="none" stroke="black" points="201.17,-253 201.17,-624 466.22,-624 466.22,-253 201.17,-253"/>
+<text text-anchor="middle" x="333.69" y="-607.4" font-family="Times,serif" font-size="14.00">Autopilot</text>
+</g>
+<g id="clust7" class="cluster">
+<title>cluster_infrastructure</title>
+<polygon fill="none" stroke="black" points="16,-16 16,-245 466.22,-245 466.22,-16 16,-16"/>
+<text text-anchor="middle" x="241.11" y="-228.4" font-family="Times,serif" font-size="14.00">Infrastructure</text>
+</g>
+<g id="clust9" class="cluster">
+<title>cluster_dissertation</title>
+<polygon fill="none" stroke="black" points="564.24,-283 564.24,-704 672.42,-704 672.42,-283 564.24,-283"/>
+<text text-anchor="middle" x="618.33" y="-687.4" font-family="Times,serif" font-size="14.00">Compilation</text>
+</g>
+<g id="clust10" class="cluster">
+<title>cluster_render</title>
+<polygon fill="none" stroke="black" points="766.96,-464 766.96,-597 1050.08,-597 1050.08,-464 766.96,-464"/>
+<text text-anchor="middle" x="908.52" y="-580.4" font-family="Times,serif" font-size="14.00">Render</text>
+</g>
+<g id="clust11" class="cluster">
+<title>cluster_output</title>
+<polygon fill="none" stroke="black" points="1149.83,-464 1149.83,-597 1221.49,-597 1221.49,-464 1149.83,-464"/>
+<text text-anchor="middle" x="1185.66" y="-580.4" font-family="Times,serif" font-size="14.00">Output</text>
+</g>
+<!-- speech_tex -->
+<g id="node8" class="node">
+<title>speech_tex</title>
+<path fill="none" stroke="black" d="M414.22,-946.2C414.22,-946.2 444.22,-946.2 444.22,-946.2 450.22,-946.2 456.22,-952.2 456.22,-958.2 456.22,-958.2 456.22,-983.8 456.22,-983.8 456.22,-989.8 450.22,-995.8 444.22,-995.8 444.22,-995.8 414.22,-995.8 414.22,-995.8 408.22,-995.8 402.22,-989.8 402.22,-983.8 402.22,-983.8 402.22,-958.2 402.22,-958.2 402.22,-952.2 408.22,-946.2 414.22,-946.2"/>
+<text text-anchor="middle" x="429.22" y="-979.2" font-family="Times,serif" font-size="14.00">Text</text>
+<polyline fill="none" stroke="black" points="402.22,-971 456.22,-971 "/>
+<text text-anchor="middle" x="429.22" y="-954.4" font-family="Times,serif" font-size="14.00">TeX</text>
+</g>
+<!-- dis_sections -->
+<g id="node23" class="node">
+<title>dis_sections</title>
+<path fill="none" stroke="black" d="M584.24,-547C584.24,-547 652.42,-547 652.42,-547 658.42,-547 664.42,-553 664.42,-559 664.42,-559 664.42,-659 664.42,-659 664.42,-665 658.42,-671 652.42,-671 652.42,-671 584.24,-671 584.24,-671 578.24,-671 572.24,-665 572.24,-659 572.24,-659 572.24,-559 572.24,-559 572.24,-553 578.24,-547 584.24,-547"/>
+<text text-anchor="middle" x="618.33" y="-654.4" font-family="Times,serif" font-size="14.00">TeX</text>
+<polyline fill="none" stroke="black" points="572.24,-646.2 664.42,-646.2 "/>
+<text text-anchor="middle" x="618.33" y="-629.6" font-family="Times,serif" font-size="14.00">Speech</text>
+<polyline fill="none" stroke="black" points="572.24,-621.4 664.42,-621.4 "/>
+<text text-anchor="middle" x="618.33" y="-604.8" font-family="Times,serif" font-size="14.00">Modeling</text>
+<polyline fill="none" stroke="black" points="572.24,-596.6 664.42,-596.6 "/>
+<text text-anchor="middle" x="618.33" y="-580" font-family="Times,serif" font-size="14.00">Autopilot</text>
+<polyline fill="none" stroke="black" points="572.24,-571.8 664.42,-571.8 "/>
+<text text-anchor="middle" x="618.33" y="-555.2" font-family="Times,serif" font-size="14.00">Infrastructure</text>
+</g>
+<!-- speech_tex&#45;&gt;dis_sections -->
+<g id="edge16" class="edge">
+<title>speech_tex-&gt;dis_sections:f0</title>
+<path fill="none" stroke="black" d="M456.35,-955.21C463.46,-949.86 470.62,-943.35 475.77,-936 554.49,-823.62 436.81,-643.43 561.12,-634.36"/>
+<polygon fill="black" stroke="black" points="561.46,-637.85 571.33,-634 561.21,-630.85 561.46,-637.85"/>
+</g>
+<!-- speech_rnw --><g id="node2" class="node">
+<title>ap_xx</title>
+</g>
+<g id="node5" class="node">
+<title>speech_rnw</title>
+<path fill="none" stroke="black" d="M225.11,-946.2C225.11,-946.2 255.11,-946.2 255.11,-946.2 261.11,-946.2 267.11,-952.2 267.11,-958.2 267.11,-958.2 267.11,-983.8 267.11,-983.8 267.11,-989.8 261.11,-995.8 255.11,-995.8 255.11,-995.8 225.11,-995.8 225.11,-995.8 219.11,-995.8 213.11,-989.8 213.11,-983.8 213.11,-983.8 213.11,-958.2 213.11,-958.2 213.11,-952.2 219.11,-946.2 225.11,-946.2"/>
+<text text-anchor="middle" x="240.11" y="-979.2" font-family="Times,serif" font-size="14.00">Text</text>
+<polyline fill="none" stroke="black" points="213.11,-971 267.11,-971 "/>
+<text text-anchor="middle" x="240.11" y="-954.4" font-family="Times,serif" font-size="14.00">Rnw</text>
+</g>
+<!-- speech_rnw&#45;&gt;speech_tex --><g id="node3" class="node">
+<title>modeling_xx</title>
+</g>
+<g id="edge5" class="edge">
+<title>speech_rnw-&gt;speech_tex</title>
+<path fill="none" stroke="black" d="M267.13,-971C299.57,-971 355.22,-971 391.87,-971"/>
+<polygon fill="black" stroke="black" points="392.12,-974.5 402.12,-971 392.12,-967.5 392.12,-974.5"/>
+<text text-anchor="middle" x="334.67" y="-975.2" font-family="Times,serif" font-size="14.00">knitr</text>
+</g>
+<!-- speech_pdf -->
+<g id="node9" class="node">
+<title>speech_pdf</title>
+<path fill="none" stroke="black" d="M412.22,-877.2C412.22,-877.2 446.22,-877.2 446.22,-877.2 452.22,-877.2 458.22,-883.2 458.22,-889.2 458.22,-889.2 458.22,-914.8 458.22,-914.8 458.22,-920.8 452.22,-926.8 446.22,-926.8 446.22,-926.8 412.22,-926.8 412.22,-926.8 406.22,-926.8 400.22,-920.8 400.22,-914.8 400.22,-914.8 400.22,-889.2 400.22,-889.2 400.22,-883.2 406.22,-877.2 412.22,-877.2"/>
+<text text-anchor="middle" x="429.22" y="-910.2" font-family="Times,serif" font-size="14.00">Figures</text>
+<polyline fill="none" stroke="black" points="400.22,-902 458.22,-902 "/>
+<text text-anchor="middle" x="429.22" y="-885.4" font-family="Times,serif" font-size="14.00">PDF</text>
+</g>
+<!-- dis_figs -->
+<g id="node25" class="node">
+<title>dis_figs</title>
+<path fill="none" stroke="black" d="M601.33,-453.8C601.33,-453.8 635.33,-453.8 635.33,-453.8 641.33,-453.8 647.33,-459.8 647.33,-465.8 647.33,-465.8 647.33,-516.2 647.33,-516.2 647.33,-522.2 641.33,-528.2 635.33,-528.2 635.33,-528.2 601.33,-528.2 601.33,-528.2 595.33,-528.2 589.33,-522.2 589.33,-516.2 589.33,-516.2 589.33,-465.8 589.33,-465.8 589.33,-459.8 595.33,-453.8 601.33,-453.8"/>
+<text text-anchor="middle" x="618.33" y="-511.6" font-family="Times,serif" font-size="14.00">Figures</text>
+<polyline fill="none" stroke="black" points="589.33,-503.4 647.33,-503.4 "/>
+<text text-anchor="middle" x="618.33" y="-486.8" font-family="Times,serif" font-size="14.00">PDF</text>
+<polyline fill="none" stroke="black" points="589.33,-478.6 647.33,-478.6 "/>
+<text text-anchor="middle" x="618.33" y="-462" font-family="Times,serif" font-size="14.00">SVG</text>
+</g>
+<!-- speech_pdf&#45;&gt;dis_figs -->
+<g id="edge22" class="edge">
+<title>speech_pdf-&gt;dis_figs</title>
+<path fill="none" stroke="black" d="M458.23,-885.43C464.87,-880.29 471.31,-874.09 475.77,-867 556.44,-738.86 477.41,-662.05 564.24,-538 569.16,-530.97 575.34,-524.28 581.73,-518.27"/>
+<polygon fill="black" stroke="black" points="584.13,-520.82 589.26,-511.55 579.47,-515.6 584.13,-520.82"/>
+</g>
+<!-- speech_bib --><g id="node4" class="node">
+<title>modeling_xxx</title>
+</g>
+<g id="node10" class="node">
+<title>speech_bib</title>
+<path fill="none" stroke="black" d="M410.67,-808.2C410.67,-808.2 447.77,-808.2 447.77,-808.2 453.77,-808.2 459.77,-814.2 459.77,-820.2 459.77,-820.2 459.77,-845.8 459.77,-845.8 459.77,-851.8 453.77,-857.8 447.77,-857.8 447.77,-857.8 410.67,-857.8 410.67,-857.8 404.67,-857.8 398.67,-851.8 398.67,-845.8 398.67,-845.8 398.67,-820.2 398.67,-820.2 398.67,-814.2 404.67,-808.2 410.67,-808.2"/>
+<text text-anchor="middle" x="429.22" y="-841.2" font-family="Times,serif" font-size="14.00">Cites</text>
+<polyline fill="none" stroke="black" points="398.67,-833 459.77,-833 "/>
+<text text-anchor="middle" x="429.22" y="-816.4" font-family="Times,serif" font-size="14.00">BibTeX</text>
+</g>
+<!-- dis_cites -->
+<g id="node24" class="node">
+<title>dis_cites</title>
+<path fill="none" stroke="black" d="M599.78,-385.2C599.78,-385.2 636.88,-385.2 636.88,-385.2 642.88,-385.2 648.88,-391.2 648.88,-397.2 648.88,-397.2 648.88,-422.8 648.88,-422.8 648.88,-428.8 642.88,-434.8 636.88,-434.8 636.88,-434.8 599.78,-434.8 599.78,-434.8 593.78,-434.8 587.78,-428.8 587.78,-422.8 587.78,-422.8 587.78,-397.2 587.78,-397.2 587.78,-391.2 593.78,-385.2 599.78,-385.2"/>
+<text text-anchor="middle" x="618.33" y="-418.2" font-family="Times,serif" font-size="14.00">Cites</text>
+<polyline fill="none" stroke="black" points="587.78,-410 648.88,-410 "/>
+<text text-anchor="middle" x="618.33" y="-393.4" font-family="Times,serif" font-size="14.00">BibTeX</text>
+</g>
+<!-- speech_bib&#45;&gt;dis_cites -->
+<g id="edge17" class="edge">
+<title>speech_bib-&gt;dis_cites:f0</title>
+<path fill="none" stroke="black" d="M459.94,-813.53C465.91,-808.44 471.61,-802.53 475.77,-796 572.56,-644.13 409.19,-407.23 576.23,-398.26"/>
+<polygon fill="black" stroke="black" points="576.43,-401.76 586.33,-398 576.24,-394.76 576.43,-401.76"/>
+</g>
+<!-- modeling_tex -->
+<g id="node7" class="node">
+<title>modeling_tex</title>
+<path fill="none" stroke="black" d="M414.22,-709.2C414.22,-709.2 444.22,-709.2 444.22,-709.2 450.22,-709.2 456.22,-715.2 456.22,-721.2 456.22,-721.2 456.22,-746.8 456.22,-746.8 456.22,-752.8 450.22,-758.8 444.22,-758.8 444.22,-758.8 414.22,-758.8 414.22,-758.8 408.22,-758.8 402.22,-752.8 402.22,-746.8 402.22,-746.8 402.22,-721.2 402.22,-721.2 402.22,-715.2 408.22,-709.2 414.22,-709.2"/>
+<text text-anchor="middle" x="429.22" y="-742.2" font-family="Times,serif" font-size="14.00">Text</text>
+<polyline fill="none" stroke="black" points="402.22,-734 456.22,-734 "/>
+<text text-anchor="middle" x="429.22" y="-717.4" font-family="Times,serif" font-size="14.00">TeX</text>
+</g><g id="node1" class="node">
+<title>speech_xx</title>
+</g>
+<!-- modeling_tex&#45;&gt;dis_sections -->
+<g id="edge13" class="edge">
+<title>modeling_tex-&gt;dis_sections:f1</title>
+<path fill="none" stroke="black" d="M456.59,-714.45C462.97,-709.53 469.7,-704.17 475.77,-699 517.42,-663.54 513.69,-615.47 561.13,-609.6"/>
+<polygon fill="black" stroke="black" points="561.55,-613.08 571.33,-609 561.14,-606.09 561.55,-613.08"/>
+</g>
+<!-- modeling_bib -->
+<g id="node11" class="node">
+<title>modeling_bib</title>
+<path fill="none" stroke="black" d="M410.67,-640.2C410.67,-640.2 447.77,-640.2 447.77,-640.2 453.77,-640.2 459.77,-646.2 459.77,-652.2 459.77,-652.2 459.77,-677.8 459.77,-677.8 459.77,-683.8 453.77,-689.8 447.77,-689.8 447.77,-689.8 410.67,-689.8 410.67,-689.8 404.67,-689.8 398.67,-683.8 398.67,-677.8 398.67,-677.8 398.67,-652.2 398.67,-652.2 398.67,-646.2 404.67,-640.2 410.67,-640.2"/>
+<text text-anchor="middle" x="429.22" y="-673.2" font-family="Times,serif" font-size="14.00">Cites</text>
+<polyline fill="none" stroke="black" points="398.67,-665 459.77,-665 "/>
+<text text-anchor="middle" x="429.22" y="-648.4" font-family="Times,serif" font-size="14.00">BibTeX</text>
+</g>
+<!-- modeling_bib&#45;&gt;dis_cites -->
+<g id="edge19" class="edge">
+<title>modeling_bib-&gt;dis_cites:f0</title>
+<path fill="none" stroke="black" d="M460.07,-645.62C466.03,-640.52 471.7,-634.59 475.77,-628 526.99,-545.12 455.43,-483.92 523.28,-414 540.89,-395.84 553.82,-397.21 576.15,-397.84"/>
+<polygon fill="black" stroke="black" points="576.28,-401.34 586.33,-398 576.39,-394.34 576.28,-401.34"/>
+</g>
+<!-- ap_tex -->
+<g id="node12" class="node">
+<title>ap_tex</title>
+<path fill="none" stroke="black" d="M414.22,-541.2C414.22,-541.2 444.22,-541.2 444.22,-541.2 450.22,-541.2 456.22,-547.2 456.22,-553.2 456.22,-553.2 456.22,-578.8 456.22,-578.8 456.22,-584.8 450.22,-590.8 444.22,-590.8 444.22,-590.8 414.22,-590.8 414.22,-590.8 408.22,-590.8 402.22,-584.8 402.22,-578.8 402.22,-578.8 402.22,-553.2 402.22,-553.2 402.22,-547.2 408.22,-541.2 414.22,-541.2"/>
+<text text-anchor="middle" x="429.22" y="-574.2" font-family="Times,serif" font-size="14.00">Text</text>
+<polyline fill="none" stroke="black" points="402.22,-566 456.22,-566 "/>
+<text text-anchor="middle" x="429.22" y="-549.4" font-family="Times,serif" font-size="14.00">TeX</text>
+</g>
+<!-- ap_tex&#45;&gt;dis_sections -->
+<g id="edge14" class="edge">
+<title>ap_tex-&gt;dis_sections:f2</title>
+<path fill="none" stroke="black" d="M456.36,-571.35C482.28,-576.22 523.47,-582.81 561.29,-583.86"/>
+<polygon fill="black" stroke="black" points="561.28,-587.36 571.33,-584 561.38,-580.36 561.28,-587.36"/>
+</g>
+<!-- ap_figs -->
+<g id="node13" class="node">
+<title>ap_figs</title>
+<path fill="none" stroke="black" d="M412.22,-423.4C412.22,-423.4 446.22,-423.4 446.22,-423.4 452.22,-423.4 458.22,-429.4 458.22,-435.4 458.22,-435.4 458.22,-510.6 458.22,-510.6 458.22,-516.6 452.22,-522.6 446.22,-522.6 446.22,-522.6 412.22,-522.6 412.22,-522.6 406.22,-522.6 400.22,-516.6 400.22,-510.6 400.22,-510.6 400.22,-435.4 400.22,-435.4 400.22,-429.4 406.22,-423.4 412.22,-423.4"/>
+<text text-anchor="middle" x="429.22" y="-506" font-family="Times,serif" font-size="14.00">Figures</text>
+<polyline fill="none" stroke="black" points="400.22,-497.8 458.22,-497.8 "/>
+<text text-anchor="middle" x="429.22" y="-481.2" font-family="Times,serif" font-size="14.00">PDF</text>
+<polyline fill="none" stroke="black" points="400.22,-473 458.22,-473 "/>
+<text text-anchor="middle" x="429.22" y="-456.4" font-family="Times,serif" font-size="14.00">SVG</text>
+<polyline fill="none" stroke="black" points="400.22,-448.2 458.22,-448.2 "/>
+<text text-anchor="middle" x="429.22" y="-431.6" font-family="Times,serif" font-size="14.00">TikZ</text>
+</g>
+<!-- ap_figs&#45;&gt;dis_figs -->
+<g id="edge21" class="edge">
+<title>ap_figs-&gt;dis_figs</title>
+<path fill="none" stroke="black" d="M458.23,-475.69C490.34,-478.78 543.14,-483.86 579.03,-487.32"/>
+<polygon fill="black" stroke="black" points="578.84,-490.81 589.13,-488.29 579.51,-483.85 578.84,-490.81"/>
+</g>
+<!-- ap_docs -->
+<g id="node6" class="node">
+<title>ap_docs</title>
+<path fill="none" stroke="black" d="M225.11,-354.8C225.11,-354.8 255.11,-354.8 255.11,-354.8 261.11,-354.8 267.11,-360.8 267.11,-366.8 267.11,-366.8 267.11,-417.2 267.11,-417.2 267.11,-423.2 261.11,-429.2 255.11,-429.2 255.11,-429.2 225.11,-429.2 225.11,-429.2 219.11,-429.2 213.11,-423.2 213.11,-417.2 213.11,-417.2 213.11,-366.8 213.11,-366.8 213.11,-360.8 219.11,-354.8 225.11,-354.8"/>
+<text text-anchor="middle" x="240.11" y="-412.6" font-family="Times,serif" font-size="14.00">Docs</text>
+<polyline fill="none" stroke="black" points="213.11,-404.4 267.11,-404.4 "/>
+<text text-anchor="middle" x="240.11" y="-387.8" font-family="Times,serif" font-size="14.00">ReST</text>
+<polyline fill="none" stroke="black" points="213.11,-379.6 267.11,-379.6 "/>
+<text text-anchor="middle" x="240.11" y="-363" font-family="Times,serif" font-size="14.00">MyST</text>
+</g>
+<!-- ap_docs_tex -->
+<g id="node16" class="node">
+<title>ap_docs_tex</title>
+<path fill="none" stroke="black" d="M414.22,-355.2C414.22,-355.2 444.22,-355.2 444.22,-355.2 450.22,-355.2 456.22,-361.2 456.22,-367.2 456.22,-367.2 456.22,-392.8 456.22,-392.8 456.22,-398.8 450.22,-404.8 444.22,-404.8 444.22,-404.8 414.22,-404.8 414.22,-404.8 408.22,-404.8 402.22,-398.8 402.22,-392.8 402.22,-392.8 402.22,-367.2 402.22,-367.2 402.22,-361.2 408.22,-355.2 414.22,-355.2"/>
+<text text-anchor="middle" x="429.22" y="-388.2" font-family="Times,serif" font-size="14.00">Docs</text>
+<polyline fill="none" stroke="black" points="402.22,-380 456.22,-380 "/>
+<text text-anchor="middle" x="429.22" y="-363.4" font-family="Times,serif" font-size="14.00">TeX</text>
+</g>
+<!-- ap_docs&#45;&gt;ap_docs_tex -->
+<g id="edge6" class="edge">
+<title>ap_docs-&gt;ap_docs_tex</title>
+<path fill="none" stroke="black" d="M267.24,-386.34C281.27,-383.58 298.91,-380.57 314.83,-379.2 340.57,-376.98 369.71,-377.25 392.01,-378.03"/>
+<polygon fill="black" stroke="black" points="391.91,-381.53 402.04,-378.44 392.19,-374.54 391.91,-381.53"/>
+<text text-anchor="middle" x="334.67" y="-383.2" font-family="Times,serif" font-size="14.00">Sphinx</text>
+</g>
+<!-- ap_wiki -->
+<g id="node14" class="node">
+<title>ap_wiki</title>
+<path fill="none" stroke="black" d="M221.17,-261.8C221.17,-261.8 259.05,-261.8 259.05,-261.8 265.05,-261.8 271.05,-267.8 271.05,-273.8 271.05,-273.8 271.05,-324.2 271.05,-324.2 271.05,-330.2 265.05,-336.2 259.05,-336.2 259.05,-336.2 221.17,-336.2 221.17,-336.2 215.17,-336.2 209.17,-330.2 209.17,-324.2 209.17,-324.2 209.17,-273.8 209.17,-273.8 209.17,-267.8 215.17,-261.8 221.17,-261.8"/>
+<text text-anchor="middle" x="240.11" y="-319.6" font-family="Times,serif" font-size="14.00">Wiki</text>
+<polyline fill="none" stroke="black" points="209.17,-311.4 271.05,-311.4 "/>
+<text text-anchor="middle" x="240.11" y="-294.8" font-family="Times,serif" font-size="14.00">wikitext</text>
+<polyline fill="none" stroke="black" points="209.17,-286.6 271.05,-286.6 "/>
+<text text-anchor="middle" x="240.11" y="-270" font-family="Times,serif" font-size="14.00">RDF</text>
+</g>
+<!-- ap_wiki_tex -->
+<g id="node15" class="node">
+<title>ap_wiki_tex</title>
+<path fill="none" stroke="black" d="M414.22,-261.8C414.22,-261.8 444.22,-261.8 444.22,-261.8 450.22,-261.8 456.22,-267.8 456.22,-273.8 456.22,-273.8 456.22,-324.2 456.22,-324.2 456.22,-330.2 450.22,-336.2 444.22,-336.2 444.22,-336.2 414.22,-336.2 414.22,-336.2 408.22,-336.2 402.22,-330.2 402.22,-324.2 402.22,-324.2 402.22,-273.8 402.22,-273.8 402.22,-267.8 408.22,-261.8 414.22,-261.8"/>
+<text text-anchor="middle" x="429.22" y="-319.6" font-family="Times,serif" font-size="14.00">Wiki</text>
+<polyline fill="none" stroke="black" points="402.22,-311.4 456.22,-311.4 "/>
+<text text-anchor="middle" x="429.22" y="-294.8" font-family="Times,serif" font-size="14.00">TeX</text>
+<polyline fill="none" stroke="black" points="402.22,-286.6 456.22,-286.6 "/>
+<text text-anchor="middle" x="429.22" y="-270" font-family="Times,serif" font-size="14.00">dot</text>
+</g>
+<!-- ap_wiki&#45;&gt;ap_wiki_tex -->
+<g id="edge7" class="edge">
+<title>ap_wiki:f0-&gt;ap_wiki_tex:f0</title>
+<path fill="none" stroke="black" d="M272.11,-299C325.91,-299 341.88,-299 390.94,-299"/>
+<polygon fill="black" stroke="black" points="391.22,-302.5 401.22,-299 391.22,-295.5 391.22,-302.5"/>
+</g>
+<!-- ap_wiki&#45;&gt;ap_wiki_tex -->
+<g id="edge8" class="edge">
+<title>ap_wiki:f1-&gt;ap_wiki_tex:f1</title>
+<path fill="none" stroke="black" d="M272.11,-274C325.91,-274 341.88,-274 390.94,-274"/>
+<polygon fill="black" stroke="black" points="391.22,-277.5 401.22,-274 391.22,-270.5 391.22,-277.5"/>
+</g>
+<!-- dis_appendix -->
+<g id="node26" class="node">
+<title>dis_appendix</title>
+<path fill="none" stroke="black" d="M589.29,-291.8C589.29,-291.8 647.38,-291.8 647.38,-291.8 653.38,-291.8 659.38,-297.8 659.38,-303.8 659.38,-303.8 659.38,-354.2 659.38,-354.2 659.38,-360.2 653.38,-366.2 647.38,-366.2 647.38,-366.2 589.29,-366.2 589.29,-366.2 583.29,-366.2 577.29,-360.2 577.29,-354.2 577.29,-354.2 577.29,-303.8 577.29,-303.8 577.29,-297.8 583.29,-291.8 589.29,-291.8"/>
+<text text-anchor="middle" x="618.33" y="-349.6" font-family="Times,serif" font-size="14.00">Appendices</text>
+<polyline fill="none" stroke="black" points="577.29,-341.4 659.38,-341.4 "/>
+<text text-anchor="middle" x="618.33" y="-324.8" font-family="Times,serif" font-size="14.00">Docs</text>
+<polyline fill="none" stroke="black" points="577.29,-316.6 659.38,-316.6 "/>
+<text text-anchor="middle" x="618.33" y="-300" font-family="Times,serif" font-size="14.00">Wiki</text>
+</g>
+<!-- ap_wiki_tex&#45;&gt;dis_appendix -->
+<g id="edge29" class="edge">
+<title>ap_wiki_tex-&gt;dis_appendix:f1</title>
+<path fill="none" stroke="black" d="M456.34,-300.43C483.23,-301.79 526.64,-303.67 566.12,-303.96"/>
+<polygon fill="black" stroke="black" points="566.32,-307.46 576.33,-304 566.34,-300.46 566.32,-307.46"/>
+</g>
+<!-- ap_docs_tex&#45;&gt;dis_appendix -->
+<g id="edge28" class="edge">
+<title>ap_docs_tex-&gt;dis_appendix:f0</title>
+<path fill="none" stroke="black" d="M456.46,-364.84C482.81,-350.95 525.29,-332.14 566.24,-329.35"/>
+<polygon fill="black" stroke="black" points="566.46,-332.85 576.33,-329 566.22,-325.85 566.46,-332.85"/>
+</g>
+<!-- infra_text -->
+<g id="node17" class="node">
+<title>infra_text</title>
+<path fill="none" stroke="black" d="M36,-162.2C36,-162.2 66,-162.2 66,-162.2 72,-162.2 78,-168.2 78,-174.2 78,-174.2 78,-199.8 78,-199.8 78,-205.8 72,-211.8 66,-211.8 66,-211.8 36,-211.8 36,-211.8 30,-211.8 24,-205.8 24,-199.8 24,-199.8 24,-174.2 24,-174.2 24,-168.2 30,-162.2 36,-162.2"/>
+<text text-anchor="middle" x="51" y="-195.2" font-family="Times,serif" font-size="14.00">Text</text>
+<polyline fill="none" stroke="black" points="24,-187 78,-187 "/>
+<text text-anchor="middle" x="51" y="-170.4" font-family="Times,serif" font-size="14.00">Liquid</text>
+</g>
+<!-- infra_md -->
+<g id="node18" class="node">
+<title>infra_md</title>
+<path fill="none" stroke="black" d="M213.39,-162.2C213.39,-162.2 266.83,-162.2 266.83,-162.2 272.83,-162.2 278.83,-168.2 278.83,-174.2 278.83,-174.2 278.83,-199.8 278.83,-199.8 278.83,-205.8 272.83,-211.8 266.83,-211.8 266.83,-211.8 213.39,-211.8 213.39,-211.8 207.39,-211.8 201.39,-205.8 201.39,-199.8 201.39,-199.8 201.39,-174.2 201.39,-174.2 201.39,-168.2 207.39,-162.2 213.39,-162.2"/>
+<text text-anchor="middle" x="240.11" y="-195.2" font-family="Times,serif" font-size="14.00">Text</text>
+<polyline fill="none" stroke="black" points="201.39,-187 278.83,-187 "/>
+<text text-anchor="middle" x="240.11" y="-170.4" font-family="Times,serif" font-size="14.00">Markdown</text>
+</g>
+<!-- infra_text&#45;&gt;infra_md -->
+<g id="edge9" class="edge">
+<title>infra_text-&gt;infra_md</title>
+<path fill="none" stroke="black" d="M78.02,-187C107.17,-187 155.06,-187 191.07,-187"/>
+<polygon fill="black" stroke="black" points="191.35,-190.5 201.35,-187 191.35,-183.5 191.35,-190.5"/>
+</g>
+<!-- infra_tex -->
+<g id="node19" class="node">
+<title>infra_tex</title>
+<path fill="none" stroke="black" d="M414.22,-162.2C414.22,-162.2 444.22,-162.2 444.22,-162.2 450.22,-162.2 456.22,-168.2 456.22,-174.2 456.22,-174.2 456.22,-199.8 456.22,-199.8 456.22,-205.8 450.22,-211.8 444.22,-211.8 444.22,-211.8 414.22,-211.8 414.22,-211.8 408.22,-211.8 402.22,-205.8 402.22,-199.8 402.22,-199.8 402.22,-174.2 402.22,-174.2 402.22,-168.2 408.22,-162.2 414.22,-162.2"/>
+<text text-anchor="middle" x="429.22" y="-195.2" font-family="Times,serif" font-size="14.00">Text</text>
+<polyline fill="none" stroke="black" points="402.22,-187 456.22,-187 "/>
+<text text-anchor="middle" x="429.22" y="-170.4" font-family="Times,serif" font-size="14.00">TeX</text>
+</g>
+<!-- infra_md&#45;&gt;infra_tex -->
+<g id="edge10" class="edge">
+<title>infra_md-&gt;infra_tex</title>
+<path fill="none" stroke="black" d="M278.97,-187C311.88,-187 359.24,-187 391.74,-187"/>
+<polygon fill="black" stroke="black" points="392.15,-190.5 402.15,-187 392.15,-183.5 392.15,-190.5"/>
+</g>
+<!-- infra_tex&#45;&gt;dis_sections -->
+<g id="edge15" class="edge">
+<title>infra_tex-&gt;dis_sections:f3</title>
+<path fill="none" stroke="black" d="M452.26,-212.06C460.71,-222.81 469.76,-235.89 475.77,-249 534.43,-376.84 432.36,-550.29 561.22,-558.68"/>
+<polygon fill="black" stroke="black" points="561.23,-562.19 571.33,-559 561.45,-555.19 561.23,-562.19"/>
+</g>
+<!-- infra_bib -->
+<g id="node20" class="node">
+<title>infra_bib</title>
+<path fill="none" stroke="black" d="M412.22,-24.2C412.22,-24.2 446.22,-24.2 446.22,-24.2 452.22,-24.2 458.22,-30.2 458.22,-36.2 458.22,-36.2 458.22,-61.8 458.22,-61.8 458.22,-67.8 452.22,-73.8 446.22,-73.8 446.22,-73.8 412.22,-73.8 412.22,-73.8 406.22,-73.8 400.22,-67.8 400.22,-61.8 400.22,-61.8 400.22,-36.2 400.22,-36.2 400.22,-30.2 406.22,-24.2 412.22,-24.2"/>
+<text text-anchor="middle" x="429.22" y="-57.2" font-family="Times,serif" font-size="14.00">Cites</text>
+<polyline fill="none" stroke="black" points="400.22,-49 458.22,-49 "/>
+<text text-anchor="middle" x="429.22" y="-32.4" font-family="Times,serif" font-size="14.00">BibTex</text>
+</g>
+<!-- infra_bib&#45;&gt;dis_cites -->
+<g id="edge18" class="edge">
+<title>infra_bib-&gt;dis_cites:f0</title>
+<path fill="none" stroke="black" d="M458.3,-66.2C464.78,-71.26 471.12,-77.27 475.77,-84 557.86,-202.73 444.19,-388.65 575.97,-397.66"/>
+<polygon fill="black" stroke="black" points="576.22,-401.17 586.33,-398 576.45,-394.17 576.22,-401.17"/>
+</g>
+<!-- infra_figs_src -->
+<g id="node21" class="node">
+<title>infra_figs_src</title>
+<path fill="none" stroke="black" d="M223.11,-68.8C223.11,-68.8 257.11,-68.8 257.11,-68.8 263.11,-68.8 269.11,-74.8 269.11,-80.8 269.11,-80.8 269.11,-131.2 269.11,-131.2 269.11,-137.2 263.11,-143.2 257.11,-143.2 257.11,-143.2 223.11,-143.2 223.11,-143.2 217.11,-143.2 211.11,-137.2 211.11,-131.2 211.11,-131.2 211.11,-80.8 211.11,-80.8 211.11,-74.8 217.11,-68.8 223.11,-68.8"/>
+<text text-anchor="middle" x="240.11" y="-126.6" font-family="Times,serif" font-size="14.00">Figures</text>
+<polyline fill="none" stroke="black" points="211.11,-118.4 269.11,-118.4 "/>
+<text text-anchor="middle" x="240.11" y="-101.8" font-family="Times,serif" font-size="14.00">React</text>
+<polyline fill="none" stroke="black" points="211.11,-93.6 269.11,-93.6 "/>
+<text text-anchor="middle" x="240.11" y="-77" font-family="Times,serif" font-size="14.00">D3</text>
+</g>
+<!-- infra_figs_svg -->
+<g id="node22" class="node">
+<title>infra_figs_svg</title>
+<path fill="none" stroke="black" d="M412.22,-93.2C412.22,-93.2 446.22,-93.2 446.22,-93.2 452.22,-93.2 458.22,-99.2 458.22,-105.2 458.22,-105.2 458.22,-130.8 458.22,-130.8 458.22,-136.8 452.22,-142.8 446.22,-142.8 446.22,-142.8 412.22,-142.8 412.22,-142.8 406.22,-142.8 400.22,-136.8 400.22,-130.8 400.22,-130.8 400.22,-105.2 400.22,-105.2 400.22,-99.2 406.22,-93.2 412.22,-93.2"/>
+<text text-anchor="middle" x="429.22" y="-126.2" font-family="Times,serif" font-size="14.00">Figures</text>
+<polyline fill="none" stroke="black" points="400.22,-118 458.22,-118 "/>
+<text text-anchor="middle" x="429.22" y="-101.4" font-family="Times,serif" font-size="14.00">SVG</text>
+</g>
+<!-- infra_figs_src&#45;&gt;infra_figs_svg -->
+<g id="edge11" class="edge">
+<title>infra_figs_src-&gt;infra_figs_svg</title>
+<path fill="none" stroke="black" d="M269.12,-107.8C301.23,-109.86 354.03,-113.24 389.92,-115.54"/>
+<polygon fill="black" stroke="black" points="389.81,-119.04 400.02,-116.19 390.26,-112.06 389.81,-119.04"/>
+<text text-anchor="middle" x="334.67" y="-118.2" font-family="Times,serif" font-size="14.00">Freeze</text>
+</g>
+<!-- infra_figs_svg&#45;&gt;dis_figs -->
+<g id="edge20" class="edge">
+<title>infra_figs_svg-&gt;dis_figs:f2</title>
+<path fill="none" stroke="black" d="M458.27,-134.54C464.91,-139.68 471.34,-145.89 475.77,-153 552.13,-275.35 445.93,-456.88 577.96,-465.67"/>
+<polygon fill="black" stroke="black" points="578.22,-469.18 588.33,-466 578.45,-462.18 578.22,-469.18"/>
+</g>
+<!-- render_pdf -->
+<g id="node27" class="node">
+<title>render_pdf</title>
+<path fill="none" stroke="black" d="M786.96,-473C786.96,-473 827.93,-473 827.93,-473 833.93,-473 839.93,-479 839.93,-485 839.93,-485 839.93,-497 839.93,-497 839.93,-503 833.93,-509 827.93,-509 827.93,-509 786.96,-509 786.96,-509 780.96,-509 774.96,-503 774.96,-497 774.96,-497 774.96,-485 774.96,-485 774.96,-479 780.96,-473 786.96,-473"/>
+<text text-anchor="middle" x="807.44" y="-486.9" font-family="Times,serif" font-size="14.00">Tectonic</text>
+</g>
+<!-- dis_sections&#45;&gt;render_pdf -->
+<g id="edge23" class="edge">
+<title>dis_sections-&gt;render_pdf</title>
+<path fill="none" stroke="black" d="M664.63,-580.44C696.72,-560.2 739.24,-533.38 769.33,-514.41"/>
+<polygon fill="black" stroke="black" points="771.26,-517.32 777.85,-509.03 767.53,-511.4 771.26,-517.32"/>
+</g>
+<!-- render_myst -->
+<g id="node28" class="node">
+<title>render_myst</title>
+<path fill="none" stroke="black" d="M792.44,-528C792.44,-528 822.44,-528 822.44,-528 828.44,-528 834.44,-534 834.44,-540 834.44,-540 834.44,-552 834.44,-552 834.44,-558 828.44,-564 822.44,-564 822.44,-564 792.44,-564 792.44,-564 786.44,-564 780.44,-558 780.44,-552 780.44,-552 780.44,-540 780.44,-540 780.44,-534 786.44,-528 792.44,-528"/>
+<text text-anchor="middle" x="807.44" y="-541.9" font-family="Times,serif" font-size="14.00">MyST</text>
+</g>
+<!-- dis_sections&#45;&gt;render_myst -->
+<g id="edge25" class="edge">
+<title>dis_sections-&gt;render_myst</title>
+<path fill="none" stroke="black" d="M664.63,-593.75C697.18,-582.79 740.46,-568.21 770.62,-558.06"/>
+<polygon fill="black" stroke="black" points="771.94,-561.31 780.3,-554.8 769.71,-554.67 771.94,-561.31"/>
+</g>
+<!-- dis_cites&#45;&gt;render_pdf -->
+<g id="edge24" class="edge">
+<title>dis_cites-&gt;render_pdf</title>
+<path fill="none" stroke="black" d="M648.98,-422.83C680.34,-436.41 730.07,-457.94 765.24,-473.16"/>
+<polygon fill="black" stroke="black" points="764.18,-476.52 774.74,-477.28 766.96,-470.09 764.18,-476.52"/>
+</g>
+<!-- dis_figs&#45;&gt;render_pdf -->
+<g id="edge26" class="edge">
+<title>dis_figs:f1-&gt;render_pdf</title>
+<path fill="none" stroke="black" d="M648.33,-491C687.79,-491 732.79,-491 764.66,-491"/>
+<polygon fill="black" stroke="black" points="764.94,-494.5 774.94,-491 764.94,-487.5 764.94,-494.5"/>
+</g>
+<!-- dis_figs&#45;&gt;render_myst -->
+<g id="edge27" class="edge">
+<title>dis_figs:f2-&gt;render_myst</title>
+<path fill="none" stroke="black" d="M648.33,-466C681.66,-466 682.81,-489.64 712.39,-505 731.19,-514.77 752.83,-524.31 770.61,-531.73"/>
+<polygon fill="black" stroke="black" points="769.47,-535.04 780.05,-535.62 772.14,-528.57 769.47,-535.04"/>
+</g>
+<!-- output_pdf -->
+<g id="node30" class="node">
+<title>output_pdf</title>
+<path fill="none" stroke="black" d="M1170.66,-473C1170.66,-473 1200.66,-473 1200.66,-473 1206.66,-473 1212.66,-479 1212.66,-485 1212.66,-485 1212.66,-497 1212.66,-497 1212.66,-503 1206.66,-509 1200.66,-509 1200.66,-509 1170.66,-509 1170.66,-509 1164.66,-509 1158.66,-503 1158.66,-497 1158.66,-497 1158.66,-485 1158.66,-485 1158.66,-479 1164.66,-473 1170.66,-473"/>
+<text text-anchor="middle" x="1185.66" y="-486.9" font-family="Times,serif" font-size="14.00">PDF</text>
+</g>
+<!-- render_pdf&#45;&gt;output_pdf -->
+<g id="edge30" class="edge">
+<title>render_pdf-&gt;output_pdf</title>
+<path fill="none" stroke="black" d="M840.19,-491C909.59,-491 1074.44,-491 1148.06,-491"/>
+<polygon fill="black" stroke="black" points="1148.24,-494.5 1158.24,-491 1148.24,-487.5 1148.24,-494.5"/>
+</g>
+<!-- render_book -->
+<!-- render_book -->
+<g id="node29" class="node">
+<title>render_book</title>
+<path fill="none" stroke="black" d="M963.03,-528C963.03,-528 1030.08,-528 1030.08,-528 1036.08,-528 1042.08,-534 1042.08,-540 1042.08,-540 1042.08,-552 1042.08,-552 1042.08,-558 1036.08,-564 1030.08,-564 1030.08,-564 963.03,-564 963.03,-564 957.03,-564 951.03,-558 951.03,-552 951.03,-552 951.03,-540 951.03,-540 951.03,-534 957.03,-528 963.03,-528"/>
+<text text-anchor="middle" x="996.55" y="-541.9" font-family="Times,serif" font-size="14.00">Jupyter Book</text>
+</g>
+<!-- render_myst&#45;&gt;render_book -->
+<g id="edge12" class="edge">
+<title>render_myst-&gt;render_book</title>
+<path fill="none" stroke="black" d="M834.46,-546C861.79,-546 905.57,-546 940.6,-546"/>
+<polygon fill="black" stroke="black" points="940.7,-549.5 950.7,-546 940.7,-542.5 940.7,-549.5"/>
+</g>
+<g id="node31" class="node">
+<title>output_html</title>
+<path fill="none" stroke="black" d="M1169.83,-528C1169.83,-528 1201.49,-528 1201.49,-528 1207.49,-528 1213.49,-534 1213.49,-540 1213.49,-540 1213.49,-552 1213.49,-552 1213.49,-558 1207.49,-564 1201.49,-564 1201.49,-564 1169.83,-564 1169.83,-564 1163.83,-564 1157.83,-558 1157.83,-552 1157.83,-552 1157.83,-540 1157.83,-540 1157.83,-534 1163.83,-528 1169.83,-528"/>
+<text text-anchor="middle" x="1185.66" y="-541.9" font-family="Times,serif" font-size="14.00">HTML</text>
+</g><!-- cluster_dissertation -->
+
+<!-- cluster_render -->
+<!-- render_book&#45;&gt;output_html -->
+<!-- render_book&#45;&gt;output_html -->
+<!-- render_book&#45;&gt;output_html -->
+<!-- render_book&#45;&gt;output_html -->
+<!-- render_book&#45;&gt;output_html -->
+<!-- render_book&#45;&gt;output_html -->
+<g id="edge31" class="edge">
+<title>render_book-&gt;output_html</title>
+<path fill="none" stroke="black" d="M1042.37,-546C1074.48,-546 1117.21,-546 1147.44,-546"/>
+<polygon fill="black" stroke="black" points="1147.58,-549.5 1157.58,-546 1147.58,-542.5 1147.58,-549.5"/>
+</g>
+<!-- render_book&#45;&gt;output_html -->
+
+
+
+
+</g>
+</svg>

@@ -1,0 +1,93 @@
+!!! add andrew hoffman to acknowledgements
+
+- need to have some kind of tool-like product
+
+- phases
+	- initial funding: gamified it, unlocking different RFAs
+	- 
+
+- decisionmaking left up to the teams
+	- hackathons and etc. 
+	- then eventually more steering
+	- didn't know what was possible
+
+? what kind of folks were recruited to build this?
+	- mix of science-like folks and ontologists 
+	- monarch inititive
+		- BIOlink isn't just translator thing, it's also a monarch thing
+		- built on Open biomedical ontology
+
+- re data commons
+	- wanted to "bring it to its knees"
+	- knowledge sources that are clinical data:
+		- UNC chapel hill, cohort based, etc.
+
+- user centered working group
+	- who is the user? translational scientists, who is that?
+	- who are on the user group?
+		- PhD student from drexel, explainable AI people in a DARPA sense
+			- Hoffman, DARPA school of explainable AI
+	- actively not talking about user interface until 5 years later
+		- given to a defense contractor through contracting process
+	- started as surveying people who might be prospective users.
+		- there are answers to these questions... some focus groups... 
+		- disconnect between user centered working group and the interface group.
+
+? personalized medicine
+	- "augmenting human reasoning"
+	- university of alabama birmingham, precision medicine program
+		- matt might - son with rare disease
+	- sustaiinability committee
+		- earthcube/other cyberinfrastructure people influencing 
+		? are there explicit ethics people?
+			- but no formal ethics team. 
+		- thumbs down on ads. 
+	- licensing conditions
+		- NCATS owns it.
+
+? CoVar
+	- maybe something with RENCI overlap
+	- patrick (wrote paper on logic of domains?)
+	- Eli Lily
+		- a few calls with them to compare how their research is doing
+	- Google overlap: some people on both sides
+		- translator people believe that the google side is fucking up
+
+? Explainability:
+	- provanance about sources of evidence and reasoning steps.
+	?? is 'translatinig to knowledge' a mischaracterization? 
+	?? mixed messaging about how it's intended to be used.
+		- definitively not trying to be a question answering system.
+		- use tool to navigate complex search space.
+		- balance between existing information and novel information.
+		- internally, so much skepticism that don't think anyone would believe it's true
+		- ultimately a matter of belief about what the tool can do.
+
+- Distributed work structure
+	- do people see it as good?
+
+? Reasoners: where did the reasoning model come from?
+	- !!GoFi/Blackboard system.
+	- Came from initial rounds of hackathons
+		- first round got knowledge providers
+		- second round funded reasoning agents, but first round got upset because they were also doing reasoning.
+		- relay system came later to deal with inconsistencies in stack.
+
+
+?? Bucher (taina) work on APIs
+	- if/then
+	- book on facebook. 
+
+? Who gets to contribute data to the translator
+	- ideally it would be possible, but wasn't centered, and fell by teh wayside.
+	- chun-lai wu: scripps: biothings explorer - 
+
+?? NSF data infrastructure 
+
+?? david chapman
+phil agre https://pages.gseis.ucla.edu/faculty/agre/
+harry halpin https://www.ibiblio.org/hhalpin/homepage/cv/cv.pdf
+	- https://link.springer.com/chapter/10.1007/978-3-642-17746-0_20
+https://www.maastrichtuniversity.nl/michel.dumontier
+
+sloan - funding - funded jupyter - contact josh - darrio at chan zuckerberg (alt metrics)
