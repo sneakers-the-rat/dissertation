@@ -1,11 +1,11 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 
-\ProvidesClass{tufte-autopilot}[2015/06/30 v3.5.3 Tufte-book class]
+\ProvidesClass{tufte-dissertation}[2015/06/30 v3.5.3 Tufte-book class]
 
 %%
 % Declare we're tufte-book
 \newcommand{\@tufte@class}{book}% the base LaTeX class (defaults to the article/handout style)
-\newcommand{\@tufte@pkgname}{tufte-autopilot}% the name of the package (defaults to tufte-handout)
+\newcommand{\@tufte@pkgname}{tufte-dissertation}% the name of the package (defaults to tufte-handout)
 
 
 
@@ -128,33 +128,43 @@
 \titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
 \titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus.2ex}
 
-% \usepackage{setspace}
-% \makeatletter
-% \renewcommand{\maketitle}{
-%   \global\@topnum\z@% prevent floats from being placed at the top of the page
-%   \thispagestyle{empty}%
-%   \sffamily%
-%   \begin{fullwidth}%
-%   \begin{spacing}{0.5}
-%   \selectfont\par\noindent\Large{\textbf\thanklessauthor \href{mailto:wehr@uoregon.edu}{@}}\vspace{6pt}\\
-%   %
-%   {\normalfont\noindent\textcolor{darkgray}\footnotesize%
-%   University of Oregon\\
-%   Institute of Neuroscience, Department of Psychology\\
-%   Eugene, OR 97403, United States}
-%   % %\affils
-%   \end{spacing}
-%   \vspace{6pc}%
-%   {\sffamily%
-%   \fontsize{72}{60}\selectfont\par\noindent AUTO\textcolor{RED}{PI}LOT\vspace{6pt}\\
-% \normalfont\fontsize{20}{32}\selectfont\textit{ Automating experiments with lots of Raspberry Pis}}\\
+
+\renewcommand\thesubsubsection{\thesubsection.\@arabic\c@subsubsection}
+
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+{-3.25ex\@plus -1ex \@minus -.2ex}%
+{1.5ex \@plus .2ex}%
+{\normalfont\normalsize\bfseries}}
+
+
+\usepackage{setspace}
+\makeatletter
+\renewcommand{\maketitle}{
+  \global\@topnum\z@% prevent floats from being placed at the top of the page
+  \thispagestyle{empty}%
+  \sffamily%
+  \begin{fullwidth}%
+  \begin{spacing}{0.5}
+  \selectfont\par\noindent\Large{\textbf\thanklessauthor \href{mailto:j@nny.fyi}{@}}\vspace{6pt}\\
+  %
+  {\normalfont\noindent\textcolor{darkgray}\footnotesize%
+  University of Oregon\\
+  Institute of Neuroscience, Department of Psychology\\
+  Eugene, OR 97403, United States}
+  % %\affils
+  \end{spacing}
+  \vspace{6pc}%
+  {%\sffamily%
+  \fontsize{60}{60}\selectfont\par\noindent Swarmpunk\vspace{6pt}}\\
+  \end{fullwidth}
+{\normalfont\fontsize{20}{32}\selectfont\textit{Rough Consensus and Running Code in Brains, Machines, and Society}\\}
+{\vspace{16pt}\\\fontsize{16}{16}\thedate}
 % \makebox[0pt][l]{%
 %   \raisebox{-27.1pc}[0pt][0pt]{%
 %     \hspace{15pc}\includegraphics[width=4.25in]{figures/autopilot_logo_titlepage.pdf}}}
-%   \end{fullwidth}
-%   \normalfont
-% }
-% \makeatother
+  \normalfont
+}
+\makeatother
 
 
 \endinput

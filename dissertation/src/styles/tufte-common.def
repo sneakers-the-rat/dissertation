@@ -1665,31 +1665,13 @@
   {}% before the title body
   []% after the title body
 
+
 \titlespacing*{\chapter}{0pt}{50pt}{40pt}
 \titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
 \titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus.2ex}
 
-% Subsubsection and following section headings shouldn't be used.
-% See Bringhurst's _The Elements of Typography_, section 4.2.2.
-\renewcommand\subsubsection{%
-  \@tufte@error{\string\subsubsection is undefined by this class.
-    See Robert Bringhurst's _The Elements of
-    Typographic Style_, section 4.2.2.
-    \string\subsubsection was used}
-    {From Bringhurst's _The Elements of Typographic Style_, section 4.2.2: Use as
-    many levels of headings as you need, no more and no fewer.  Also see the many
-    related threads on Ask E.T. at http://www.edwardtufte.com/.}
-}
 
-\renewcommand\subparagraph{%
-  \@tufte@error{\string\subparagraph is undefined by this class.%
-    See Robert Bringhurst's _The Elements of
-    Typographic Style_, section 4.2.2.
-    \string\subparagraph was used}
-    {From Bringhurst's _The Elements of Typographic Style_, section 4.2.2: Use as
-    many levels of headings as you need, no more and no fewer.  Also see the many
-    related threads on Ask E.T. at http://www.edwardtufte.com/.}
-}
+
 
 
 % Formatting for main TOC (printed in front matter)
@@ -1711,7 +1693,7 @@
     [\end{fullwidth}] % after
   \titlecontents{section}% FIXME
     [0em] % distance from left margin
-    {\vspace{-12pt}\begin{fullwidth}\large\rmfamily\itshape} % above (global formatting of entry)
+    {\vspace{-12pt}\begin{fullwidth}\Huge\rmfamily\itshape} % above (global formatting of entry)
     {\hspace*{2em}\contentslabel{2em}} % before w/label (label = ``2.6'')
     {\hspace*{2em}} % before w/o label
     {\rmfamily\upshape\qquad\thecontentspage} % filler + page (leaders and page num)
