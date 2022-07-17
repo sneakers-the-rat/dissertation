@@ -92,6 +92,14 @@
 
 
 % redo title formatting
+\titleformat{\part}%
+  [display]% shape
+  {\relax\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\begin{fullwidth}}{}}% format applied to label+text
+  {\Huge\sffamily\bfseries\thepart}% label
+  {0pt}% horizontal separation between label and title body
+  {\Huge\sffamily\bfseries}% before the title body
+  [\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\end{fullwidth}}{}]% after the title body
+
 \titleformat{\chapter}%
   [display]% shape
   {\relax\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\begin{fullwidth}}{}}% format applied to label+text
