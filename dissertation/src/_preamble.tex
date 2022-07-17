@@ -2,7 +2,7 @@
 % !TEX jobname = jls_dissertation
 % !TEX output_directory = ../build/jls_dissertation
 
-\documentclass[nohyper, justified, notitlepage, notoc, marginals=raggedright,twoside=false,debug]{styles/tufte-autopilot}
+\documentclass[nohyper, justified, notitlepage, notoc, marginals=raggedright,twoside=false,debug]{styles/tufte-dissertation}
 
 % set PDF version
 \special{pdf:minorversion 7}
@@ -67,6 +67,8 @@
 % ----------
 
 \input{styles/environments}
+\input{styles/highlight}
+\input{styles/toc}
 
 % ---------------------------
 % Geometry and spacing
@@ -97,6 +99,7 @@
 
 \lstset{aboveskip=0pt,belowskip=0pt}
 \setlength\intextsep{2pt}
+
 
 
 % \setlength{\partopsep}{-20pt}
@@ -164,12 +167,22 @@
 %\captionsetup[table]{aboveskip=12pt, position=above}
 
 
+% fix emph for infrastructure
+\renewcommand{\emph}[1]{\textit{#1}}
+
 % format smart quotes
 \MakeOuterQuote{"}
 
 % Section numbering
-\setcounter{secnumdepth}{1}
+\setcounter{secnumdepth}{2}
 \setcounter{tocdepth}{1}
+
+% enable changing toc depth mid-document
+% https://tex.stackexchange.com/a/395858
+\newcommand{\changelocaltocdepth}[1]{%
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{#1}}%
+  \setcounter{tocdepth}{#1}%
+}
 
 
 % right aligned tabularx
@@ -271,8 +284,8 @@
 \definecolor{RED}{HTML}{FF0000}
 %%
 % Book metadata
-\title{Autopilot: Automating behavioral experiments with lots of Raspberry Pis}
-\author{Jonny L. Saunders, Lucas A. Ott, Michael Wehr}
+\title{Swarmpunk: Rough Consensus and Running Code in Brains, Machines, and Society}
+\author{Jonny L. Saunders}
 
 % filthy hack putting the affiliations in the tufte-common.cls file. 
 % goddamn hate latex.
