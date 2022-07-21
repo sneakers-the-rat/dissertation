@@ -6,6 +6,8 @@ layout: home
 title: "Swarmpunk"
 subtitle: "Rough Consensus and Running Code in Brains, Machines, and Society"
 subsubtitle: A dissertation by Jonny Saunders
+tagline: Rough Consensus and Running Code in Brains, Machines, and Society
+image: /assets/img/card.png
 noheader: true
 nofooter: true
 homepage: true
