@@ -21,13 +21,17 @@
 title: "Swarmpunk: A Dissertation"
 email: j@nny.fyi
 description: >- # this means to ignore newlines until "baseurl:"
-  Swarmpunk: Rough Consensus and Running Code in Brains, Machines, and Society, 
+  Rough Consensus and Running Code in Brains, Machines, and Society, 
   a dissertation by Jonny Saunders, Institute of Neuroscience/Department of Psychology,
   University of Oregon. Summer 2022.
 baseurl: "/dissertation" # the subpath of your site, e.g. /blog
 url: "https://jon-e.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: json_dirs
 github_username:  sneakers-the-rat
+author:
+  twitter: json_dirs
+  url: https://jon-e.net
+  name: Jonny Saunders
 
 # Build settings
 plugins:
