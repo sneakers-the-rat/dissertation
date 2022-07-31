@@ -34,6 +34,7 @@ jobs:
           cache: 'yarn'
       - name: Install Yarn Dependencies
         run: yarn install --frozen-lockfile
+        working-directory: slides
       - name: Slides cache
         uses: actions/cache@v3
         id: slides-cache
@@ -47,6 +48,7 @@ jobs:
         run: npm run build
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
+        working-directory: slides
         with:
           name: slides-artifact
           path: dist/
