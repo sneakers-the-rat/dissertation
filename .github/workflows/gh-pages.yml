@@ -22,6 +22,9 @@ jobs:
           publish_dir: ./build 
   slides:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: slides
     steps:
       - name: Install Node
         uses: actions/setup-node@v3
@@ -45,18 +48,18 @@ jobs:
         uses: actions/cache@v3
         id: slides-cache
         with:
-          path: slides/dist
+          path: dist
           key: ${{ runner.os }}-slidesv1-${{ hashFiles('./slides/src/**/*') }}
           restore-keys: |
             ${{ runner.os }}-slidesv1-
       - name: Build Slides
         if: ${{ steps.slides-cache.outputs.cache-hit != 'true' }}
-        run: npm run --prefix slides build
+        run: npm run build
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: slides-artifact
-          path: slides/dist/
+          path: dist/
   jekyll-site:
     runs-on: ubuntu-latest
     needs: slides
