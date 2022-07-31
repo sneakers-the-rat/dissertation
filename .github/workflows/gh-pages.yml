@@ -65,17 +65,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Jekyll Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          path: ./vendor/bundle
+          key: ${{ runner.os }}-gemsv1-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
-            ${{ runner.os }}-gems-
+            ${{ runner.os }}-gemsv1-
       - name: Download Slides Artifact
         uses: actions/download-artifact@v3
         with:
           name: slides-artifact
           path: site/slides
+          # Use GitHub Actions' cache to shorten build times and decrease load on servers
       - uses: helaili/jekyll-action@2.4.0    # Choose any one of the Jekyll Actions
         with:                                # Some relative inputs of your action
           token: ${{ secrets.GITHUB_TOKEN }}
