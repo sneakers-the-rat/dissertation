@@ -13,7 +13,6 @@ nofooter: true
 homepage: true
 ---
 
-
 <div class="body-container" markdown="1">
 ## Defense
 
