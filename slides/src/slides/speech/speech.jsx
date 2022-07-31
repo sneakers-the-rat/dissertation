@@ -3,11 +3,16 @@ import {
   Slide
 } from 'spectacle';
 
-import { Intro, Model1 } from './intro.jsx';
+import { Intro, Chair1 } from './intro.js';
+import { HaskinsModel, Chair2, InverseModel } from './models.jsx';
 
 const Speech = [
     Intro,
-    Model1
+    Chair1,
+    HaskinsModel,
+    Chair2,
+    InverseModel
 ]
+console.log(Intro)
 
 export default Speech;

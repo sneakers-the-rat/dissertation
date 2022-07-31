@@ -1,0 +1,34 @@
+import React from 'react';
+import {
+  Slide,
+    Heading,
+    Text,
+    Markdown
+} from 'spectacle';
+
+export const Intro = (
+<Markdown>
+{`
+# Introduce speech problem
+
+- Music is continuous, speech is not.
+- Reduce infinite variation to a small number of phonemes
+- Not neatly delineated. (sound demo across accents)
+
+`}
+</Markdown>
+);
+
+export const Chair1 = (
+<Markdown>
+  {`
+  # Wittgenstein
+  
+  - Speech is like wittgenstein's game
+  - Example of a chair? idk think of a better example lol
+  `}
+</Markdown>
+)
+
+console.log(Intro)
+
