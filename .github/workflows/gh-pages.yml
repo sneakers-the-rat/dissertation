@@ -32,6 +32,7 @@ jobs:
         with:
           node-version: 18
           cache: 'yarn'
+          cache-dependency-path: slides/yarn.lock
       - name: Install Yarn Dependencies
         run: yarn install --frozen-lockfile
         working-directory: slides
