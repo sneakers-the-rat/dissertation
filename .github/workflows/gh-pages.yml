@@ -22,10 +22,6 @@ jobs:
           publish_dir: ./build 
   slides:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: slides
     steps:
       - name: Install Node
         uses: actions/setup-node@v3
@@ -49,13 +45,14 @@ jobs:
         uses: actions/cache@v3
         id: slides-cache
         with:
-          path: dist
+          path: slides/dist
           key: ${{ runner.os }}-slidesv1-${{ hashFiles('./slides/src/**/*') }}
           restore-keys: |
             ${{ runner.os }}-slidesv1-
       - name: Build Slides
         if: ${{ steps.slides-cache.outputs.cache-hit != 'true' }}
         run: npm run build
+        working-directory: slides
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
