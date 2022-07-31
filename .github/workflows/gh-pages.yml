@@ -35,9 +35,9 @@ jobs:
         id: yarn-cache
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-yarnv1-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
+            ${{ runner.os }}-yarnv1-
       - name: Install Yarn Dependencies
         if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
         run: yarn install
@@ -45,13 +45,13 @@ jobs:
         uses: actions/cache@v3
         id: slides-cache
         with:
-          path: ./slides/dist
-          key: ${{ runner.os }}-slides-${{ hashFiles('./slides/src/**/*') }}
+          path: slides/dist
+          key: ${{ runner.os }}-slidesv1-${{ hashFiles('./slides/src/**/*') }}
           restore-keys: |
-            ${{ runner.os }}-slides-
+            ${{ runner.os }}-slidesv1-
       - name: Build Slides
         if: ${{ steps.slides-cache.outputs.cache-hit != 'true' }}
-        run: npm run --prefix ./slides build
+        run: npm run --prefix slides build
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
