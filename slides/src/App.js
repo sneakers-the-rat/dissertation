@@ -60,7 +60,8 @@ function Presentation(){
       {toc_slides_flat.map((slide, i) =>
 
 
-        <HideSlide
+        // <HideSlide
+      <HideSlide
         key={`slide-${i}`}
         slideNum={i}
         backgroundColor={'background'}

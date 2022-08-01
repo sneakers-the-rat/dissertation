@@ -11,10 +11,9 @@ export const Intro = (
 {`
 # Introduce speech problem
 
-- Music is continuous, speech is not.
+- Music is continuous, speech is not...!!!!
 - Reduce infinite variation to a small number of phonemes
-- Not neatly delineated. (sound demo across accents)
-
+ 
 `}
 </Markdown>
 );
