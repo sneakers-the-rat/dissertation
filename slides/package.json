@@ -19,7 +19,7 @@
     "react-canvas-draw": "^1.2.1",
     "react-dom": "^18.2.0",
     "react-svg": "^15.1.4",
-    "spectacle": "^9.3.0"
+    "spectacle": "git+https://github.com/sneakers-the-rat/spectacle.git"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
@@ -30,6 +30,7 @@
     "@emotion/styled": "^11.9.3",
     "@mui/icons-material": "^5.8.4",
     "@mui/styles": "^5.9.2",
+    "assert": "^2.0.0",
     "babel-loader": "^8.2.5",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",

@@ -3,15 +3,20 @@ import {
   Slide
 } from 'spectacle';
 
-import { Intro, Chair1 } from './intro.js';
-import { HaskinsModel, Chair2, InverseModel } from './models.jsx';
+import { Intro } from './intro.jsx';
+import { HaskinsModel, Chair1, BrokenSpeech, InverseModel } from './models.jsx';
+import { Mice } from './mice.jsx';
+import { Net } from './expansion.jsx';
+
 
 const Speech = [
     Intro,
-    Chair1,
     HaskinsModel,
-    Chair2,
-    InverseModel
+    BrokenSpeech,
+    Chair1,
+    InverseModel,
+    Mice,
+    Net
 ]
 console.log(Intro)
 

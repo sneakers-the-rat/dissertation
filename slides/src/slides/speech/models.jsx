@@ -11,24 +11,36 @@ export const HaskinsModel = (
   {`
   # Trad model
   
+  - Easy enough right? figure out what makes a 'b' a 'b' and viola! language!
   - Find what features are necessary!
   - Specify some feature, vary it, and test what people say it is
   - If people's perception varies, then it defines the phoneme!
   - Diagram of feature -> perception -> loop back to sound
+
   `}
 </Markdown>
 )
 
-export const Chair2 = (
+export const BrokenSpeech = (
+    <Markdown>
+      {`
+      # Not so fast
+      
+      - haskins lab quote, what features are necessary? none.
+      - Sine wave speech, noise vocoded speech
+      `}
+    </Markdown>
+)
+
+export const Chair1 = (
 <Markdown>
   {`  
-  # Back to the chair
+  # What's a chair?
   
-  - "chairs have four legs" 
+  - "chairs have four legs" !
   - 6 legged chairs are benches, 2 legged chairs are like.. sandwich boards
   - but having 4 legs isn't enough: is a cat a chair?
   - and something can be a chair with a ton of pointless legs, idk why not
-  - overlay haskins lab quote: What features are necessary? none.
   `}
 </Markdown>
 )
