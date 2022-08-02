@@ -32,6 +32,10 @@
 	- How to link documents, communication systems, wikis, etc.
 
 - Conclusion...
+	- We have to think about this as a sort of cognitive rhythm imposed by our relationship with infrastructural technology. 
+	- Why is it that we process information serially, that there is such a thing as a 'news cycle,' that it might be possible to miss a very relevant idea when you're looking for it specifically.
+	- The same processes that make it so that we can't make sense of our scientific results are the same systems that make it impossible to organize an effective climate resistance, abolition movement, or properly anticapital organizations at a time when all three are literally killing us all.
+	- 
 
 
 # Slides
