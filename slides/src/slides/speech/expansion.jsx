@@ -49,3 +49,20 @@ export const Net = (
     </NetStepper>
     </>
 )
+
+
+export const Harms = (
+    <Markdown>
+      {`
+      # Harms
+      
+      - So what, science is a little bit suboptimal, whats the big deal.
+      - wrong bozo. 
+        - harms from piece
+        - disciplines are arguably a product of prestige fiefdoms where a small number of people basically control the conversation within a discipline
+        - By not having to engage with things even subtly outside of your discipline, you can make many of these 'local champions' so that everyone has a little treadmill to climb
+        - This is all of course at the expense of, yno, understanding things.
+        - perhaps most subtle of all is the cognitive limitations in bounding what is possible to imagine.
+      `}
+    </Markdown>
+)

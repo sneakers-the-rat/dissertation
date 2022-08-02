@@ -2,11 +2,14 @@ import React from 'react';
 
 import cover from './cover.jsx';
 import speech from './speech/speech.jsx';
-
+import infocapitalism from './infocapitalism/infocapitalism.jsx';
+// import {info} from 'sass';
+console.log('slides', infocapitalism)
 
 let all_slides = [
     [cover],
-  speech
+  speech,
+    infocapitalism
 ]
 
 export const toc_slides = [
@@ -19,6 +22,11 @@ export const toc_slides = [
     name: 'speech',
     display: 'Speech',
     slides: speech
+  },
+  {
+    name: 'infocapitalism',
+    display: "Infocapitalism",
+    slides: infocapitalism
   }
 ]
 

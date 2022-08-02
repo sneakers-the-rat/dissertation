@@ -38,6 +38,7 @@
     "d3": "^7.6.1",
     "d3-force": "^3.0.0",
     "file-loader": "^6.2.0",
+    "fs": "^0.0.1-security",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
     "path": "^0.12.7",

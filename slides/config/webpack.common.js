@@ -53,6 +53,18 @@ module.exports = {
       {
         test: /\.(png|j?g|svg|gif|mp3)?$/,
         use: [require.resolve('file-loader')]
+      },
+      {
+        test: /\.(mp4|webm)?$/,
+        use: [
+          {
+            loader: require.resolve('file-loader'),
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'video'
+            }
+          }
+        ]
       }
     ]
   },

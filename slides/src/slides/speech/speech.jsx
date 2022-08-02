@@ -1,7 +1,4 @@
 import React from 'react';
-import {
-  Slide
-} from 'spectacle';
 
 import { Intro } from './intro.jsx';
 import { HaskinsModel, Chair1, BrokenSpeech, InverseModel } from './models.jsx';
@@ -18,6 +15,7 @@ const Speech = [
     Mice,
     Net
 ]
+
 console.log(Intro)
 
 export default Speech;

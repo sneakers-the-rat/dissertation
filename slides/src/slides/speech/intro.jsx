@@ -7,7 +7,7 @@ import {
 } from 'spectacle';
 
 export const Intro = (
-<Markdown>
+<Markdown title={"Test"}>
 {`
 # Introduce speech problem
 
