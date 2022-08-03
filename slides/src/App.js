@@ -40,7 +40,7 @@ export const template = () => (
         // width={1}
     >
 
-      <TOC slides={toc_slides_flat}/>
+      <TOC slides={toc_slides}/>
       <Box padding="1em 0">
         <FullScreen style={{marginLeft:0, marginRight:0}}/>
       </Box>

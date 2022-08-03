@@ -30,7 +30,7 @@ export const NSFNET = (
 )
 
 export const Cloud = (
-    <Markdown>
+    <Markdown title={"Test Title"}>
     {`
     # Creating the Cloud
     
@@ -65,3 +65,5 @@ export const DOI = (
      `}
     </Markdown>
 )
+
+console.log('cloud slide', Cloud)
