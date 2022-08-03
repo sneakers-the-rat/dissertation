@@ -39,8 +39,7 @@ export const template = () => (
         // bottom={0}
         // width={1}
     >
-
-      <TOC slides={toc_slides}/>
+      <TOC slides={toc_slides} slides_flat={toc_slides_flat}/>
       <Box padding="1em 0">
         <FullScreen style={{marginLeft:0, marginRight:0}}/>
       </Box>

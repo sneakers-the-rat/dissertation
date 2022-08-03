@@ -1,21 +1,17 @@
 import React from 'react';
 
-import { Intro } from './intro.jsx';
-import { HaskinsModel, Chair1, BrokenSpeech, InverseModel } from './models.jsx';
-import { Mice } from './mice.jsx';
-import { Net } from './expansion.jsx';
+import intro from './intro.jsx';
+import models from './models.jsx';
+import mice from './mice.jsx';
+import expansion from './expansion.jsx';
 
 
 const Speech = [
-    Intro,
-    HaskinsModel,
-    BrokenSpeech,
-    Chair1,
-    InverseModel,
-    Mice,
-    Net
+    ...intro,
+    ...models,
+    ...mice,
+    ...expansion
 ]
 
-console.log(Intro)
 
 export default Speech;

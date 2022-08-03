@@ -6,6 +6,7 @@ import infocapitalism from './infocapitalism/infocapitalism.jsx';
 import data from './data/data.jsx';
 import tools from './tools/tools.jsx';
 import knowledge from './knowledge/knowledge.jsx'
+import conclusion from './conclusion/conclusion.jsx';
 
 // import {info} from 'sass';
 console.log('slides', infocapitalism)
@@ -16,7 +17,8 @@ let all_slides = [
     infocapitalism,
     data,
     tools,
-    knowledge
+    knowledge,
+    conclusion
 ]
 
 export const toc_slides = [
@@ -50,6 +52,11 @@ export const toc_slides = [
     display: "Knowledge",
     slides: knowledge
   },
+  {
+    name: 'conclusion',
+    display: "Conclusion",
+    slides: conclusion
+  }
 ]
 
 export const toc_slides_flat = Array.prototype.concat(

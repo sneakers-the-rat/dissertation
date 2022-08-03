@@ -6,8 +6,8 @@ import {
     Markdown
 } from 'spectacle';
 
-export const Intro = (
-<Markdown title={"Test"}>
+const Intro = (
+<Markdown title={"A Problem..."}>
 {`
 # Introduce speech problem
 
@@ -18,7 +18,7 @@ export const Intro = (
 </Markdown>
 );
 
-export const Chair1 = (
+const Chair1 = (
 <Markdown>
   {`
   # Wittgenstein
@@ -28,6 +28,12 @@ export const Chair1 = (
   `}
 </Markdown>
 )
+
+const Slides = [
+    Intro, Chair1
+]
+
+export default Slides
 
 console.log(Intro)
 

@@ -59,3 +59,11 @@ export const InverseModel = (
     </Markdown>
 )
 
+const Slides = [
+    HaskinsModel,
+    BrokenSpeech,
+    InverseModel
+]
+
+export default Slides
+

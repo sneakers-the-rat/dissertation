@@ -8,7 +8,7 @@ import {
 
 import {NetStepper} from '../../components/net_stepper.jsx'
 
-export const Net = (
+const Net = (
     <>
       <Markdown>
         {`
@@ -50,8 +50,7 @@ export const Net = (
     </>
 )
 
-
-export const Harms = (
+const Harms = (
     <Markdown>
       {`
       # Harms
@@ -66,3 +65,9 @@ export const Harms = (
       `}
     </Markdown>
 )
+
+const Slides = [
+    Net, Harms
+]
+
+export default Slides

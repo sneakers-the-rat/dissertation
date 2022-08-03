@@ -6,10 +6,16 @@ import {
   Markdown
 } from 'spectacle';
 
-export const Mice = (
+const Mice = (
     <Markdown>
       # Mice Can Learn Phonetic Categories
 
       - One slide summary of training and results
     </Markdown>
 )
+
+const Slides = [
+    Mice
+]
+
+export default Slides
