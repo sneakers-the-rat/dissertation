@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import { Box, Heading, Text, Quote } from 'spectacle';
 
 
 export const Cover = (
-<>
+<Fragment title={"Cover"}>
     <Box width={2/3}>
       <Heading
           fontFamily={'headerSerif'}
@@ -45,7 +45,7 @@ export const Cover = (
     - Brian Martin, 1998, <a fontSize={"1em"} href={"https://documents.uow.edu.au/~bmartin/pubs/98il/ilall.html"}>Information Liberation</a>
   </Quote>
 </Box>
-  </>
+  </Fragment>
 )
 
 export default Cover;

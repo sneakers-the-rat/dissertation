@@ -212,6 +212,7 @@ function TOCGroup({
 export default function TOC(
     {
       slides,
+        slides_flat,
       drawerWidth,
       ...props
     }
@@ -285,7 +286,7 @@ export default function TOC(
         .map((_, idx) => (
             <Circle
                 key={`progress-circle-${idx}`}
-                // color={spectacle_theme.colors[slides[idx].group] ? spectacle_theme.colors[slides[idx].group]  : props.color}
+                color={spectacle_theme.colors[slides_flat[idx].group] ? spectacle_theme.colors[slides_flat[idx].group]  : props.color}
                 active={activeView.slideIndex === idx}
                 size={props.size}
                 onClick={() =>
