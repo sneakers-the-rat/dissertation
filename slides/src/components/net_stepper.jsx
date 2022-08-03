@@ -37,11 +37,15 @@ export function NetStepper(
     .attr("x", d => d.x+d.size)
     .attr("y", d => d.y+d.size)
 
-    d3.selectAll(".netstep-link")
-    .attr("x1", d => d.source.x)
-    .attr("y1", d => d.source.y)
-    .attr("x2", d => d.target.x)
-    .attr("y2", d => d.target.y);
+    try {
+      d3.selectAll(".netstep-link").
+          attr("x1", d => d.source.x).
+          attr("y1", d => d.source.y).
+          attr("x2", d => d.target.x).
+          attr("y2", d => d.target.y);
+    } catch (error){
+      console.log('caught error')
+    }
   }
 
   useEffect(() => {

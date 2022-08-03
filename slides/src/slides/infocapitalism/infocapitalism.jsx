@@ -5,7 +5,7 @@ import {NSFNET, Cloud} from './cloud.jsx';
 
 const Infocapitalism = [
   NSFNET,
-    Cloud
+  Cloud
 ];
 
 export default Infocapitalism

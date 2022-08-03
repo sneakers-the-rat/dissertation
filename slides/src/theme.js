@@ -78,7 +78,7 @@ export const material_theme = createTheme({
     textAlign: 'left'
     },
     body1: {
-      fontSize: 44,
+      fontSize: "1em",
     },
     body2: {
       fontSize: 40,
