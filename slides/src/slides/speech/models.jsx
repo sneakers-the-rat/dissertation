@@ -15,11 +15,11 @@ import qb from '../../img/cuebased-01.svg';
 import mtf from '../../img/mtf.png';
 import naturalspeech from '../../img/naturalspeech-01.svg';
 
-import mtf3hz from '../../assets/sound/mtf_3Hz.mp3';
-import mtf12hz from '../../assets/sound/mtf_12Hz.mp3';
-import mtf4cyc from '../../assets/sound/mtf_4cyc.mp3';
-import mtf05cyc from '../../assets/sound/mtf_05cyc.mp3';
-import mtforig from '../../assets/sound/mtf_orig.mp3';
+import mtf3hz from '../../sound/mtf_3Hz.mp3';
+import mtf12hz from '../../sound/mtf_12hz.mp3';
+import mtf4cyc from '../../sound/mtf_4cyc.mp3';
+import mtf05cyc from '../../sound/mtf_05cyc.mp3';
+import mtforig from '../../sound/mtf_orig.mp3';
 
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Icon } from '@mui/material';
