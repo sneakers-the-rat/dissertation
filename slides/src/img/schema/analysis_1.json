@@ -1,0 +1,33 @@
+{
+  "name": "analysis",
+  "anchor": true,
+  "children": [
+    {
+      "name": "stats",
+      "children": [
+        {
+          "name": "alignment",
+          "children": [
+            {
+              "name": "ephys",
+              "children": [
+                {
+                  "name": "sorting"
+                },
+                {
+                  "name": "params"
+                }
+              ]
+            },
+            {
+              "name": "behavior"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "visualization"
+    }
+  ]
+}

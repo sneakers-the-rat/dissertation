@@ -4,15 +4,6 @@ import SvgAnimator from '../../components/svg_animator';
 import overview from '../../img/schematic-diagram.svg';
 import {SentimentVeryDissatisfied} from '@mui/icons-material';
 
-const ActivityPub = (
-  <Markdown title={"ActivityPub"}>
-  {`
-  # ActivityPub
-  
-  - with LD we can do stuff like define basic actions and what to do with them
-  `}
-  </Markdown>
-)
 
 const Federation = (
     <Markdown title={"P2P Federation"}>
@@ -42,7 +33,6 @@ const Summary = (
 
 
 const Slides = [
-    ActivityPub,
     Federation,
     Summary
 ]

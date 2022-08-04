@@ -6,7 +6,8 @@ import applications from './applications.jsx'
 const Slides = [
     ...wikis,
     ...documents,
-    ...fedi
+    ...fedi,
+    ...applications
 ]
 
 export default Slides

@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smile</title>
+    <style>
+    pre {
+        line-height: 125%;
+    }
+
+    .highlight {
+        background: var(--jp-cell-editor-background);
+        color: var(--jp-mirror-editor-variable-color)
+    }
+
+    .highlight .k {
+        color: var(--jp-mirror-editor-keyword-color);
+        font-weight: bold
+    }
+
+    .highlight .o {
+        color: var(--jp-mirror-editor-operator-color);
+        font-weight: bold
+    }
+
+    .highlight .p {
+        color: var(--jp-mirror-editor-punctuation-color)
+    }
+
+    .highlight .kn {
+        color: var(--jp-mirror-editor-keyword-color);
+        font-weight: bold
+    }
+
+    .highlight .s1 {
+        color: var(--jp-mirror-editor-string-color)
+    }
+
+    [data-jp-theme-scrollbars='true'] ::-webkit-scrollbar-track:horizontal {
+        border-left: var(--jp-scrollbar-endpad) solid var(--jp-scrollbar-background-color);
+        border-right: var(--jp-scrollbar-endpad) solid var(--jp-scrollbar-background-color);
+    }
+
+    [data-jp-theme-scrollbars='true'] ::-webkit-scrollbar-track:vertical {
+        border-top: var(--jp-scrollbar-endpad) solid var(--jp-scrollbar-background-color);
+        border-bottom: var(--jp-scrollbar-endpad) solid var(--jp-scrollbar-background-color);
+    }
+
+    [data-jp-theme-scrollbars='true'] .CodeMirror-hscrollbar::-webkit-scrollbar-track:horizontal {
+        border-left: var(--jp-scrollbar-endpad) solid transparent;
+        border-right: var(--jp-scrollbar-endpad) solid transparent;
+    }
+
+    [data-jp-theme-scrollbars='true'] .CodeMirror-vscrollbar::-webkit-scrollbar-track:vertical {
+        border-top: var(--jp-scrollbar-endpad) solid transparent;
+        border-bottom: var(--jp-scrollbar-endpad) solid transparent;
+    }
+
+    .jp-scrollbar-tiny::-webkit-scrollbar-track:horizontal {
+        border-left: 0px solid transparent;
+        border-right: 0px solid transparent;
+    }
+
+    .jp-scrollbar-tiny::-webkit-scrollbar-track:vertical {
+        border-top: 0px solid transparent;
+        border-bottom: 0px solid transparent;
+    }
+
+    @charset "UTF-8";
+
+    html {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+    }
+
+    body {
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 1.28581;
+        text-transform: none;
+        color: #182026;
+        font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", "Icons16", sans-serif;
+    }
+
+    p {
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+
+    ::-moz-selection {
+        background: rgba(125, 188, 255, 0.6);
+    }
+
+    ::selection {
+        background: rgba(125, 188, 255, 0.6);
+    }
+
+    a {
+        color: #106ba3;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #106ba3;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    :focus {
+        outline: rgba(19, 124, 189, 0.6) auto 2px;
+        outline-offset: 2px;
+        -moz-outline-radius: 6px;
+    }
+
+    .bp3-input-group .bp3-input:not(:focus)+.bp3-button.bp3-minimal:not(:hover):not(:focus),
+    .bp3-input-group .bp3-input:not(:focus)+.bp3-input-action .bp3-button.bp3-minimal:not(:hover):not(:focus) {
+        color: #5c7080;
+    }
+
+    .bp3-dark .bp3-input-group .bp3-input:not(:focus)+.bp3-button.bp3-minimal:not(:hover):not(:focus),
+    .bp3-dark .bp3-input-group .bp3-input:not(:focus)+.bp3-input-action .bp3-button.bp3-minimal:not(:hover):not(:focus) {
+        color: #a7b6c2;
+    }
+
+
+    :root {
+        --jp-warn-color0: var(--md-orange-700);
+    }
+
+    html {
+        box-sizing: unset;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: unset;
+    }
+
+    body {
+        color: unset;
+        font-family: var(--jp-ui-font-family);
+    }
+
+    p {
+        margin-top: unset;
+        margin-bottom: unset;
+    }
+
+    a {
+        text-decoration: unset;
+        color: unset;
+    }
+
+    a:hover {
+        text-decoration: unset;
+        color: unset;
+    }
+
+    :focus {
+        outline: unset;
+        outline-offset: unset;
+        -moz-outline-radius: unset;
+    }
+
+    :root {
+        --jp-private-commandpalette-search-height: 28px;
+    }
+
+    .jp-MainAreaWidget> :focus {
+        outline: none;
+    }
+
+    :root {
+        --md-red-50: #ffebee;
+        --md-red-100: #ffcdd2;
+        --md-red-200: #ef9a9a;
+        --md-red-300: #e57373;
+        --md-red-400: #ef5350;
+        --md-red-500: #f44336;
+        --md-red-600: #e53935;
+        --md-red-700: #d32f2f;
+        --md-red-800: #c62828;
+        --md-red-900: #b71c1c;
+        --md-red-A100: #ff8a80;
+        --md-red-A200: #ff5252;
+        --md-red-A400: #ff1744;
+        --md-red-A700: #d50000;
+
+        --md-pink-50: #fce4ec;
+        --md-pink-100: #f8bbd0;
+        --md-pink-200: #f48fb1;
+        --md-pink-300: #f06292;
+        --md-pink-400: #ec407a;
+        --md-pink-500: #e91e63;
+        --md-pink-600: #d81b60;
+        --md-pink-700: #c2185b;
+        --md-pink-800: #ad1457;
+        --md-pink-900: #880e4f;
+        --md-pink-A100: #ff80ab;
+        --md-pink-A200: #ff4081;
+        --md-pink-A400: #f50057;
+        --md-pink-A700: #c51162;
+
+        --md-purple-50: #f3e5f5;
+        --md-purple-100: #e1bee7;
+        --md-purple-200: #ce93d8;
+        --md-purple-300: #ba68c8;
+        --md-purple-400: #ab47bc;
+        --md-purple-500: #9c27b0;
+        --md-purple-600: #8e24aa;
+        --md-purple-700: #7b1fa2;
+        --md-purple-800: #6a1b9a;
+        --md-purple-900: #4a148c;
+        --md-purple-A100: #ea80fc;
+        --md-purple-A200: #e040fb;
+        --md-purple-A400: #d500f9;
+        --md-purple-A700: #aa00ff;
+
+        --md-deep-purple-50: #ede7f6;
+        --md-deep-purple-100: #d1c4e9;
+        --md-deep-purple-200: #b39ddb;
+        --md-deep-purple-300: #9575cd;
+        --md-deep-purple-400: #7e57c2;
+        --md-deep-purple-500: #673ab7;
+        --md-deep-purple-600: #5e35b1;
+        --md-deep-purple-700: #512da8;
+        --md-deep-purple-800: #4527a0;
+        --md-deep-purple-900: #311b92;
+        --md-deep-purple-A100: #b388ff;
+        --md-deep-purple-A200: #7c4dff;
+        --md-deep-purple-A400: #651fff;
+        --md-deep-purple-A700: #6200ea;
+
+        --md-indigo-50: #e8eaf6;
+        --md-indigo-100: #c5cae9;
+        --md-indigo-200: #9fa8da;
+        --md-indigo-300: #7986cb;
+        --md-indigo-400: #5c6bc0;
+        --md-indigo-500: #3f51b5;
+        --md-indigo-600: #3949ab;
+        --md-indigo-700: #303f9f;
+        --md-indigo-800: #283593;
+        --md-indigo-900: #1a237e;
+        --md-indigo-A100: #8c9eff;
+        --md-indigo-A200: #536dfe;
+        --md-indigo-A400: #3d5afe;
+        --md-indigo-A700: #304ffe;
+
+        --md-blue-50: #e3f2fd;
+        --md-blue-100: #bbdefb;
+        --md-blue-200: #90caf9;
+        --md-blue-300: #64b5f6;
+        --md-blue-400: #42a5f5;
+        --md-blue-500: #2196f3;
+        --md-blue-600: #1e88e5;
+        --md-blue-700: #1976d2;
+        --md-blue-800: #1565c0;
+        --md-blue-900: #0d47a1;
+        --md-blue-A100: #82b1ff;
+        --md-blue-A200: #448aff;
+        --md-blue-A400: #2979ff;
+        --md-blue-A700: #2962ff;
+
+        --md-light-blue-50: #e1f5fe;
+        --md-light-blue-100: #b3e5fc;
+        --md-light-blue-200: #81d4fa;
+        --md-light-blue-300: #4fc3f7;
+        --md-light-blue-400: #29b6f6;
+        --md-light-blue-500: #03a9f4;
+        --md-light-blue-600: #039be5;
+        --md-light-blue-700: #0288d1;
+        --md-light-blue-800: #0277bd;
+        --md-light-blue-900: #01579b;
+        --md-light-blue-A100: #80d8ff;
+        --md-light-blue-A200: #40c4ff;
+        --md-light-blue-A400: #00b0ff;
+        --md-light-blue-A700: #0091ea;
+
+        --md-cyan-50: #e0f7fa;
+        --md-cyan-100: #b2ebf2;
+        --md-cyan-200: #80deea;
+        --md-cyan-300: #4dd0e1;
+        --md-cyan-400: #26c6da;
+        --md-cyan-500: #00bcd4;
+        --md-cyan-600: #00acc1;
+        --md-cyan-700: #0097a7;
+        --md-cyan-800: #00838f;
+        --md-cyan-900: #006064;
+        --md-cyan-A100: #84ffff;
+        --md-cyan-A200: #18ffff;
+        --md-cyan-A400: #00e5ff;
+        --md-cyan-A700: #00b8d4;
+
+        --md-teal-50: #e0f2f1;
+        --md-teal-100: #b2dfdb;
+        --md-teal-200: #80cbc4;
+        --md-teal-300: #4db6ac;
+        --md-teal-400: #26a69a;
+        --md-teal-500: #009688;
+        --md-teal-600: #00897b;
+        --md-teal-700: #00796b;
+        --md-teal-800: #00695c;
+        --md-teal-900: #004d40;
+        --md-teal-A100: #a7ffeb;
+        --md-teal-A200: #64ffda;
+        --md-teal-A400: #1de9b6;
+        --md-teal-A700: #00bfa5;
+
+        --md-green-50: #e8f5e9;
+        --md-green-100: #c8e6c9;
+        --md-green-200: #a5d6a7;
+        --md-green-300: #81c784;
+        --md-green-400: #66bb6a;
+        --md-green-500: #4caf50;
+        --md-green-600: #43a047;
+        --md-green-700: #388e3c;
+        --md-green-800: #2e7d32;
+        --md-green-900: #1b5e20;
+        --md-green-A100: #b9f6ca;
+        --md-green-A200: #69f0ae;
+        --md-green-A400: #00e676;
+        --md-green-A700: #00c853;
+
+        --md-light-green-50: #f1f8e9;
+        --md-light-green-100: #dcedc8;
+        --md-light-green-200: #c5e1a5;
+        --md-light-green-300: #aed581;
+        --md-light-green-400: #9ccc65;
+        --md-light-green-500: #8bc34a;
+        --md-light-green-600: #7cb342;
+        --md-light-green-700: #689f38;
+        --md-light-green-800: #558b2f;
+        --md-light-green-900: #33691e;
+        --md-light-green-A100: #ccff90;
+        --md-light-green-A200: #b2ff59;
+        --md-light-green-A400: #76ff03;
+        --md-light-green-A700: #64dd17;
+
+        --md-lime-50: #f9fbe7;
+        --md-lime-100: #f0f4c3;
+        --md-lime-200: #e6ee9c;
+        --md-lime-300: #dce775;
+        --md-lime-400: #d4e157;
+        --md-lime-500: #cddc39;
+        --md-lime-600: #c0ca33;
+        --md-lime-700: #afb42b;
+        --md-lime-800: #9e9d24;
+        --md-lime-900: #827717;
+        --md-lime-A100: #f4ff81;
+        --md-lime-A200: #eeff41;
+        --md-lime-A400: #c6ff00;
+        --md-lime-A700: #aeea00;
+
+        --md-yellow-50: #fffde7;
+        --md-yellow-100: #fff9c4;
+        --md-yellow-200: #fff59d;
+        --md-yellow-300: #fff176;
+        --md-yellow-400: #ffee58;
+        --md-yellow-500: #ffeb3b;
+        --md-yellow-600: #fdd835;
+        --md-yellow-700: #fbc02d;
+        --md-yellow-800: #f9a825;
+        --md-yellow-900: #f57f17;
+        --md-yellow-A100: #ffff8d;
+        --md-yellow-A200: #ffff00;
+        --md-yellow-A400: #ffea00;
+        --md-yellow-A700: #ffd600;
+
+        --md-amber-50: #fff8e1;
+        --md-amber-100: #ffecb3;
+        --md-amber-200: #ffe082;
+        --md-amber-300: #ffd54f;
+        --md-amber-400: #ffca28;
+        --md-amber-500: #ffc107;
+        --md-amber-600: #ffb300;
+        --md-amber-700: #ffa000;
+        --md-amber-800: #ff8f00;
+        --md-amber-900: #ff6f00;
+        --md-amber-A100: #ffe57f;
+        --md-amber-A200: #ffd740;
+        --md-amber-A400: #ffc400;
+        --md-amber-A700: #ffab00;
+
+        --md-orange-50: #fff3e0;
+        --md-orange-100: #ffe0b2;
+        --md-orange-200: #ffcc80;
+        --md-orange-300: #ffb74d;
+        --md-orange-400: #ffa726;
+        --md-orange-500: #ff9800;
+        --md-orange-600: #fb8c00;
+        --md-orange-700: #f57c00;
+        --md-orange-800: #ef6c00;
+        --md-orange-900: #e65100;
+        --md-orange-A100: #ffd180;
+        --md-orange-A200: #ffab40;
+        --md-orange-A400: #ff9100;
+        --md-orange-A700: #ff6d00;
+
+        --md-deep-orange-50: #fbe9e7;
+        --md-deep-orange-100: #ffccbc;
+        --md-deep-orange-200: #ffab91;
+        --md-deep-orange-300: #ff8a65;
+        --md-deep-orange-400: #ff7043;
+        --md-deep-orange-500: #ff5722;
+        --md-deep-orange-600: #f4511e;
+        --md-deep-orange-700: #e64a19;
+        --md-deep-orange-800: #d84315;
+        --md-deep-orange-900: #bf360c;
+        --md-deep-orange-A100: #ff9e80;
+        --md-deep-orange-A200: #ff6e40;
+        --md-deep-orange-A400: #ff3d00;
+        --md-deep-orange-A700: #dd2c00;
+
+        --md-brown-50: #efebe9;
+        --md-brown-100: #d7ccc8;
+        --md-brown-200: #bcaaa4;
+        --md-brown-300: #a1887f;
+        --md-brown-400: #8d6e63;
+        --md-brown-500: #795548;
+        --md-brown-600: #6d4c41;
+        --md-brown-700: #5d4037;
+        --md-brown-800: #4e342e;
+        --md-brown-900: #3e2723;
+
+        --md-grey-50: #fafafa;
+        --md-grey-100: #f5f5f5;
+        --md-grey-200: #eeeeee;
+        --md-grey-300: #e0e0e0;
+        --md-grey-400: #bdbdbd;
+        --md-grey-500: #9e9e9e;
+        --md-grey-600: #757575;
+        --md-grey-700: #616161;
+        --md-grey-800: #424242;
+        --md-grey-900: #212121;
+
+        --md-blue-grey-50: #eceff1;
+        --md-blue-grey-100: #cfd8dc;
+        --md-blue-grey-200: #b0bec5;
+        --md-blue-grey-300: #90a4ae;
+        --md-blue-grey-400: #78909c;
+        --md-blue-grey-500: #607d8b;
+        --md-blue-grey-600: #546e7a;
+        --md-blue-grey-700: #455a64;
+        --md-blue-grey-800: #37474f;
+        --md-blue-grey-900: #263238;
+    }
+
+    :root {
+        --jp-private-toolbar-height: calc(28px + var(--jp-border-width));
+    }
+
+    .CodeMirror {
+
+        font-family: monospace;
+        height: 300px;
+        color: black;
+        direction: ltr;
+    }
+
+    .CodeMirror {
+        position: relative;
+        overflow: hidden;
+        background: white;
+    }
+
+    @media print {}
+
+    .CodeMirror {
+        line-height: var(--jp-code-line-height);
+        font-size: var(--jp-code-font-size);
+        font-family: var(--jp-code-font-family);
+        border: 0;
+        border-radius: 0;
+        height: auto;
+
+    }
+
+    .CodeMirror pre {
+        padding: 0 var(--jp-code-padding);
+    }
+
+    .jp-CodeMirrorEditor {
+        cursor: text;
+    }
+
+    .CodeMirror.cm-s-jupyter {
+        background: var(--jp-layout-color0);
+        color: var(--jp-content-font-color1);
+    }
+
+    .jp-Notebook .CodeMirror.cm-s-jupyter {
+        background: transparent;
+    }
+
+    :root {
+
+        --jp-private-code-span-padding: calc((var(--jp-code-line-height) - 1) * var(--jp-code-font-size) / 2);
+    }
+
+    .jp-RenderedText {
+        text-align: left;
+        padding-left: var(--jp-code-padding);
+        line-height: var(--jp-code-line-height);
+        font-family: var(--jp-code-font-family);
+    }
+
+    .jp-RenderedText pre {
+        color: var(--jp-content-font-color1);
+        font-size: var(--jp-code-font-size);
+        border: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .jp-RenderedHTMLCommon {
+        color: var(--jp-content-font-color1);
+        font-family: var(--jp-content-font-family);
+        font-size: var(--jp-content-font-size1);
+        line-height: var(--jp-content-line-height);
+
+        padding-right: 20px;
+    }
+
+    .jp-RenderedHTMLCommon a:link {
+        text-decoration: none;
+        color: var(--jp-content-link-color);
+    }
+
+    .jp-RenderedHTMLCommon a:hover {
+        text-decoration: underline;
+        color: var(--jp-content-link-color);
+    }
+
+    .jp-RenderedHTMLCommon a:visited {
+        text-decoration: none;
+        color: var(--jp-content-link-color);
+    }
+
+    .jp-RenderedHTMLCommon h1 {
+        line-height: var(--jp-content-heading-line-height);
+        font-weight: var(--jp-content-heading-font-weight);
+        font-style: normal;
+        margin: var(--jp-content-heading-margin-top) 0 var(--jp-content-heading-margin-bottom) 0;
+    }
+
+    .jp-RenderedHTMLCommon h1:first-child {
+        margin-top: calc(0.5 * var(--jp-content-heading-margin-top));
+    }
+
+    .jp-RenderedHTMLCommon h1 {
+        font-size: var(--jp-content-font-size5);
+    }
+
+    .jp-RenderedHTMLCommon p {
+        text-align: left;
+        margin: 0px;
+    }
+
+    .jp-RenderedHTMLCommon p {
+        margin-bottom: 1em;
+    }
+
+    [data-jp-theme-light='true'] .jp-RenderedImage img.jp-needs-light-background {}
+
+    .jp-RenderedImage img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .jp-RenderedHTMLCommon>*:last-child {
+        margin-bottom: 0.5em;
+    }
+
+    :root {
+        --jp-private-filebrowser-button-height: 28px;
+        --jp-private-filebrowser-button-width: 48px;
+    }
+
+    .jp-FileBrowser-toolbar.jp-Toolbar .jp-Toolbar-item:first-child .jp-ToolbarButtonComponent:focus-visible {
+        background-color: var(--jp-brand-color0);
+    }
+
+    .jp-DirListing:focus-visible {
+        border: 1px solid var(--jp-brand-color1);
+    }
+
+    :root {}
+
+    .jp-OutputArea {
+        overflow-y: auto;
+    }
+
+    .jp-OutputArea-child {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .jp-OutputPrompt {
+        flex: 0 0 var(--jp-cell-prompt-width);
+        color: var(--jp-cell-outprompt-font-color);
+        font-family: var(--jp-cell-prompt-font-family);
+        padding: var(--jp-code-padding);
+        letter-spacing: var(--jp-cell-prompt-letter-spacing);
+        line-height: var(--jp-code-line-height);
+        font-size: var(--jp-code-font-size);
+        border: var(--jp-border-width) solid transparent;
+        opacity: var(--jp-cell-prompt-opacity);
+
+        text-align: right;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .jp-OutputArea-output {
+        height: auto;
+        overflow: auto;
+        user-select: text;
+        -moz-user-select: text;
+        -webkit-user-select: text;
+        -ms-user-select: text;
+    }
+
+    .jp-OutputArea-child .jp-OutputArea-output {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    .jp-OutputArea-output pre {
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: auto;
+        overflow-y: auto;
+        word-break: break-all;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+    }
+
+    .jp-OutputArea-output.jp-OutputArea-executeResult {
+        margin-left: 0px;
+        flex: 1 1 auto;
+    }
+
+    .jp-Collapser {
+        flex: 0 0 var(--jp-cell-collapser-width);
+        padding: 0px;
+        margin: 0px;
+        border: none;
+        outline: none;
+        background: transparent;
+        border-radius: var(--jp-border-radius);
+        opacity: 1;
+    }
+
+    .jp-InputArea {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .jp-InputArea-editor {
+        flex: 1 1 auto;
+        overflow: hidden;
+    }
+
+    .jp-InputArea-editor {
+
+        border: var(--jp-border-width) solid var(--jp-cell-editor-border-color);
+        border-radius: 0px;
+        background: var(--jp-cell-editor-background);
+    }
+
+    .jp-InputPrompt {
+        flex: 0 0 var(--jp-cell-prompt-width);
+        color: var(--jp-cell-inprompt-font-color);
+        font-family: var(--jp-cell-prompt-font-family);
+        padding: var(--jp-code-padding);
+        letter-spacing: var(--jp-cell-prompt-letter-spacing);
+        opacity: var(--jp-cell-prompt-opacity);
+        line-height: var(--jp-code-line-height);
+        font-size: var(--jp-code-font-size);
+        border: var(--jp-border-width) solid transparent;
+        opacity: var(--jp-cell-prompt-opacity);
+
+        text-align: right;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    :root {
+        --jp-private-cell-scrolling-output-offset: 5px;
+    }
+
+    .jp-Cell {
+        padding: var(--jp-cell-padding);
+        margin: 0px;
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    .jp-Cell-inputWrapper,
+    .jp-Cell-outputWrapper {
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+        margin: 0px;
+
+        overflow: visible;
+    }
+
+    .jp-Cell-inputArea,
+    .jp-Cell-outputArea {
+        flex: 1 1 auto;
+    }
+
+    .jp-Cell:not(.jp-mod-noOutputs) .jp-Cell-outputCollapser {
+        min-height: var(--jp-cell-collapser-min-height);
+    }
+
+    .jp-Cell:not(.jp-mod-noOutputs) .jp-Cell-outputWrapper {
+        margin-top: 5px;
+    }
+
+    .jp-MarkdownOutput {
+        flex: 1 1 auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: var(--jp-code-padding);
+    }
+
+    .jp-MarkdownOutput.jp-RenderedHTMLCommon {
+        overflow: auto;
+    }
+
+    :root {
+        --jp-private-notebook-dragImage-width: 304px;
+        --jp-private-notebook-dragImage-height: 36px;
+        --jp-private-notebook-selected-color: var(--md-blue-400);
+        --jp-private-notebook-active-color: var(--md-green-400);
+    }
+
+    .jp-Notebook {
+        padding: var(--jp-notebook-padding);
+        outline: none;
+        overflow: auto;
+    }
+
+    .jp-Notebook .jp-Cell {
+        overflow: visible;
+    }
+
+    .jp-Notebook .jp-Cell .jp-InputPrompt {
+        cursor: move;
+        float: left;
+    }
+
+    .jp-Notebook .jp-Cell:not(.jp-mod-active) .jp-InputPrompt {
+        opacity: var(--jp-cell-prompt-not-active-opacity);
+        color: var(--jp-cell-prompt-not-active-font-color);
+    }
+
+    .jp-Notebook .jp-Cell:not(.jp-mod-active) .jp-OutputPrompt {
+        opacity: var(--jp-cell-prompt-not-active-opacity);
+        color: var(--jp-cell-prompt-not-active-font-color);
+    }
+
+    .jp-Notebook .jp-Cell .jp-Collapser:hover {
+        box-shadow: var(--jp-elevation-z2);
+        background: var(--jp-brand-color1);
+        opacity: var(--jp-cell-collapser-not-active-hover-opacity);
+    }
+
+    :root {
+
+
+        --jp-shadow-base-lightness: 0;
+        --jp-shadow-umbra-color: rgba(var(--jp-shadow-base-lightness),
+            var(--jp-shadow-base-lightness),
+            var(--jp-shadow-base-lightness),
+            0.2);
+        --jp-shadow-penumbra-color: rgba(var(--jp-shadow-base-lightness),
+            var(--jp-shadow-base-lightness),
+            var(--jp-shadow-base-lightness),
+            0.14);
+        --jp-shadow-ambient-color: rgba(var(--jp-shadow-base-lightness),
+            var(--jp-shadow-base-lightness),
+            var(--jp-shadow-base-lightness),
+            0.12);
+        --jp-elevation-z0: none;
+        --jp-elevation-z1: 0px 2px 1px -1px var(--jp-shadow-umbra-color),
+            0px 1px 1px 0px var(--jp-shadow-penumbra-color),
+            0px 1px 3px 0px var(--jp-shadow-ambient-color);
+        --jp-elevation-z2: 0px 3px 1px -2px var(--jp-shadow-umbra-color),
+            0px 2px 2px 0px var(--jp-shadow-penumbra-color),
+            0px 1px 5px 0px var(--jp-shadow-ambient-color);
+        --jp-elevation-z4: 0px 2px 4px -1px var(--jp-shadow-umbra-color),
+            0px 4px 5px 0px var(--jp-shadow-penumbra-color),
+            0px 1px 10px 0px var(--jp-shadow-ambient-color);
+        --jp-elevation-z6: 0px 3px 5px -1px var(--jp-shadow-umbra-color),
+            0px 6px 10px 0px var(--jp-shadow-penumbra-color),
+            0px 1px 18px 0px var(--jp-shadow-ambient-color);
+        --jp-elevation-z8: 0px 5px 5px -3px var(--jp-shadow-umbra-color),
+            0px 8px 10px 1px var(--jp-shadow-penumbra-color),
+            0px 3px 14px 2px var(--jp-shadow-ambient-color);
+        --jp-elevation-z12: 0px 7px 8px -4px var(--jp-shadow-umbra-color),
+            0px 12px 17px 2px var(--jp-shadow-penumbra-color),
+            0px 5px 22px 4px var(--jp-shadow-ambient-color);
+        --jp-elevation-z16: 0px 8px 10px -5px var(--jp-shadow-umbra-color),
+            0px 16px 24px 2px var(--jp-shadow-penumbra-color),
+            0px 6px 30px 5px var(--jp-shadow-ambient-color);
+        --jp-elevation-z20: 0px 10px 13px -6px var(--jp-shadow-umbra-color),
+            0px 20px 31px 3px var(--jp-shadow-penumbra-color),
+            0px 8px 38px 7px var(--jp-shadow-ambient-color);
+        --jp-elevation-z24: 0px 11px 15px -7px var(--jp-shadow-umbra-color),
+            0px 24px 38px 3px var(--jp-shadow-penumbra-color),
+            0px 9px 46px 8px var(--jp-shadow-ambient-color);
+
+
+
+        --jp-border-width: 1px;
+        --jp-border-color0: var(--md-grey-400);
+        --jp-border-color1: var(--md-grey-400);
+        --jp-border-color2: var(--md-grey-300);
+        --jp-border-color3: var(--md-grey-200);
+        --jp-border-radius: 2px;
+
+
+
+        --jp-ui-font-scale-factor: 1.2;
+        --jp-ui-font-size0: 0.83333em;
+        --jp-ui-font-size1: 13px;
+        --jp-ui-font-size2: 1.2em;
+        --jp-ui-font-size3: 1.44em;
+
+        --jp-ui-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+            Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+
+
+
+        --jp-ui-font-color0: rgba(0, 0, 0, 1);
+        --jp-ui-font-color1: rgba(0, 0, 0, 0.87);
+        --jp-ui-font-color2: rgba(0, 0, 0, 0.54);
+        --jp-ui-font-color3: rgba(0, 0, 0, 0.38);
+
+
+
+        --jp-ui-inverse-font-color0: rgba(255, 255, 255, 1);
+        --jp-ui-inverse-font-color1: rgba(255, 255, 255, 1);
+        --jp-ui-inverse-font-color2: rgba(255, 255, 255, 0.7);
+        --jp-ui-inverse-font-color3: rgba(255, 255, 255, 0.5);
+
+
+
+        --jp-content-line-height: 1.6;
+        --jp-content-font-scale-factor: 1.2;
+        --jp-content-font-size0: 0.83333em;
+        --jp-content-font-size1: 14px;
+        --jp-content-font-size2: 1.2em;
+        --jp-content-font-size3: 1.44em;
+        --jp-content-font-size4: 1.728em;
+        --jp-content-font-size5: 2.0736em;
+
+
+        --jp-content-presentation-font-size1: 17px;
+
+        --jp-content-heading-line-height: 1;
+        --jp-content-heading-margin-top: 1.2em;
+        --jp-content-heading-margin-bottom: 0.8em;
+        --jp-content-heading-font-weight: 500;
+
+
+        --jp-content-font-color0: rgba(0, 0, 0, 1);
+        --jp-content-font-color1: rgba(0, 0, 0, 0.87);
+        --jp-content-font-color2: rgba(0, 0, 0, 0.54);
+        --jp-content-font-color3: rgba(0, 0, 0, 0.38);
+
+        --jp-content-link-color: var(--md-blue-700);
+
+        --jp-content-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+            Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+            'Segoe UI Symbol';
+
+
+
+        --jp-code-font-size: 13px;
+        --jp-code-line-height: 1.3077;
+        --jp-code-padding: 5px;
+        --jp-code-font-family-default: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+        --jp-code-font-family: var(--jp-code-font-family-default);
+
+
+        --jp-code-presentation-font-size: 16px;
+
+
+        --jp-code-cursor-width0: 1.4px;
+        --jp-code-cursor-width1: 2px;
+        --jp-code-cursor-width2: 4px;
+
+
+
+        --jp-layout-color0: white;
+        --jp-layout-color1: white;
+        --jp-layout-color2: var(--md-grey-200);
+        --jp-layout-color3: var(--md-grey-400);
+        --jp-layout-color4: var(--md-grey-600);
+
+
+
+        --jp-inverse-layout-color0: #111111;
+        --jp-inverse-layout-color1: var(--md-grey-900);
+        --jp-inverse-layout-color2: var(--md-grey-800);
+        --jp-inverse-layout-color3: var(--md-grey-700);
+        --jp-inverse-layout-color4: var(--md-grey-600);
+
+
+
+        --jp-brand-color0: var(--md-blue-900);
+        --jp-brand-color1: var(--md-blue-700);
+        --jp-brand-color2: var(--md-blue-300);
+        --jp-brand-color3: var(--md-blue-100);
+        --jp-brand-color4: var(--md-blue-50);
+
+        --jp-accent-color0: var(--md-green-900);
+        --jp-accent-color1: var(--md-green-700);
+        --jp-accent-color2: var(--md-green-300);
+        --jp-accent-color3: var(--md-green-100);
+
+
+
+        --jp-warn-color0: var(--md-orange-900);
+        --jp-warn-color1: var(--md-orange-700);
+        --jp-warn-color2: var(--md-orange-300);
+        --jp-warn-color3: var(--md-orange-100);
+
+        --jp-error-color0: var(--md-red-900);
+        --jp-error-color1: var(--md-red-700);
+        --jp-error-color2: var(--md-red-300);
+        --jp-error-color3: var(--md-red-100);
+
+        --jp-success-color0: var(--md-green-900);
+        --jp-success-color1: var(--md-green-700);
+        --jp-success-color2: var(--md-green-300);
+        --jp-success-color3: var(--md-green-100);
+
+        --jp-info-color0: var(--md-cyan-900);
+        --jp-info-color1: var(--md-cyan-700);
+        --jp-info-color2: var(--md-cyan-300);
+        --jp-info-color3: var(--md-cyan-100);
+
+
+
+        --jp-cell-padding: 5px;
+
+        --jp-cell-collapser-width: 8px;
+        --jp-cell-collapser-min-height: 20px;
+        --jp-cell-collapser-not-active-hover-opacity: 0.6;
+
+        --jp-cell-editor-background: var(--md-grey-100);
+        --jp-cell-editor-border-color: var(--md-grey-300);
+        --jp-cell-editor-box-shadow: inset 0 0 2px var(--md-blue-300);
+        --jp-cell-editor-active-background: var(--jp-layout-color0);
+        --jp-cell-editor-active-border-color: var(--jp-brand-color1);
+
+        --jp-cell-prompt-width: 64px;
+        --jp-cell-prompt-font-family: var(--jp-code-font-family-default);
+        --jp-cell-prompt-letter-spacing: 0px;
+        --jp-cell-prompt-opacity: 1;
+        --jp-cell-prompt-not-active-opacity: 0.5;
+        --jp-cell-prompt-not-active-font-color: var(--md-grey-700);
+
+        --jp-cell-inprompt-font-color: #307fc1;
+
+        --jp-cell-outprompt-font-color: #bf5b3d;
+
+
+
+        --jp-notebook-padding: 10px;
+        --jp-notebook-select-background: var(--jp-layout-color1);
+        --jp-notebook-multiselected-color: var(--md-blue-50);
+
+
+        --jp-notebook-scroll-padding: calc(100% - var(--jp-code-font-size) * var(--jp-code-line-height) - var(--jp-code-padding) - var(--jp-cell-padding) - 1px);
+
+
+
+        --jp-rendermime-error-background: #fdd;
+        --jp-rendermime-table-row-background: var(--md-grey-100);
+        --jp-rendermime-table-row-hover-background: var(--md-light-blue-50);
+
+
+
+        --jp-dialog-background: rgba(0, 0, 0, 0.25);
+
+
+
+        --jp-console-padding: 10px;
+
+
+
+        --jp-toolbar-border-color: var(--jp-border-color1);
+        --jp-toolbar-micro-height: 8px;
+        --jp-toolbar-background: var(--jp-layout-color1);
+        --jp-toolbar-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.24);
+        --jp-toolbar-header-margin: 4px 4px 0px 4px;
+        --jp-toolbar-active-background: var(--md-grey-300);
+
+
+
+        --jp-statusbar-height: 24px;
+
+
+
+        --jp-input-box-shadow: inset 0 0 2px var(--md-blue-300);
+        --jp-input-active-background: var(--jp-layout-color1);
+        --jp-input-hover-background: var(--jp-layout-color1);
+        --jp-input-background: var(--md-grey-100);
+        --jp-input-border-color: var(--jp-border-color1);
+        --jp-input-active-border-color: var(--jp-brand-color1);
+        --jp-input-active-box-shadow-color: rgba(19, 124, 189, 0.3);
+
+
+
+        --jp-editor-selected-background: #d9d9d9;
+        --jp-editor-selected-focused-background: #d7d4f0;
+        --jp-editor-cursor-color: var(--jp-ui-font-color0);
+
+
+
+        --jp-mirror-editor-keyword-color: #008000;
+        --jp-mirror-editor-atom-color: #88f;
+        --jp-mirror-editor-number-color: #080;
+        --jp-mirror-editor-def-color: #00f;
+        --jp-mirror-editor-variable-color: var(--md-grey-900);
+        --jp-mirror-editor-variable-2-color: #05a;
+        --jp-mirror-editor-variable-3-color: #085;
+        --jp-mirror-editor-punctuation-color: #05a;
+        --jp-mirror-editor-property-color: #05a;
+        --jp-mirror-editor-operator-color: #aa22ff;
+        --jp-mirror-editor-comment-color: #408080;
+        --jp-mirror-editor-string-color: #ba2121;
+        --jp-mirror-editor-string-2-color: #708;
+        --jp-mirror-editor-meta-color: #aa22ff;
+        --jp-mirror-editor-qualifier-color: #555;
+        --jp-mirror-editor-builtin-color: #008000;
+        --jp-mirror-editor-bracket-color: #997;
+        --jp-mirror-editor-tag-color: #170;
+        --jp-mirror-editor-attribute-color: #00c;
+        --jp-mirror-editor-header-color: blue;
+        --jp-mirror-editor-quote-color: #090;
+        --jp-mirror-editor-link-color: #00c;
+        --jp-mirror-editor-error-color: #f00;
+        --jp-mirror-editor-hr-color: #999;
+
+
+
+        --jp-vega-background: white;
+
+
+
+        --jp-sidebar-min-width: 250px;
+
+
+
+        --jp-search-toggle-off-opacity: 0.5;
+        --jp-search-toggle-hover-opacity: 0.8;
+        --jp-search-toggle-on-opacity: 1;
+        --jp-search-selected-match-background-color: rgb(245, 200, 0);
+        --jp-search-selected-match-color: black;
+        --jp-search-unselected-match-background-color: var(--jp-inverse-layout-color0);
+        --jp-search-unselected-match-color: var(--jp-ui-inverse-font-color0);
+
+
+        --jp-icon-contrast-color0: var(--md-purple-600);
+        --jp-icon-contrast-color1: var(--md-green-600);
+        --jp-icon-contrast-color2: var(--md-pink-600);
+        --jp-icon-contrast-color3: var(--md-blue-600);
+    }
+
+    * {
+        -webkit-print-color-adjust: exact;
+    }
+
+    a.anchor-link {
+        display: none;
+    }
+
+    .highlight {
+        margin: 0.4em;
+    }
+
+    .jp-InputArea {
+        overflow: hidden;
+    }
+
+    .jp-InputArea-editor {
+        overflow: hidden;
+    }
+
+    .CodeMirror pre {
+        margin: 0;
+        padding: 0;
+    }
+
+    .jp-OutputArea-child {
+        display: table;
+        width: 100%;
+    }
+
+    .jp-OutputPrompt {
+        display: table-cell;
+        vertical-align: top;
+        min-width: var(--jp-cell-prompt-width);
+    }
+
+    .jp-OutputArea-output {
+        display: table-cell;
+        width: 100%;
+    }
+
+    .jp-OutputArea-output.jp-OutputArea-executeResult {
+        width: 100%;
+    }
+
+    .jp-Collapser {
+        display: none;
+    }
+
+    @media print {
+
+        .jp-Cell-inputWrapper,
+        .jp-Cell-outputWrapper {
+            display: block;
+        }
+
+        .jp-OutputArea-child {
+            break-inside: avoid-page;
+        }
+    }
+    </style>
+</head>
+
+<body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
+    <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+        <div class="jp-Cell-inputWrapper">
+            <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+            </div>
+            <div class="jp-InputArea jp-Cell-inputArea">
+                <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+                    <h1 id="Mathematical-foundations-of-smiling">Mathematical foundations of smiling<a class="anchor-link" href="#Mathematical-foundations-of-smiling">&#182;</a></h1>
+                    <p>In my experiment, I have demonstrated that smiling is a simple matter of making the mouth into an arc, having eyes, and optionally a nose.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+        <div class="jp-Cell-inputWrapper">
+            <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+            </div>
+            <div class="jp-InputArea jp-Cell-inputArea">
+                <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+                    <div class="CodeMirror cm-s-jupyter">
+                        <div class=" highlight hl-ipython3">
+                            <pre><span></span><span class="kn">from</span> <span class="nn">p2p_system</span> <span class="kn">import</span> <span class="n">get_data</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+        <div class="jp-Cell-inputWrapper">
+            <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+            </div>
+            <div class="jp-InputArea jp-Cell-inputArea">
+                <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+                    <div class="CodeMirror cm-s-jupyter">
+                        <div class=" highlight hl-ipython3">
+                            <pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sizes</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><span class="s1">&#39;@jonny:my-project:Analysis1&#39;</span><span class="p">)</span>
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jp-Cell-outputWrapper">
+            <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+            </div>
+            <div class="jp-OutputArea jp-Cell-outputArea">
+                <div class="jp-OutputArea-child">
+                    <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+                        <pre>Downloading dataset @jonny:my-project:Analysis1
+--------------------
+</pre>
+                    </div>
+                </div>
+                <div class="jp-OutputArea-child">
+                    <div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+                        <pre>  0%|          | 0/100 [00:00&lt;?, ?it/s]</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+        <div class="jp-Cell-inputWrapper">
+            <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+            </div>
+            <div class="jp-InputArea jp-Cell-inputArea">
+                <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+                    <div class="CodeMirror cm-s-jupyter">
+                        <div class=" highlight hl-ipython3">
+                            <pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="n">sizes</span><span class="p">)</span>
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jp-Cell-outputWrapper">
+            <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+            </div>
+            <div class="jp-OutputArea jp-Cell-outputArea">
+                <div class="jp-OutputArea-child">
+                    <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+                        <pre>&lt;matplotlib.collections.PathCollection at 0x12826dee0&gt;</pre>
+                    </div>
+                </div>
+                <div class="jp-OutputArea-child">
+                    <div class="jp-RenderedImage jp-OutputArea-output ">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXoAAAD4CAYAAADiry33AAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjQuMSwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy/Z1A+gAAAACXBIWXMAAAsTAAALEwEAmpwYAAAqpElEQVR4nO3deXxddZ3/8dfn3CV7m6RJurdJ2xRoWdoSisAAgiwdHQqKYkFGcOvPkQ6OqL8fjs5PxRn3n6IziCLiuAxUx3EJonZgkEWg0JSytaULaWnTNW3S7Df33nM+vz/uSXob0vSGLDc5/Twfjzx67znfc+8np8k7537POd+vqCrGGGOCy8l2AcYYY0aWBb0xxgScBb0xxgScBb0xxgScBb0xxgRcONsF9FVWVqaVlZXZLsMYY8aV9evXH1LV8v7Wjbmgr6yspK6uLttlGGPMuCIirx9vnXXdGGNMwFnQG2NMwI25rpug2XOkiz3NXeRFQpw2tYhwyP62GmNGlwX9CFm3s4kvP7SZTftaiYYdPFXCjsMHL6jkY5fMI2KBb4wZJRb0I2DNxv18fPUGYgkPgO6k569xufvx11i7o4mffnCphb0xZlRklDQiskxEtojIdhG5/ThtrhORTSKyUUTuT1vuisgL/lftcBU+VjV3xI8J+b5iCY8Nu5r50ZP1o1yZMeZkdcIjehEJAXcBlwMNwDoRqVXVTWltqoHPABeoarOIVKS9RJeqLhresseuX6zbdcI2sYTHD5/cwcqL5uI4MgpVGWNOZpkc0S8FtqtqvarGgdXA1X3afAS4S1WbAVT14PCWOX489PL+4x7Np+tKuNQfah+FiowxJ7tMgn46sDvteYO/LN18YL6IPCUia0VkWdq6XBGp85df098biMhKv01dY2PjYOofc2IJN6N2jkhGfxCMMWaohutsYBioBt4KXA/8UESK/XWzVbUGuAG4U0Tm9t1YVe9R1RpVrSkv7/cO3nFjbkUhmXTGJFyPacV5I16PMcZkEvR7gJlpz2f4y9I1ALWqmlDVHcBWUsGPqu7x/60HHgMWD7HmMe2DF1SRFw0N2EaAC+aWUVoQHZ2ijDEntUyCfh1QLSJVIhIFVgB9r575LamjeUSkjFRXTr2IlIhITtryC4BNBNg5lSWcMX0iOeHj79rcSIhPLztlFKsyxpzMThj0qpoEVgFrgM3AL1V1o4jcISLL/WZrgMMisgn4M/BpVT0MnAbUiciL/vKvpl+tE0Qiwn03n8OS2SXkRUKkX1STHw1RmBPmvpvP4bSpE7JXpDHmpCJjbXLwmpoaDcLolarKiw0t/OTpndQ3tpMfDXPN4mlcddY08qN2n5oxZniJyHr/fOgbWOKMEBFh0cxiFr13UbZLMSYQOuNJfv18A/c+uYO9LTEijnDxKeWsvGgui2YWZ7u8Mc2C3hgz5u1viXHt3U/T1BGny7+EOQ786ZX9/PnVRj568Rw+ftn87BY5htlgK8aYMc3zlBvuXcv+1lhvyPeu09TNh99/vJ4HX+x7MaDpYUFvjBnT/rL9EAdaYrje8c8ndiVcvrlmK2PtnONYYUFvjBnT7n92Fx3xE99xfrCtm20HbViR/ljQG2PGtANtsYzahUPCofbuEa5mfLKgN8aMaZMyvIPc9ZTiPLvbvD8W9MaYMe26mpkU5Aw8rAjAxLwIp00tGoWKxh8LemPMmHbpqRVMyI0w0NQNeZEQt15ajYjN79AfC3pjzJgWDjk88JG3UJwf7XcMqfxoiHefPYMVS2f2s7UBu2HKGDMOVJYV8MhtF/PTp3fyk2d20tKVAKCmspS/e+tcLjml4gSvcHKzsW6MMeNOPOkRdsSm4kxjY90YYwIlOsAw4OaNbG8ZY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAZRT0IrJMRLaIyHYRuf04ba4TkU0islFE7k9bfpOIbPO/bhquwo0xxmTmhNfRi0gIuAu4HGgA1olIrapuSmtTDXwGuEBVm0Wkwl9eCnweqAEUWO9v2zz834oxxpj+ZHJEvxTYrqr1qhoHVgNX92nzEeCungBX1YP+8iuBh1W1yV/3MLBseEo3xhiTiUyCfjqwO+15g78s3Xxgvog8JSJrRWTZILZFRFaKSJ2I1DU2NmZevTHGmBMarpOxYaAaeCtwPfBDESnOdGNVvUdVa1S1pry8fJhKMsYYA5kF/R4gffzPGf6ydA1AraomVHUHsJVU8GeyrTHGmBGUSdCvA6pFpEpEosAKoLZPm9+SOppHRMpIdeXUA2uAK0SkRERKgCv8ZcYYY0bJCa+6UdWkiKwiFdAh4D5V3SgidwB1qlrL0UDfBLjAp1X1MICIfInUHwuAO1S1aSS+EWOMMf2z8eiNMSYABhqP3u6MNcaYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgLOgN8aYgMso6EVkmYhsEZHtInJ7P+tvFpFGEXnB//pw2jo3bXntcBZvjDHmxMInaiAiIeAu4HKgAVgnIrWquqlP01+o6qp+XqJLVRcNuVJjjDFvSiZH9EuB7apar6pxYDVw9ciWZYwxZrhkEvTTgd1pzxv8ZX1dKyIvicivRGRm2vJcEakTkbUick1/byAiK/02dY2NjRkXb4wx5sSG62Tsg0Clqp4JPAz8JG3dbFWtAW4A7hSRuX03VtV7VLVGVWvKy8uHqSRjjDGQWdDvAdKP0Gf4y3qp6mFV7faf3gucnbZuj/9vPfAYsHgI9RpjjBmkTIJ+HVAtIlUiEgVWAMdcPSMiU9OeLgc2+8tLRCTHf1wGXAD0PYlrjDFmBJ3wqhtVTYrIKmANEALuU9WNInIHUKeqtcCtIrIcSAJNwM3+5qcBPxARj9Qfla/2c7WOMcaYESSqmu0ajlFTU6N1dXXZLsMYY8YVEVnvnw99A7sz1hhjAs6C3hhjAs6C3hhjAs6C3hhjAs6C3hhjAs6C3hhjAs6C3hhjAs6C3hhjAs6C3hhjAs6C3hhjAs6C3hhjAs6C3hhjAs6C3hhjAs6C3hhjAs6C3hhjAs6C3hhjAu6EM0wZc7KLJVzWbNzPlv1tREMO588r45zKEkQk26UZkxELemMG8PO1r/PlP2xGgI64iwD3PFnPpIIod994NqdPn5jtEo05Ieu6MeY4/v2pHfzLQ5vpjLt0xF0AFOiMu+xu7uK6HzzDlv1t2S3SmAxkFPQiskxEtojIdhG5vZ/1N4tIo4i84H99OG3dTSKyzf+6aTiLN2aktHQl+MofX6Ur4R63TWfc5bO/eXkUqzLmzTlh142IhIC7gMuBBmCdiNSq6qY+TX+hqqv6bFsKfB6oIXUwtN7ftnlYqjdmhPx6fQNOBn3wL+9pYdfhTmZNyh+Fqox5czI5ol8KbFfVelWNA6uBqzN8/SuBh1W1yQ/3h4Flb65UY0bPczubBjya7xEJOWza1zIKFRnz5mUS9NOB3WnPG/xlfV0rIi+JyK9EZOZgthWRlSJSJyJ1jY2NGZZuzMjJ5Gi+h119Y8a64ToZ+yBQqapnkjpq/8lgNlbVe1S1RlVrysvLh6kkY9688+dNIj8aOmG7uOtxhl15Y8a4TIJ+DzAz7fkMf1kvVT2sqt3+03uBszPd1pix6JpF0/FUB2zjCJxTWcK04rxRqsqYNyeToF8HVItIlYhEgRVAbXoDEZma9nQ5sNl/vAa4QkRKRKQEuMJfZsyYVpAT5svvPIPcSP+/Io5Aod/GmLHuhFfdqGpSRFaRCugQcJ+qbhSRO4A6Va0FbhWR5UASaAJu9rdtEpEvkfpjAXCHqjaNwPdhzLB715IZ5EYc/ul3G4nFXRKu19t3Xz25iO9ev5jZkwqyXKUxJyZ6go+no62mpkbr6uqyXYYxvVxP+cv2Q2w/2E4kJLxlziTmTy7KdlnGHENE1qtqTX/rbAgEY04g5AgXzy/n4vl2oYAZn2wIBGOMCTgLemOMCTgLemOMCTgLemOMCTgLemOMCTgLemOMCTgLemOMCTgLemOMCTgLemOMCTgLemOMCTgLemOMCTgLemOMCTgLemOMCTgLemOMCTgLemOMCTgLemOMCTgLemOMCTgLemOMCbiMgl5ElonIFhHZLiK3D9DuWhFREanxn1eKSJeIvOB/fX+4CjfGGJOZE84ZKyIh4C7gcqABWCcitaq6qU+7IuDjwLN9XuI1VV00POUaY4wZrEyO6JcC21W1XlXjwGrg6n7afQn4GhAbxvqMMcYMUSZBPx3Ynfa8wV/WS0SWADNV9aF+tq8SkQ0i8riIXNjfG4jIShGpE5G6xsbGTGs3xhiTgSGfjBURB/gW8Ml+Vu8DZqnqYuA24H4RmdC3kareo6o1qlpTXl4+1JKMMcakySTo9wAz057P8Jf1KAJOBx4TkZ3AW4BaEalR1W5VPQygquuB14D5w1G4McaYzGQS9OuAahGpEpEosAKo7Vmpqi2qWqaqlapaCawFlqtqnYiU+ydzEZE5QDVQP+zfhTHGmOM64VU3qpoUkVXAGiAE3KeqG0XkDqBOVWsH2Pwi4A4RSQAe8FFVbRqOwo0xxmRGVDXbNRyjpqZG6+rqsl2GMcaMKyKyXlVr+ltnd8YaY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAWdAbY0zAZRT0IrJMRLaIyHYRuX2AdteKiIpITdqyz/jbbRGRK4ejaGOMMZkLn6iBiISAu4DLgQZgnYjUquqmPu2KgI8Dz6YtWwCsABYC04BHRGS+qrrD9y0YY4wZSCZH9EuB7apar6pxYDVwdT/tvgR8DYilLbsaWK2q3aq6A9juv54xxphRkknQTwd2pz1v8Jf1EpElwExVfWiw2/rbrxSROhGpa2xszKhwY4wxmRnyyVgRcYBvAZ98s6+hqveoao2q1pSXlw+1JGOMMWlO2EcP7AFmpj2f4S/rUQScDjwmIgBTgFoRWZ7BtsYYY0ZYJkf064BqEakSkSipk6u1PStVtUVVy1S1UlUrgbXAclWt89utEJEcEakCqoHnhv27MMYYc1wnPKJX1aSIrALWACHgPlXdKCJ3AHWqWjvAthtF5JfAJiAJ3GJX3BhjzOgSVc12DceoqanRurq6bJdhjDHjioisV9Wa/tbZnbHGGBNwFvTGGBNwFvTGGBNwgQn6I51x1mzcz7YDbdkuxRhjBkVVeXr7IZ7Y2ojrDf9500yuox/zDrV3c+W3n6A76ZL0lDvfu5hlp0/JdlnGGJORT/ziRf57034A3jJnEvfdfM6wvn4ggv7RVw/SmXDpiqeu3Pzu/2xl094WZpTm8+4lM3AcyXKFxhhzrOaOOA88twtHhNoX99BzIP/ktkaaOuKUFkSH7b0CEfQzS/LB30kRB7YeaGfzvjZyIw7bDrTx2XcsyG6BxhiTxvWUd939NA3NnQCICPiXukfDDoU5wxvNgQj68+ZO4pNXzOf+Z3dRnB9ly4FWOrpduhIev3thL+t2NjN5Qg7/fM0ZlBflZLtcY8xJ6rkdTXztj6+SG3HYc6SLhHu0P/7MGRNxPeWOq08nGh7e06eBu2Fqd1MnV3z7CboSLjkhIampv54hR1gyq5hfrDwPEf8vqDHGjALXU9piCc77yqN0JVwEcBxBVXFEqCor4OHbLh7Sewx0w1Tggh5gw65m/uPZXUQcofalvXR0p/ru8yIOCVeJhh3uvvFsLp5vI2UaY0bWl36/iR8/tYO8aAjXVWJJD4CcsPCemplEQg6rLpnHpMKh9TYMFPSB6Lrpa/GsEhbPKiGWcPnLa4dQjeOpEk8qrirJuMvHH3ief71hCSFHOG/OJDvCN8YMm7ZYgmfrm4glXO5/dheeQke3SyQk5EdDALxz8XT++ZozRqWeQB7Rp2uLJXj01YN4Htz+65fo9v+ahhwhN+ygwF+fPoX/d92iYXtPY8zJqy2W4Mo7n6C1K0EiqShK3O+Lnzoxl8+8/TSKcsK89ZTyYT3APOmO6NMV5Ua4elFqUqsXdjdz/3O7QMEDOvzLMX/9fOrSJtdTbrt8PpVlBVms2BgzHj2y6QCr1+0iNxKipTPRmy8F0RCKR8gRvvyuM7jklIpRry3wR/R9NXXEAbjwa4/2/kc4AkLqCs2S/ChP334pjiNEQoG5cdgYM0K6ky6v7mtlxT3P0pVwiYYFz4Okp4Qd4aL55Xz93WdSEA2T53fbjIST+oi+r56bEH7ywaX80+82EhZ4ZW8rnr++pSvBWV/8bxKe8veXzuMfLpufvWKNMWNWV9zlxh89y4ZdzRTnRek5aI4nlVmleYQch6pJBXzj3WcO+UTrUJ10Qd+jprKUP378QgBW3PMML+w+Agpx1yOWTP2Hfe/P2yktiOJ5yjvOnGbX4BtjeKnhCM/taOJgWzcb97bgaWqsLccRIo4QDjl8+MI5vP+8ymyX2uuk67rpTyzh8uvn95D0PL6xZgttsSSQ6tKJhh1UYUJuhEc/dTFFuZFRrc0YM3Y8t6OJ99/3LK6nqIIIJFzFEbj01AqWVpVSXVHEJadmoR/eum4GlhsJccO5swAozY9y23++iOcp4ZAQS6Q6dTriSa76179wpDPBBy+o4tbLqrNZsjFmlLR3J/nYz9fzYkMLZQXR3kwAKM6L0BFPUpwf5fNXLWRmaX4WKz0+C/o+/uasaVy2YDJx12PVfzzPM/WHSbhKLOHy+uFOFLj78dcon5BD2BEurC5nysTcbJdtjBlmL+w+wtYDbbyw6whr65uIux6d8SSRkJBwlbxIiM++/VTetmAKE/MihMbw4InWdTOAlq4E3/jTq+xribH1QBu7m7sAiIYEEEKhVJ/cmk9cxNSJedkt1hgzbB56aS+f+s8XERHiSY+kP7RkSOCtp1aQSHq89ZQKPnBB5Zi52XLIQyCIyDLgO0AIuFdVv9pn/UeBWwAXaAdWquomEakENgNb/KZrVfWjA73XWAr6dP+9cT+3rt5ASARXtffjW27YYVpxHo1t3Vy2YDLffM9ZY/ovuzGmf3uOdLHyp3XsauqkKCfM3pYYAJGQ4EjqcuucsMNDt144Jj/FDynoRSQEbAUuBxqAdcD1qroprc0EVW31Hy8HPqaqy/yg/72qnp5psWM16AH2t8Q40BrjF+t281/PN9Cd9Aj5A6QlvdRHuQ9cUElRboRz55SyZFZJtks2xgzA85QHX9rLgdYYj2w+SN3OJjyFsJP6ve7porlzxVlUFOVSPblo2IcQHi5DPRm7FNiuqvX+i60GrgZ6g74n5H0F9I4OHyxTJuYyZWIu8ycXIQIb97biqfJSQwsACdflnifqAQiHhB/ffA4Lpk2kKCdsk58YM4bEkx4JN3WV3S/W7SbpeXie9k7+EQ05nFNVSktXkutqZnDlwqnZLXiIMgn66cDutOcNwLl9G4nILcBtQBS4NG1VlYhsAFqBz6nqk/1suxJYCTBr1qyMi8+WvGiIf3lnajCiV/a0sOKetYDiekqX36WT9JSP/cfztMWSVBTl8F8fO9/68Y0ZAx7ZtJ9V928g6aVGsu1KHB3d1vVSXTUzSvL5/o01I3on62jKpOvm3cAyVf2w//xvgXNVddVx2t8AXKmqN4lIDlCoqodF5Gzgt8DCPp8AjjGWu26O50hnnF1NnWza28oXH9xEV8Il7B/BJz0lJKkbtFSVs2YW8+krTx32iQWMMcfX0NzJl36/ie6Ex4bdR2jpSgCpe2VCTqqLJj8a4pf/6y2oCqdMKRp3v6ND7brZA8xMez7DX3Y8q4G7AVS1G+j2H68XkdeA+cD4SvITKM6PUpwf5YzpE0m6Ho9vPUQ07PDw5gPgKQrUvd6M6ykv7WkhlnBZNLOE2ZPyqakszXb5xgRSwvV4eNMBHIEv/+FVGpo78TQ1rlWPsCNcs3g6bbEkH75wDqdPL85WuSMqk6BfB1SLSBWpgF8B3JDeQESqVXWb//QdwDZ/eTnQpKquiMwBqoH64Sp+rBERbjyvkhvPq6S9O8nr9zzD5r1tFOWG6Uq4uF7qap0HntvNfz2/B1X43DtO4x1nTiUvGiInHIyPicZkU2ssQViElT9bz/O7mlE92qUKqXB3nNQFFDdfUMU/vv20LFY7OjK9vPLtwJ2kLq+8T1X/RUTuAOpUtVZEvgNcBiSAZmCVqm4UkWuBO/zlHvB5VX1woPcaj103A+mMJ2ls6+bt33kSV1P9+I5I77j4RTlhYkmXsOPwo5trOH9uWZYrNmb8+vqfXuWeJ+oRwNWjJ1cB8iKpA6k55QX85u/OxyN1V3xQnHRTCY5Fuw538uT2RiKO8Pnao/34SmocfIDywih50TDF+RG+/d5FzC0vzG7RxowDv39pL1//0xaKcsNsPdB2zITbkOqqKc6P8MXlC4m7yjvOmBqYk6zpbKybMWDWpHzeN2k2ADnhED96ageTCqKsrT9Mlx/0h9rjKHF2N8EHfvwc580tIy8S4ta3VfcOr2yMSQ1P8O9P7aQkP8z9z+3u/YSc3v+eFwmxeFYxIvCFqxZSPbkoO8WOAXZEn0Wqymd/80rvrDSup8f8wIqAI8K8ikI+eEEVAMsXTQvUx01jMrW7qZP/2XyACXkRPvfbV+iMp+Zg7ZkdDlJ3qic9JeQI371+MVcunJLlqkePdd2McfGkhyNw3Q+eYcuBNpJuqi8/mdbBmBdxAOHUKYX8098sIJb0OLdqkg23YALtSGecDbuPMCE3zM33rSPuer3DA/ccFEVCQjTk4Cnc+rZ5fPjCOTgiJ93vhgX9OJFwPdbtaKIgJ8zfP7CBfS1dCPROLAypI/3cSAhHYPGsEr75njNp704yt7xwzAyuZMxQdMVddh7uICfscO3dT5Nwle6kS0iEmB/uPRmeEw7x7rNnsOz0KRTnR1g4bWIWK88uC/pxqLkjzup1u8kJC3c/Xs/h9m6AY64iCAs4jkPIEc6bO4nvrlhER9yloijHQt+MKwnX41B7N56nXPO9p+mMJ3G91CfbnpOrjqR+/nPCDlcsnEx1RRFTJ+Zy7ZIZNsQIFvTj3q7DnXz1j5tRYN3OJg61x9/QJhp2eic4/6t5ZXzvfUvoirsU50cs9M2YlHQ9WmNJuuJJ3vm9p2mNJYiEHDrjbm+fe8gRXE+JhhzOnzsJV5VTphTxqStOsXNVfVjQB8ir+1v51C9fpDPh0h5LcrAtdaTfE/KQOiHlOELC9VhaNYl73382nXGX0oKohb7JqoTr0RZL0tIZ5z0/eIaWrgRFOWGOdCXwNHXULpIK97ADZ84o5kBrN2fMmMg333PWmB05ciywoA+olxta+OjP19PSlaAgJ8SB1lTo93zEBciNOIQdh+6ky2lTJvCzD51LayzB1Im5hEPjaywPMz51dCdp6UrQ3Bnn+h+upSvuUpQb4UhnHE9Tk3kAuAoRR5hdls+e5hhnzZzID99fY/M0Z8iC/iTwyp4WbrrvOZo745QX5XCwtRslFfqqqaP9nHBq8oSkp5QV5vDAR97Ckc4Es8vymWC/TGYY7TnSRUtngsPt3az82Xo8VXIjDi1dSSAV7p7/c5kbdigpiLK/JcbiWcX87EPnUmBH7oNmQX8S8Txle2M719+zNhX6hTk0tnf3Hjn1/HKFHIiGQoQcwRG47+ZzONQeZ/7kQubYHblmkFSV53Y00Rl32d8S44sPbsRxBFV6hwFOP+jIjTjkR8Mc6YxTU1nKTz+4lGjIsZOqQ2BBfxJSVeKux8HWblbc8wz7WmJMnpBLY1s3SU+P+aWD1LXIOeHUTVt3XL2QQ+1x5lUUctlpFdavb/rVFXf51frduJ6y7WA7v9mwByF1fXvPPSB9uxFzIyFauxJcemoF37/xbFxVG8xvmFjQn+RUU5eodXQnufFHz7J5XyszSvI40NrtT4coKEcHgAqJgKRm2bl2yXT2tcaonFTAp644JZBjhJjMvdbYzrce3ko05LD9YDtbD7QBqZv+epIk/cKAaEj8/vgE7zt3Fl9YvoCkx7gb6308sKA3x+g52r/1gQ08tf0ws0vzqT/U8YYJUyB1B6L61y6fMqWIPc1dlBZEufvGJeRFw+SGHSYV5mTz2zEjQFXZ3dTFhLwwj756kC//YTNFOWEOd8Rp604imhqONl1PwOeEHSZPyKWlK8EnLq/m5vOrUFX7ZDjCLOjNgFSV7zyyjdoX91I5KZ+n6w8TS3hE/Mshem5YST9Sm5Abpts/ivvHvz6VSNghJKlJHOz65vGpobmTNRsPMKMkjwee28Xa1w7jaWrinL4jQvYISepnojg/QlVZIR3dST73jgX8VbUNtz3aLOjNoPx5y0EeeHYXlWX5/GJdA13xJCKCp9rvL7wAOREHQZhXUUA0HCKe9PjC8gXMnlRAV9xlRkmeHdGNEfGkx+7mTqZOzOX+Z3ex+rldzCkv5Jn6w3QnXBDp7e6DY//Ai6SO2AU4Y/pEZk8qwPWUT1w+n5ml+dn6lgwW9GYI9h7p4g8v72PaxFx+/PRONu5tJel6eMoxg671JxoSEEGAyxdMZuG0CexvjfG3b5nN3PLC1E0xdi3/iHL9kRzXbNzPk1sbWTSrhDsf2UpTRzw1OYenxJLeG7vsOBru+f55GU+VVZfOZWJulEjI4Z1LptuJ1DHEgt4MC9dTXtnTQkl+lD9vOchX/riZnLCDKrR3J4+5iqcvR1JTuMVdJS8SIi8a4khnnOVnTeOKhZPZdqCDKxZO5rSpE0i6nv0BGAT1Zy7rCfQt+9s5e3YJn699hfrGDuZWFNDQ3EUs4b1hspuQCK6+cSyZqrIC6hs7KCmI8MP3p7KjKDdCVVlBtr5NcwIW9GZE7TzUwTfWbCHkCHHX44mtjf6om16/XT3pl9xF/Pk7E65HNORQVpTDnuYuzqkq5X3nzmJtfRMXzy/jklMr2HW4k2nFeSftzTQH22J0drtMmZjDfX/Zyb6WGH81r4zP/vZlmjriLJg2gdcOdtCddHsn4HD9+yfS/xt6xo8JC4RCDuGQ4Hmw8qI5vNRwhLkVhTaWzDhkQW9Gjary1PbDJFyPvIjDLfdvoDPuMq+ikG0H2uhOekha0KeHfs+JPc+/FR5JnQTMDQt50dTJ33BIuO7sGTyy+SALp03klkvn8cTWRion5XP5aZPZcbiT4vwIZePoSiBV5fXDneRGQhTlhvnV+gYcSY3z8n9/9wrdSY+L5pfzk6d3IgKl+VEOd8SJD7Av0++TCDuC+PsyJyycMmUCm/e1ctqUCXz7vYvYeqCNuRWFzD+JZ2AKgiEHvYgsA75DanLwe1X1q33WfxS4BXCBdmClqm7y130G+JC/7lZVXTPQe1nQB1M86fHztTvZ3xrj9GkT+cxvXiaRVKZMyOFgezexhHdMOKWHFn2e9xyR9vwxUE2FWUVRDo3tcTxVrl0yg4de3kdRbpj/feUp/PaFveRGQvzDZdX8+dWDeKpcv3QWG3YfoSvucumpFTQ0d3GkM86imcW0dCVo6ogzp7yQWMLlcHucGSV5dCc9DrbFmF6cetzQ3MXsSfnEEi6v7m9jXkUhCddjbf1hTp0yARH4w0v7mFtRyMS8CD98sp5ZpfnMLs3ne4+9RnFehOrJRTz12iE8TyktyKG5M44IJF094XmQvp+ORFKfqqJhIT8apivuMrM0n3+4rJrnX2/mgnllvO20ySPzn2yyakhBLyIhYCtwOdAArAOu7wlyv80EVW31Hy8HPqaqy0RkAfAAsBSYBjwCzFdV93jvZ0F/coglXNpiSUryI9z31A5e2dPKRdVlfPVPr9IaS1JWGKWpPU4s6R1zdJ8+uiEcG3Q91/z3Jf6ZRfHPE6Qapu7U7AnSiXkRmjvjOCJMnZhLQ3MXjgizJ+Wzq6kTT5VZJfnsb42RcJWywiitsSRJzyMnHCLhT4jR098tHD2xGU96RMNO76xhESfVL95bN8c/t9EfRyAScognPfIiod6j9aVVJfzVvDI27WvjXUumc8G8Mpo74pQV5tjQAieBoU4OvhTYrqr1/outBq4GeoO+J+R9BRz9ub0aWK2q3cAOEdnuv94zg/4uTKDkRkK9fcArL5rbu/yaxdNp7kwwqSDK41sbeeq1Q5xbVcov6xp4Ymsj1ZMLaWjuIukqCX9aubjrHZ07NC1oe34Ie8I/1VZ718Tdo7f8dMaPHnvUN3b0brv1QFtvIG9vbO99vPdIV2+/d0e3e8z7vaELhdSwAD1Zm/D0mEms00O+Z67gnn3Us2xeRSH7WmJ0dCe57fL5hBxhX0uM954zk+klebTFkkzqZxjqigm5/ex9c7LJJOinA7vTnjcA5/ZtJCK3ALcBUeDStG3X9tl2ej/brgRWAsyaNSuTuk1AhUMO5UWp/vVLTq3gklMrALh8wdFJnps64qx/vZmqsgIOtMb46TM7mVdeiOMI9z65g9KCCDNL83lxdwuu51FakENLV4KjAd8T9qnrxT2lN3j7u42/55OCCDi8sQsp/dLEnv5wz1UiodSgXp6m+sZ7QliA8qLUuEOeKledNY0/vbKf3IjD569awKOvNhJyhNsur2ZXUxfxpMf5cycNeCVSTqGdODXHl0nXzbuBZar6Yf/53wLnquqq47S/AbhSVW8SkX8D1qrqz/11PwL+qKq/Ot77WdeNGQ6eP9BWYW6YkvwIv39xHzkRh6WVpXz/iXo8T3nn4ul8+5GtdHQnuem8Sr7/RD3NHd28//xKfrluNwfburl2yXSe2HaIPc1dXLFwMtsPtvNaYwcXVZfREXd5qeEI582ZRHF+hCe3HWJpZSlnzijmwZf2snhmMVcsnMJvNuzhtKlFXHXmNP7n1YNML87jouoyth5sZ2JehGnFedneXSYAhtpHfx7wBVW90n/+GQBV/cpx2jtAs6pO7NtWRNb4r3XcrhsLemOMGbyBgj6Tu1LWAdUiUiUiUWAFUNvnDarTnr4D2OY/rgVWiEiOiFQB1cBzg/0GjDHGvHkn7KNX1aSIrALWkLq88j5V3SgidwB1qloLrBKRy4AE0Azc5G+7UUR+SerEbRK4ZaArbowxxgw/u2HKGGMCYKhdN8YYY8YxC3pjjAk4C3pjjAk4C3pjjAm4MXcyVkQagdeH8BJlwKFhKmc4WV2DY3UNjtU1OEGsa7aqlve3YswF/VCJSN3xzjxnk9U1OFbX4Fhdg3Oy1WVdN8YYE3AW9MYYE3BBDPp7sl3AcVhdg2N1DY7VNTgnVV2B66M3xhhzrCAe0RtjjEljQW+MMQE3boJeRJaJyBYR2S4it/ez/qMi8rKIvCAif/Hnq+1Z9xl/uy0icuVYqEtEKkWky1/+goh8fzTrSmt3rYioiNSkLcva/jpeXdneXyJys4g0pr3/h9PW3SQi2/yvm8ZQXW7a8tq+2450bX6b60Rkk4hsFJH705aPyD4bYk1Z3V8i8u20998qIkfS1g1tf6nqmP8iNTzya8AcUlMVvggs6NNmQtrj5cCf/McL/PY5QJX/OqExUFcl8Eq29pffrgh4gtR0jzVjYX8NUFdW9xdwM/Bv/WxbCtT7/5b4j0uyXZe/rn0k9tcgaqsGNvTsD6BiJPfZUGoaC/urT/u/JzUk/LDsr/FyRN87QbmqxoGeCcp7aQYTlKvqDqBngvJs1zWSTliX70vA14BY2rKs7q8B6hpJmdbVnyuBh1W1SVWbgYeBZWOgrpGWSW0fAe7y9wuqetBfPlL7bCg1jbTB/l9eDzzgPx7y/hovQd/fBOX9TTJ+i4i8BnwduHUw22ahLoAqEdkgIo+LyIXDVFNGdYnIEmCmqj402G2zVBdkcX/5rhWRl0TkVyIyc5DbjnZdALkiUicia0XkmmGqaTC1zQfmi8hTfg3LBrHtaNcE2d9fAIjIbFKfph8d7LbHM16CPiOqepeqzgX+D/C5bNfT4zh17QNmqepi4DbgfhGZMBr1SGpe328BnxyN98vUCerK2v7yPQhUquqZpI6ofjKK7z2Qgeqaranb6W8A7hSRuaNcW5hUV8lbSR2h/lBEike5hr4Gqinb+6vHCuBXOoyz8Y2XoN8DpB+pzPCXHc9q4Jo3ue2o1OV3jRz2H68n1X83f5TqKgJOBx4TkZ3AW4Ba/8RnNvfXcevK8v5CVQ+rarf/9F7g7Ey3zVJdqOoe/9964DFg8TDVlVFtpI48a1U14XcDbiUVsiO1z4ZS01jYXz1WcLTbZrDb9m+kTj4M84mMMKkTEFUcPZGxsE+b6rTHV5GazxZgIceeXKxn+E4uDqWu8p46SJ2g2QOUjlZdfdo/xtGTnlndXwPUldX9BUxNe/xOYK3/uBTYQeokWYn/eCzUVQLk+I/LgG0McPJvhGpbBvwkrYbdwKSR2mdDrCnr+8tvdyqwE/9m1uH6GRuWb2I0voC3k/rr+xrwWX/ZHcBy//F3gI3AC8Cf03ci8Fl/uy3AX4+FuoBr05Y/D1w1mnX1afsYfqBme38dr65s7y/gK/77v+j/P56atu0HSZ203g58YCzUBZwPvOwvfxn40HDWlWFtQqorbpNfw4qR3mdvtqaxsL/8518AvtrPtkPaXzYEgjHGBNx46aM3xhjzJlnQG2NMwFnQG2NMwFnQG2NMwFnQG2NMwFnQG2NMwFnQG2NMwP1/NcVI4un6qO0AAAAASUVORK5CYII=
+" class="
+jp-needs-light-background
+">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+        <div class="jp-Cell-inputWrapper">
+            <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+            </div>
+            <div class="jp-InputArea jp-Cell-inputArea">
+                <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+                    <p>QED.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

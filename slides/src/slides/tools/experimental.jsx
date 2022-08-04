@@ -1,17 +1,6 @@
 import React from 'react';
-import {Markdown} from 'spectacle';
-
-const Autopilot = (
-  <Markdown title={"Autopilot"}>
-  {`
-  # Autopilot
-  
-  - Reuse cover slide from infrastructure presentation
-  - Autopilot links them together!
-  `}
-  </Markdown>
-)
-
+import {Markdown, Heading, Image} from 'spectacle';
+import topologies from '../../img/topologies.png';
 
 const Parallaxin = (
   <Markdown title={"Parallaxin"}>
@@ -23,38 +12,15 @@ const Parallaxin = (
   </Markdown>
 )
 
-const ProgramStructure = (
-    <Markdown title={"Program Structure"}>
-      {`
-  # Program Structure
-  
-  - Make a framework that can be extended and composed.
-  - Separate the things that are unique to a single experiment from general things
-  - Move beyond "a high throughput apparatus to do a single experiment"
-  `}
-    </Markdown>
-)
-
-const CustomHardware = (
-    <Markdown title={"Custom Hardware"}>
-      {`
-  # Custom Hardware & Integration
-  
-  - Comparison of Cliff's BASIC code to autopilot control
-  - Video of parallax platform
-  - Video of us plugging into evan's rig.
-  `}
-    </Markdown>
-)
 
 const Topologies = (
-  <Markdown title={"Topologies"}>
-  {`
-  # Experimental Topologies
-  
-  - Power of swarms to do lots of cool shit
-  `}
-  </Markdown>
+    <div title={"Topologies"}>
+    <div className={'blankslide'}></div>
+
+<Heading fontSize={"90pt"} style={{color:"#ffffff"}} caps textAlign="left" fontFamily={"Source Serif Pro"}>
+  Multi-Agent <span style={{'color':'#ff3030'}}>Topologies</span></Heading>
+<Image src={topologies} style={{objectFit:'contain', margin:'auto', display:"block"}} width="90%" />
+    </div>
 )
 
 
@@ -84,7 +50,7 @@ const Wiki = (
 )
 
 const Slides = [
-  Autopilot, Parallaxin, ProgramStructure, Topologies, CustomHardware, DataModels, Wiki
+  Parallaxin, Topologies, DataModels, Wiki
 ]
 
 export default Slides

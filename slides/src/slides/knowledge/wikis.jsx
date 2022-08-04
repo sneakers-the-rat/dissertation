@@ -24,24 +24,13 @@ const What = (
   </Markdown>
 )
 
-const Wikipedia = (
-  <Markdown title={"Wikipedia"}>
-  {`
-  # We all know Wikipedia right
-  
-  - The 'behind the scenes' stuff in wikipedia
-  - But wikipedia is an anomaly in wiki history
-  `}
-  </Markdown>
-)
-
 const Wikis = (
   <Markdown title={"Early Wikis"}>
   {`
   # Earlier Wikis
   
-  - meaball & c2
-  - What wikis are really good at is governance
+  - meatball & c2
+  - example of fedwiki
   `}
   </Markdown>
 )
@@ -49,7 +38,7 @@ const Wikis = (
 
 
 const Slides = [
-Social, What, Wikipedia, Wikis
+Social, What,  Wikis
 ]
 
 export default Slides

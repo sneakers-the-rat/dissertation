@@ -1,0 +1,36 @@
+{
+  "name": "Data Format",
+  "children": [
+    {
+      "name": "Researcher",
+      "children": [
+        {
+          "name": "Name"
+        },
+        {
+          "name": "Institution"
+        },
+        {
+          "name": "Secret Power"
+        }
+      ]
+    },
+    {
+      "name": "Ephys"
+    },
+    {
+      "name": "Behavior",
+      "children": [
+        {
+          "name": "Reward Timeseries"
+        },
+        {
+          "name": "Skateboard Trick"
+        }
+      ]
+    },
+    {
+      "name": "Stimuli"
+    }
+  ]
+}

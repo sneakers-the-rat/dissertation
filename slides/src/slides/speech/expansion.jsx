@@ -71,7 +71,7 @@ const Harms = (
 )
 
 const Slides = [
-    Net, Harms
+    Net
 ]
 
 export default Slides

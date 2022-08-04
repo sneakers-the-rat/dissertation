@@ -8,9 +8,7 @@ import {Citations, Citation} from '../../components/typography.jsx';
 import {FancyHeading} from '../../components/styled.jsx';
 import {PositionedHeading} from '../../components/basics.jsx';
 import baby_rumbly from '../../img/baby_rumbly.png';
-// import soproud from '../../img/so_proud-01.png';
-import soundwave from '../../img/soumdwave.png';
-import vot from '../../img/vot.png';
+import soproud from '../../img/so_proud-01.png';
 import qb from '../../img/cuebased-01.svg';
 import mtf from '../../img/mtf.png';
 import naturalspeech from '../../img/naturalspeech-01.svg';
@@ -27,7 +25,7 @@ import { Icon } from '@mui/material';
 import anime from 'animejs';
 
 export const HaskinsModel = (
-    <div title={"Cue-Based Phonetic Models"} className={"fullslide"}>
+    <div title={"Cue-Based Phonetic Models"}>
       <FancyHeading fontWeight={700} fontStyle={"normal"}>
         What is a Phoneme?
       </FancyHeading>
@@ -96,22 +94,24 @@ export const Chair = (
       <PositionedHeading x={430} y={360}>
         4 Legs = Chair
       </PositionedHeading>
-      <Appear stepIndex={1}>
+      <Appear stepIndex={1} id={"chair-sign"}>
         <PositionedHeading x={550} y={250}>
           2 Legs = Sign (?)
         </PositionedHeading>
       </Appear>
-      <Appear stepIndex={2}>
+      <Appear stepIndex={2} id={"chair-bench"}>
         <PositionedHeading x={200} y={470}>
           6 Legs = Bench.
         </PositionedHeading>
       </Appear>
-      <Appear stepIndex={3}>
+      <Appear stepIndex={3} id={"Rumbly"}>
         <PositionedHeading x={1400} y={400}>
           Rumbly = Chair
         </PositionedHeading>
         <Image src={baby_rumbly} width={"700px"} left={"1200px"} top={"500px"} position={"absolute"}/>
-        {/*<Image src={soproud} position={"absolute"} top={0} left={-100} zIndex={999}></Image>*/}
+        </Appear>
+      <Appear id={"soproud"}>
+        <Image src={soproud} position={"absolute"} top={0} left={-100} width={"100%"} height={"100%"} zIndex={999}></Image>
       </Appear>
 
       <SvgAnimator

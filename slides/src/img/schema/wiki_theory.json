@@ -1,0 +1,33 @@
+{
+  "name": "Theory Wiki",
+  "children": [
+    {
+      "name": "Theory 1",
+      "children": [
+        {
+          "name": "Prediction 1"
+        },
+        {
+          "name": "Prediction 2"
+        },
+        {
+          "name": "Assumption"
+        }
+      ]
+    },
+    {
+      "name": "Theory 2",
+      "children": [
+        {
+          "name": "Prediction 1"
+        },
+        {
+          "name": "Prediction 2"
+        },
+        {
+          "name": "Assumption"
+        }
+      ]
+    }
+  ]
+}

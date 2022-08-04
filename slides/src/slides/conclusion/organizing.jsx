@@ -18,7 +18,7 @@ const Organizing = (
 const Society = (
   <Markdown title={"Organizing for Society"}>
   {`
-  # Systematic Dismantling of the Left
+  # For society...
   
   - Why can't we mount an effective climate movement?
   - Why are the fascists eating our lunch?

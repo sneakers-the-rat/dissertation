@@ -1,11 +1,13 @@
 import React from 'react';
 
-import {NSFNET, Cloud} from './cloud.jsx';
-
+import {Infra, NSFNET, Cloud} from './cloud.jsx';
+import surveillance from './surveillance.jsx';
 
 const Infocapitalism = [
+    Infra,
   NSFNET,
-  Cloud
+  Cloud,
+    ...surveillance
 ];
 
 export default Infocapitalism

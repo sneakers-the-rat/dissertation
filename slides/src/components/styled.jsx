@@ -6,13 +6,15 @@ export function FancyHeading(
         fontWeight= 200,
         textAlign= "left",
         fontStyle="italic",
+        fontSize="72px",
         children
     }){
   return(
 <Heading fontFamily={"Source Serif Pro"}
          fontWeight={fontWeight}
          textAlign={textAlign}
-         fontStyle={fontStyle}>
+         fontStyle={fontStyle}
+fontSize={fontSize}>
   {children}
 </Heading>
   )

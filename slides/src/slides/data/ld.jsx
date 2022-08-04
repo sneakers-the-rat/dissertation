@@ -33,17 +33,9 @@ const Heterogeneity = (
   {`
   # Design Principle - Heterogeneity is good
   
-  - rough consensus slide
-  - neat v. scruffy
-  - We are not trying to order the world, but build a means of expression.
-  - Very brief allusion to NIH data translator project and trans health.
-  
   - Formats are political. 
-  - Why do we have so many databases but none of them feel relevant to us?
-    - why does NIH waste so much money making so many domain-specific databases??
-  - Example from academic work, but also translator - it's a colonial project!
-  - Our version of federation means that we can make negotiation over formats an explicit part of the process
-  
+  - Universalizing systems get bought up by information giants
+  - Heterogeneity resists capture
   `}
   </Markdown>
 )

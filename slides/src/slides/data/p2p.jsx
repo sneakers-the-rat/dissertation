@@ -2,19 +2,6 @@ import React, {Fragment} from 'react';
 import { Markdown, Appear, Heading, Box, FlexBox, Text } from 'spectacle';
 import { Swarm } from '../../components/p2p/swarm';
 
-
-const Edges = (
-  <Markdown title={"Edges"}>
-  {`
-  # Design Principle - Empower People, not Systems
-  
-  - Push the power towards the edge.
-  - Don't build platforms that do things *for* people
-  - Make tools that let people do things directly.
-  `}
-  </Markdown>
-)
-
 const P2P = (
     <div title={"P2P"}><Box
         width={4/9}
@@ -142,6 +129,6 @@ const P2PScaling = (
 
 
 
-const Slides = [Edges, P2P, P2PScaling]
+const Slides = [P2P, P2PScaling]
 
 export default Slides
