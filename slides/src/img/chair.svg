@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1;}
+</style>
+<g id="sign">
+	<line id="remove_1_" class="st0 remove" x1="1099.8" y1="365.2" x2="1099.8" y2="522.7"/>
+	<polyline class="st0" points="1224.3,437.1 1224.3,331.5 1099.8,259.6 1099.8,365.2 	"/>
+	<line id="remove" class="st0 remove" x1="1224.3" y1="485" x2="1224.3" y2="437.1"/>
+	<polyline class="st0" points="1270.3,595.4 1270.3,234.6 1248.8,247 1248.8,608.7 1224.3,594.6 1224.3,485 	"/>
+	<polyline id="Axo_Line_Conc_1_" class="st0" points="1248.8,247 1081.9,150.7 1103.4,138.3 	"/>
+	<line id="Axo_Line_1_" class="st0" x1="1270.3" y1="234.6" x2="1103.4" y2="138.3"/>
+	<line id="remove_2_" class="st0 remove" x1="1081.9" y1="354.9" x2="1081.9" y2="512.4"/>
+	<line class="st0" x1="1081.9" y1="150.7" x2="1081.9" y2="354.9"/>
+	<path id="Axo_Line_7_" class="st0" d="M1224.3,594.6"/>
+	<polyline id="remove_3_" class="st0 remove" points="1121.7,377.9 1121.7,510 1099.8,522.7 1081.9,512.4 	"/>
+	<line class="st0" x1="1121.7" y1="272.3" x2="1121.7" y2="377.9"/>
+	<line id="Axo_Line_16_" class="st0" x1="1248.8" y1="608.7" x2="1270.7" y2="596.1"/>
+	<path class="st0" d="M1099.8,365.2"/>
+</g>
+<g id="chair">
+	<line id="remove_15_" class="st0 remove" x1="1092.3" y1="541.6" x2="925.9" y2="444.9"/>
+	<polyline class="st0" points="1081.9,354.9 1248.8,451.2 1092.3,541.6 	"/>
+	<polyline id="remove_14_" class="st0 remove" points="925.9,444.9 925.9,602.4 947.9,615.1 947.9,477.1 	"/>
+	<line class="st0" x1="1081.9" y1="354.9" x2="925.9" y2="444.9"/>
+	<line class="st0" x1="1092.6" y1="560.7" x2="1248.8" y2="470.5"/>
+	<line id="remove_13_" class="st0 remove" x1="925.9" y1="464.5" x2="1092.6" y2="560.7"/>
+	<path id="Axo_Line_18_" class="st0" d="M1116.4,685.2"/>
+	<polyline id="remove_12_" class="st0 remove" points="970.6,490.3 970.6,602 947.9,615.1 	"/>
+	<line id="remove_11_" class="st0 remove" x1="1092.3" y1="541.6" x2="1092.3" y2="561.8"/>
+	<line id="remove_10_" class="st0 remove" x1="1068.5" y1="574.5" x2="1068.5" y2="546.8"/>
+	<polyline class="st0" points="1092.3,699.1 1068.5,685.3 1068.5,574.5 	"/>
+	<polyline class="st0" points="1092.3,561.8 1092.3,699.1 1116.4,685.2 1116.4,546.9 	"/>
+</g>
+<g id="bench">
+	<polyline id="Axo_Line_Conc_14_" class="st0" points="1092.3,541.6 744.8,742.2 577.9,645.9 	"/>
+	<polyline id="Axo_Line_Conc_6_" class="st0" points="925.9,444.9 577.9,645.9 577.9,802.6 599.6,815.1 599.6,677.6 	"/>
+	<polyline id="Axo_Line_Conc_19_" class="st0" points="599.6,815.1 625.4,800.2 625.4,692.5 	"/>
+	<polyline id="Axo_Line_Conc_17_" class="st0" points="744.8,742.2 744.8,899.7 771.3,884.4 771.3,746.2 	"/>
+	<polyline id="Axo_Line_Conc_18_" class="st0" points="1092.6,560.7 744.8,761.4 577.9,665.1 	"/>
+	<line id="Axo_Line_14_" class="st0" x1="721" y1="886" x2="721" y2="747.7"/>
+	<polyline id="Axo_Line_Conc_13_" class="st0" points="744.8,899.7 721,886 721,867.6 	"/>
+</g>
+</svg>

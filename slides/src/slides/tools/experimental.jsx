@@ -12,6 +12,7 @@ const Autopilot = (
   </Markdown>
 )
 
+
 const Parallaxin = (
   <Markdown title={"Parallaxin"}>
   {`
@@ -34,6 +35,18 @@ const ProgramStructure = (
     </Markdown>
 )
 
+const CustomHardware = (
+    <Markdown title={"Custom Hardware"}>
+      {`
+  # Custom Hardware & Integration
+  
+  - Comparison of Cliff's BASIC code to autopilot control
+  - Video of parallax platform
+  - Video of us plugging into evan's rig.
+  `}
+    </Markdown>
+)
+
 const Topologies = (
   <Markdown title={"Topologies"}>
   {`
@@ -43,6 +56,8 @@ const Topologies = (
   `}
   </Markdown>
 )
+
+
 
 const DataModels = (
   <Markdown title={"DataModels"}>
@@ -69,7 +84,7 @@ const Wiki = (
 )
 
 const Slides = [
-  Autopilot, Parallaxin, ProgramStructure, Topologies, DataModels, Wiki
+  Autopilot, Parallaxin, ProgramStructure, Topologies, CustomHardware, DataModels, Wiki
 ]
 
 export default Slides

@@ -1,0 +1,46 @@
+#federation-svg
+  position: absolute
+  top: 0
+  left: 0
+
+
+  line.dragline
+    fill: none
+    stroke: #000
+    stroke-width: 4px
+    cursor: default
+    pointer-events: none
+
+    &.selected
+      stroke-dasharray: 10,2
+
+    &.hidden
+      stroke-width: 0
+
+.federation-svg-drawnlink
+  stroke: #333333
+  stroke-width: 4px
+
+.federation-svg-node
+  will-change: transform
+
+  &.fixed
+    opacity: 0.8
+    stroke: #000000
+    stroke-width: 2px
+
+.federation-svg-link
+  stroke: #000
+
+.federation-svg-group
+  opacity: 0.2
+
+.federation-params
+  position: absolute
+  right: 20px
+  top: 20px
+
+#federation-cursor
+  fill: none
+  stroke: brown
+  pointer-events: none

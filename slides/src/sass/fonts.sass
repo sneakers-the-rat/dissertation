@@ -1,3 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fira+Code:wght@400;700&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,700;1,200;1,700&display=swap')
+// Thanks to https://google-webfonts-helper.herokuapp.com/fonts/
+$font-path: '../assets/fonts/'
+
+// Mixin to generate font declarations
+@mixin font-face($family, $file, $svg, $weight: 400, $style: normal)
+  @font-face
+    font:
+      family: $family
+      weight: $weight
+      style: $style
+    src: url($font-path + $file + '.eot')
+    src: url($font-path + $file + '.eot?#iefix') format('embedded-opentype'), url($font-path + $file + '.woff') format('woff'), url($font-path + $file + '.woff2') format('woff2'), url($font-path + $file + '.ttf') format('truetype'), url($font-path + $file + '.svg##{$svg}') format('svg')
+
+@include font-face('Cutive Mono', 'cutive-mono-v14-latin-regular', 'CutiveMono')
+
+@include font-face('Fira Code', 'fira-code-v21-latin-regular', 'FiraCode')
+@include font-face('Fira Code', 'fira-code-v21-latin-700', 'FiraCode', 700)
+
+@include font-face('Source Serif Pro', 'source-serif-pro-v15-latin-200', 'SourceSerifPro', 200)
+@include font-face('Source Serif Pro', 'source-serif-pro-v15-latin-200italic', 'SourceSerifPro', 200, italic)
+@include font-face('Source Serif Pro', 'source-serif-pro-v15-latin-regular', 'SourceSerifPro')
+@include font-face('Source Serif Pro', 'source-serif-pro-v15-latin-italic', 'SourceSerifPro', 400, italic)
+@include font-face('Source Serif Pro', 'source-serif-pro-v15-latin-700', 'SourceSerifPro', 700)
+@include font-face('Source Serif Pro', 'source-serif-pro-v15-latin-700italic', 'SourceSerifPro', 700, italic)
+
+@include font-face('EB Garamond', 'eb-garamond-v26-latin-regular', 'EBGaramond')
+@include font-face('EB Garamond', 'eb-garamond-v26-latin-500', 'EBGaramond', 500)
+@include font-face('EB Garamond', 'eb-garamond-v26-latin-600', 'EBGaramond', 600)
+@include font-face('EB Garamond', 'eb-garamond-v26-latin-700', 'EBGaramond', 700)
+@include font-face('EB Garamond', 'eb-garamond-v26-latin-800', 'EBGaramond', 800)
+@include font-face('EB Garamond', 'eb-garamond-v26-latin-italic', 'EBGaramond', 400, italic)
+@include font-face('EB Garamond', 'eb-garamond-v26-latin-500italic', 'EBGaramond', 500, italic)
+@include font-face('EB Garamond', 'eb-garamond-v26-latin-600italic', 'EBGaramond', 600, italic)
+@include font-face('EB Garamond', 'eb-garamond-v26-latin-700italic', 'EBGaramond', 700, italic)
+@include font-face('EB Garamond', 'eb-garamond-v26-latin-800italic', 'EBGaramond', 800, italic)
+

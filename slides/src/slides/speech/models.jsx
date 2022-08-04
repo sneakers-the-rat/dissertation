@@ -1,49 +1,116 @@
 import React from 'react';
-import {
-  Slide,
-  Heading,
-  Text,
-  Markdown
-} from 'spectacle';
+import {Markdown, Heading, Appear, Image, FlexBox, Text} from 'spectacle';
+import SvgAnimator from '../../components/svg_animator';
+import chair from '../../img/chair.svg';
+
+import {FancyHeading} from '../../components/styled.jsx';
+import {PositionedHeading} from '../../components/basics.jsx';
+import baby_rumbly from '../../img/baby_rumbly.png';
+// import soproud from '../../img/so_proud-01.png';
+import soundwave from '../../img/soumdwave.png';
+import vot from '../../img/vot.png';
+import qb from '../../img/cuebased-01.svg';
+
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { Icon } from '@mui/material';
+
+import anime from 'animejs';
 
 export const HaskinsModel = (
-<Markdown>
-  {`
-  # Trad model
-  
-  - Easy enough right? figure out what makes a 'b' a 'b' and viola! language!
-  - Find what features are necessary!
-  - Specify some feature, vary it, and test what people say it is
-  - If people's perception varies, then it defines the phoneme!
-  - Diagram of feature -> perception -> loop back to sound
+    <div title={"Cue-Based Phonetic Models"} className={"fullslide"}>
+      <FancyHeading fontWeight={700} fontStyle={"normal"}>
+        What is a Phoneme?
+      </FancyHeading>
+      <FancyHeading>
+        "Cue-Based" Models
+      </FancyHeading>
+      <Image position={"absolute"} top={0} src={qb}/>
 
-  `}
-</Markdown>
+
+    </div>
 )
 
-export const BrokenSpeech = (
-    <Markdown>
-      {`
-      # Not so fast
-      
-      - haskins lab quote, what features are necessary? none.
-      - Sine wave speech, noise vocoded speech
-      `}
-    </Markdown>
-)
+export const Chair = (
+    <div title={"Family Resemblances"}>
+      <FancyHeading fontWeight={700} fontStyle={"normal"}>
+        Family Resemblances
+      </FancyHeading>
+      <FancyHeading>
+        What is a chair?
+      </FancyHeading>
+      <PositionedHeading x={430} y={360}>
+        4 Legs = Chair
+      </PositionedHeading>
+      <Appear stepIndex={1}>
+        <PositionedHeading x={550} y={250}>
+          2 Legs = Sign (?)
+        </PositionedHeading>
+      </Appear>
+      <Appear stepIndex={2}>
+        <PositionedHeading x={200} y={470}>
+          6 Legs = Bench.
+        </PositionedHeading>
+      </Appear>
+      <Appear stepIndex={3}>
+      <PositionedHeading x={1400} y={400}>
+        Rumbly = Chair
+      </PositionedHeading>
+      <Image src={baby_rumbly} width={"700px"} left={"1200px"} top={"500px"} position={"absolute"}/>
+        {/*<Image src={soproud} position={"absolute"} top={0} left={-100} zIndex={999}></Image>*/}
+      </Appear>
 
-export const Chair1 = (
-<Markdown>
-  {`  
-  # What's a chair?
-  
-  - "chairs have four legs" !
-  - 6 legged chairs are benches, 2 legged chairs are like.. sandwich boards
-  - but having 4 legs isn't enough: is a cat a chair?
-  - and something can be a chair with a ton of pointless legs, idk why not
-  `}
-</Markdown>
-)
+      <SvgAnimator
+          svgUrl={chair}
+          steps={[
+            [
+              {
+                targets: '#chair *',
+                strokeDashoffset: [0, anime.setDashoffset],
+                duration: () => (anime.random(500, 1000)),
+                delay: () => (anime.random(0, 500)),
+                easing: 'easeInOutCirc',
+
+              },
+              {
+                targets: '#sign .remove',
+                strokeDashoffset: [anime.setDashoffset,0],
+                duration: () => (anime.random(500, 1000)),
+                delay: () => (anime.random(0, 500)),
+                easing: 'easeInOutCirc',
+
+              },
+            ],
+            [
+              {
+                targets: '#bench *',
+                strokeDashoffset: [anime.setDashoffset, 0],
+                duration: () => (anime.random(500, 1000)),
+                delay: () => (anime.random(0, 500)),
+                easing: 'easeInOutCirc',
+
+              },
+              {
+                targets: '#chair *:not(.remove)',
+                strokeDashoffset: [anime.setDashoffset,0],
+                duration: () => (anime.random(500, 1000)),
+                delay: () => (anime.random(0, 500)),
+                easing: 'easeInOutCirc',
+
+              },
+              {
+                targets: '#sign .remove',
+                strokeDashoffset: [0, anime.setDashoffset],
+                duration: () => (anime.random(500, 1000)),
+                delay: () => (anime.random(0, 500)),
+                easing: 'easeInOutCirc',
+
+              },
+            ]
+          ]}
+          id={'chair-1'}
+      />
+    </div>
+);
 
 export const InverseModel = (
     <Markdown>
@@ -61,7 +128,7 @@ export const InverseModel = (
 
 const Slides = [
     HaskinsModel,
-    BrokenSpeech,
+    Chair,
     InverseModel
 ]
 

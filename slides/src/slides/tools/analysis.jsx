@@ -15,14 +15,39 @@ const Overview = (
 const Integration = (
   <Markdown title={"Integration"}>
   {`
+  # Design Principle - Integration, not Innovation!
   
+  - Frameworks that allow us to put existing work in a common space
   `}
   </Markdown>
 )
 
+const Pipelines = (
+  <Markdown title={"Pipelines"}>
+  {`
+  # Pipelines
+  
+  - Import from infrastructure-presentation
+  - Popup with example of how to do this with LD
+  `}
+  </Markdown>
+)
+
+const System = (
+    <Markdown title={"System Diagram"}>
+      {`
+  # System Diagram
+  
+  - Continue system diagram, show linking from data to analysis
+  `}
+    </Markdown>
+)
+
 
 const Slides = [
-  Overview
+  Overview,
+    Integration,
+  System
 ]
 
 export default Slides

@@ -1,0 +1,75 @@
+g.dataset *
+  //isolation: isolate
+  filter: drop-shadow(2px 2px 3px $color-primary-shade2)
+
+g.dataset.fast *
+  filter: none
+
+//.dataset
+  //transform:
+    //origin: 50% 50%
+    //box: fill-box
+
+.dataset-header
+  transform:
+    origin: center
+    box: fill-box
+  stroke: aqua
+    width: 0
+  transition: stroke-width 0.2s ease-in-out
+
+  font:
+    family: 'Helvetica Neue'
+    weight: bold
+
+  &:hover
+    stroke-width: 5px
+
+@keyframes dash
+  to
+    stroke-dashoffset: 0
+
+.dataset-block
+  will-change: transform
+  //transition: transform 0.5s ease-in-out
+  //transform-origin: center
+  fill: $color-primary
+  transform:
+    origin: center
+    box: fill-box
+
+  //&:hover
+  //  transform: scale($hover-scale)
+
+.dataset-outline
+  fill: none
+  stroke: $color-primary-shade1
+    dasharray: 10,10
+
+.dataset-label
+  z-index: 2
+  fill: $color-primary-shade1
+  //fill: $color-secondary-shade1
+
+  //mix-blend-mode: difference
+
+  font:
+    size: 3em
+    weight: 200
+
+  transform:
+    origin: right
+    box: fill-box
+
+  filter: drop-shadow(1px 1px 0px $color-primary-shade2)
+
+  &.header-label
+    fill: $color-primary
+    transform-origin: center
+    font:
+      size: 6em
+      weight: bold
+    filter: drop-shadow(1px 1px 2px $color-primary-shade2)
+
+
+
