@@ -21,6 +21,7 @@
     "react": "^18.2.0",
     "react-canvas-draw": "^1.2.1",
     "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.5",
     "react-svg": "^15.1.4",
     "resolve-url-loader": "^5.0.0",
     "spectacle": "git+https://github.com/sneakers-the-rat/spectacle.git",

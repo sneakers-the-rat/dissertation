@@ -155,7 +155,7 @@ export function NetStepper(
   }
 
   return(
-      <svg id={svgId} width={width} height={height}viewBox={[0,0, width, height]}>
+      <svg id={svgId} width={width} height={height} viewBox={[0,0, width, height]}>
         {placeholder}
         <g id={svgId + "-links"} className={"netstep-links"}>
           {graph && graph.links.map((link, i) => (

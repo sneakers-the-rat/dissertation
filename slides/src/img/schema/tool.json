@@ -1,0 +1,33 @@
+{
+  "name": "autopilot",
+  "children": [
+    {
+      "name": "Task"
+    },
+    {
+      "name": "Hardware",
+      "children": [
+        {
+          "name": "Solenoid",
+          "children": [
+            {
+              "name": "# of Activations"
+            },
+            {
+              "name": "Latency"
+            },
+            {
+              "name": "Open Duration"
+            },
+            {
+              "name": "Model #"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stimuli"
+    }
+  ]
+}

@@ -1,21 +1,32 @@
 import React from 'react';
-import { Markdown } from 'spectacle';
+import {Markdown, Appear, Quote, Text, Link, Box} from 'spectacle';
 
 import { Citation, Citations } from '../../components/typography.jsx';
+import {PositionedHeading} from '../../components/basics.jsx';
+import {FancyHeading} from '../../components/styled.jsx';
+import SvgAnimator from '../../components/svg_animator';
 
 import nsfnetmp4 from '../../img/nsfnet.mp4';
 import nsfnetwebm from '../../img/nsfnet.webm';
+import cloud from '../../img/cloud-01.svg';
+import chair from '../../img/chair.svg';
+import anime from 'animejs';
+
+export const Infra = (
+    <div title={"Deinfrastructuring"}>
+        <PositionedHeading x={100} y={100} fontWeight={700}>Why is Science Like This?</PositionedHeading>
+        <PositionedHeading x={600} y={250} fontStyle={"italic"}>Severe Digital Infrastructural Deficits</PositionedHeading>
+        <Appear>
+        <PositionedHeading x={100} y={500} fontWeight={700}>Why do we have Infrastructural Deficits?</PositionedHeading>
+        <PositionedHeading x={600} y={650} fontStyle={"italic"}>...the dominant mode of capitalism</PositionedHeading>
+        </Appear>
+    </div>
+)
 
 export const NSFNET = (
-    <>
-    <Markdown>
-{`# NSFNet
-
-- 1981-1995, Created the backbone of the internet
-- Federal & State governments invested ~$1.6 Billion 
-- Then just... gave it away
-`}
-    </Markdown>
+    <div title={"NSFNET"} style={{height:"100%"}}>
+    <FancyHeading  fontWeight={700}>Infrastructures Past... NSFNET: 1985-1995</FancyHeading>
+        <FancyHeading fontStyle={"normal"} fontSize={"50px"}>We spent ~$1.6 Billion in Public Money Creating the Internet, then ... Gave it Away</FancyHeading>
     <video controls loop  className={"video-slide"}>
         <source type={"video/webm"} src={nsfnetwebm}/>
         <source type={"video/webm"} src={nsfnetmp4}/>
@@ -26,44 +37,92 @@ export const NSFNET = (
         year={"1992"}
         link={"https://avl.ncsa.illinois.edu/project-archive/visualizing-the-early-internet"}
     /></Citations>
-    </>
+    </div>
 )
 
 export const Cloud = (
-    <Markdown title={"Test Title"}>
-    {`
-    # Creating the Cloud
-    
-    - quote about how the internet isn't profitable
-    - 1998 PageRank algorithm
-        - but it was really AdWords that completed the picture.
-    - Figure of cloud platform model: user <-> platform <-> server with information coming off the top
-    - Information is like a universal acid: once you have the data you can invent whatever kind of derivative products you want
-        - Multisided markets
-    - The interface controls the information collection methods
-        - TikTok is a beautiful surveillance system because it has figured out how to translate so much structured information into UI elements
-        - Papers are the same thing: carefully control the means by which we interact with the system, can only cite, can only write big massive papers. create artificial scarcity both in prestige but also the imagination of what scientific output could look like.
-        - We could go ahead and do our own peer review, why don't we? because it wouldn't show up in the aggregation and registration systems.
-    - Necessarily need to create and maintain the need.
-        - Google has bought up competing indexing and organizational technologies...
-        - What do scientific platforms do?
-        - Partly it's indexing (so making sure that you can't find shit)
-        - but it's also deinfrastructuring (making sure you can't build alternative shit that could compete with the paper as such)
-    `}
-    </Markdown>
-);
+    <div>
+      <FancyHeading>Creating the Cloud</FancyHeading>
+      <Box width={2/5} margin={'40px 40px'} >
+        <Quote fontSize={"3em"} fontFamily={"Source Serif Pro"} fontWeight={200} fontStyle={"italic"}>
+"People were frightened of getting lost in it. You could follow links forever."
+          <Text fontSize={"0.5em"}>Tim Berners-Lee (1998)
+            <Link fontSize={"1em"}  href={"https://www.w3.org/DesignIssues/RDFnot.html"}>
+              What The Semantic Web Can Represent
+            </Link>
+          </Text>
+        </Quote>
+      </Box>
+      <Appear id={"blankappead"} stepIndex={1}></Appear>
+<Appear id={"horowitz"} stepIndex={2}>
+      <Box width={2/5} margin={'40px 40px'} position={"absolute"} top={"60%"} >
+        <Quote fontSize={"3em"} fontFamily={"Source Serif Pro"} fontWeight={200} fontStyle={"italic"}>
+        “The Internet has yet to fulfill its promise of commercial success. Why? Because there is no business model.”
+          <Text fontSize={"0.5em"}>Ed Horowitz, CEO of Viacom (1996)</Text>
+        </Quote>
+      </Box>
+</Appear>
+    <SvgAnimator
+        svgUrl={cloud}
+        steps={[
+      [
+        {
+          targets: '#direct line',
+          strokeDashoffset: [anime.setDashoffset, 0],
+          duration: () => (anime.random(500, 1000)),
+          delay: () => (anime.random(0, 500)),
+          easing: 'easeInOutCirc',
 
-export const DOI = (
-    <Markdown>
-        {`
-     # Dark Side of the DOI
-     
-     - Primarily about copyright protection - https://quod.lib.umich.edu/j/jep/3336451.0003.204?view=text;rgn=main
-     - Some means of linking between journals:
-        - Don't want to link, b/c don't want to make others more prestigious
-        - But need other people to link to you!
-     `}
-    </Markdown>
-)
+        },
+        {
+          targets: '#direct polygon',
+          opacity: [0, 1],
+          duration: () => (anime.random(500, 1000)),
+          delay: () => (anime.random(0, 500)),
+          easing: 'easeInOutCirc',
+
+        },
+
+      ],
+          [
+            {
+              targets: '#search *',
+              opacity: [0, 1],
+              duration: () => (anime.random(500, 1000)),
+              delay: () => (anime.random(0, 500)),
+              easing: 'easeInOutCirc',
+
+            },
+            {
+              targets: '#direct line',
+              strokeDashoffset: [0, anime.setDashoffset],
+              duration: () => (anime.random(500, 1000)),
+              delay: () => (anime.random(0, 500)),
+              easing: 'easeInOutCirc',
+
+            },
+            {
+              targets: '#direct polygon',
+              opacity: [1, 0],
+              duration: () => (anime.random(500, 1000)),
+              delay: () => (anime.random(0, 500)),
+              easing: 'easeInOutCirc',
+
+            },
+          ],
+          [
+            {
+              targets: '#Data *',
+              opacity: [0, 1],
+              duration: () => (anime.random(500, 1000)),
+              delay: () => (anime.random(0, 500)),
+              easing: 'easeInOutCirc',
+
+            },
+          ]
+]}
+id={'cloud-svg'}/>
+      </div>
+);
 
 console.log('cloud slide', Cloud)

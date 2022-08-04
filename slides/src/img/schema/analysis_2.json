@@ -1,0 +1,6 @@
+{
+  "name": "fancy manifold analysis",
+  "children": [
+    {"name": "Patch Input"}
+  ]
+}

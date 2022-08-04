@@ -1,16 +1,16 @@
 import React from 'react';
-import {Markdown} from 'spectacle';
+import {Markdown, Image} from 'spectacle';
+import {FancyHeading} from '../../components/styled.jsx';
+
+import phonemes from '../../img/phonemes.png';
+
+
 
 const Intro = (
-<Markdown title={"A Problem..."}>
-{`
-# Introduce speech problem
-
-- Music is continuous, speech is not...!!!!
-- Reduce infinite variation to a small number of phonemes
- 
-`}
-</Markdown>
+<div title={"Speech is Discrete"}>
+<FancyHeading fontWeight={800} fontStyle={"normal"}>Speech is A Series of Phonemes</FancyHeading>
+    <Image src={phonemes} position={"absolute"} width={"100%"} height={"100%"} top={0} left={0}/>
+</div>
 );
 
 const Slides = [

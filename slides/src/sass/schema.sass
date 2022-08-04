@@ -1,0 +1,74 @@
+svg.schema-svg
+  position: absolute
+  left: 0
+  top: 0
+
+  line.link
+    fill: none
+    stroke: #000
+    stroke-width: 4px
+    cursor: default
+
+    &.selected
+      stroke-dasharray: 10,2
+
+    &.dragline
+      pointer-events: none
+
+    &.hidden
+      stroke-width: 0
+
+  line.schema-drawnlink
+    stroke: #d03c3c
+      width: 1px
+      dasharray: 20,10
+
+.schema-label
+  font:
+    size: 20px
+
+svg.schema-tree
+  overflow: visible
+
+#schema-edit-labels
+  position: absolute
+  top: 0
+  left: 0
+  width: 1920px
+  height: 1080px
+  pointer-events: none
+  padding: 20px
+
+  .MuiInputBase-root
+    font:
+      size: 20pt
+    max-width: 200px
+    background-color: transparent
+
+
+    .MuiInputBase-input
+      background-color: transparent
+
+      &.notempty
+        background-color: rgba(238,238,238,0.8)
+
+    & *
+      filter: none
+
+
+
+
+
+  .schema-edit-label
+    position: absolute
+    transform-origin: center
+    pointer-events: auto
+
+    &::after
+      filter: blur(5px)
+
+
+
+//svg:not(.active):not(.ctrl) path.link {
+//  cursor: pointer;
+//}

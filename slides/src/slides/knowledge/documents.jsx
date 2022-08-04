@@ -1,5 +1,9 @@
 import React from 'react'
-import {Markdown} from 'spectacle'
+import {Markdown, Image, FlexBox, CodePane} from 'spectacle'
+import funky from 'react-syntax-highlighter/dist/cjs/styles/prism/funky';
+
+
+import smile from '../../img/smile.png';
 
 const Overview = (
   <Markdown title={"Overview"}>
@@ -18,35 +22,46 @@ const Overview = (
 )
 
 const Notebooks = (
-  <Markdown title={"Notebooks"}>
-  {`
-  # Notebooks
-  
-  - What are notebooks? 
-  - Show side-by-side example of notebook and JSON
-  `}
-  </Markdown>
+    <div style={{position:"absolute", width:"100%", height:"100%"}}>
+
+      <FlexBox position={"relative"} style={{height:"100%"}} flexDirection={"row"}>
+        <Image src={smile} style={{height:"80%"}}></Image>
+        <div style={{width:"50%", overflow:"hidden"}}>
+          <CodePane language={"json"} theme={funky} width={"50%"}
+                  highlightRanges={[
+                    [1]
+                  ]}>
+          {`
+{"cells":[
+{
+  "cell_type": "markdown",
+  "id": "hydraulic-roller",
+  "metadata": {},
+  "source": [
+  "# Mathematical foundations of smiling",
+  ]
+},
+{
+  "cell_type": "code",
+  "id": "rapid-information",
+  "metadata": {},
+  "outputs": [
+    "..."
+  ],
+  "source": [
+    "x, y, sizes = get_data('@jonny:my-project:Analysis1')"
+  ]
+}`}
+        </CodePane>
+        </div>
+      </FlexBox>
+    </div>
 )
 
-const Generalization = (
-  <Markdown title={"Generalization"}>
-  {`
-  # Generalized...
-  
-  - What if cells can contain cells?
-  - What if instead of a list of cells, the container was itself a cell?
-  - What if instead of just code and markdown we used LD to have arbitrary types?
-  - This could be an interface to our LD system
-  
-  Make an example of an elaborated type that eg. combines some reference to data, plot, and discussion
-  `}
-  </Markdown>
-)
 
 const Slides = [
   Overview,
-  Notebooks,
-    Generalization
+  Notebooks
 ]
 
 export default Slides

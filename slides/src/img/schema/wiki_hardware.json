@@ -1,0 +1,49 @@
+{
+  "name": "Methods Wiki",
+  "children": [
+    {
+      "name": "Electronics",
+      "children": [
+        {
+          "name": "Parts",
+          "children": [
+            {
+              "name": "Solenoid",
+              "children": [
+                {
+                  "name": "Datasheet"
+                },
+                { "name": "Cost"},
+                {"name": "Failure Rate"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Circuits"
+        },
+        {
+          "name": "Assembly"
+        },
+        {
+          "name": "Fabrication"
+        }
+      ]
+    },
+    {
+      "name": "Construction"
+    },
+    {
+      "name": "Surgery"
+    },
+    {
+      "name": "Behavior"
+    },
+    {
+      "name": "Viruses"
+    },
+    {
+      "name": "Optics"
+    }
+  ]
+}
