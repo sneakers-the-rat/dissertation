@@ -15,11 +15,16 @@
     "@mui/material": "^5.9.2",
     "animejs": "^3.2.1",
     "d3-hierarchy": "^3.1.2",
+    "ramda": "^0.28.0",
+    "ramda-adjunct": "^3.2.0",
+    "random": "^3.0.6",
     "react": "^18.2.0",
     "react-canvas-draw": "^1.2.1",
     "react-dom": "^18.2.0",
     "react-svg": "^15.1.4",
-    "spectacle": "git+https://github.com/sneakers-the-rat/spectacle.git"
+    "resolve-url-loader": "^5.0.0",
+    "spectacle": "git+https://github.com/sneakers-the-rat/spectacle.git",
+    "transform-parser": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",

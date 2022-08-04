@@ -1,5 +1,8 @@
 import React from 'react';
 import {Markdown} from 'spectacle'
+import SvgAnimator from '../../components/svg_animator';
+import overview from '../../img/schematic-diagram.svg';
+import {SentimentVeryDissatisfied} from '@mui/icons-material';
 
 const ActivityPub = (
   <Markdown title={"ActivityPub"}>
@@ -12,7 +15,7 @@ const ActivityPub = (
 )
 
 const Federation = (
-    <Markdown title={"Federation"}>
+    <Markdown title={"P2P Federation"}>
       {`
   # Federation
   
@@ -27,24 +30,21 @@ const Federation = (
     </Markdown>
 )
 
-const Folk = (
-  <Markdown title={"Folk Federation"}>
-  {`
-  # Remember formats?
-  
-  - Formats are political. 
-  - Why do we have so many databases but none of them feel relevant to us?
-    - why does NIH waste so much money making so many domain-specific databases??
-  - Example from academic work, but also translator - it's a colonial project!
-  - Our version of federation means that we can make negotiation over formats an explicit part of the process
-  `}
-  </Markdown>
+const Summary = (
+    <div>
+      <SvgAnimator
+        svgUrl={overview}
+        steps = {[[]]}
+        id={'overview-1'}
+        />
+    </div>
 )
+
 
 const Slides = [
     ActivityPub,
     Federation,
-    Folk
+    Summary
 ]
 
 export default Slides

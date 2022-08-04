@@ -52,6 +52,7 @@ module.exports = {
       // },
       {
         test: /\.(png|j?g|svg|gif|mp3)?$/,
+        exclude: path.resolve(__dirname, '../src/assets/fonts/' ),
         use: [require.resolve('file-loader')]
       },
       {
@@ -61,10 +62,28 @@ module.exports = {
             loader: require.resolve('file-loader'),
             options: {
               name: '[name].[ext]',
-              outputPath: 'video'
+              outputPath: 'assets/video'
             }
           }
         ]
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        include: path.resolve(__dirname, '../src/assets/fonts/' ),
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext]'
+        }
+        // use: [
+        //   {
+        //     loader: 'file-loader',
+        //     options: {
+        //       name: '[name].[ext]',
+        //       outputPath: 'assets/fonts/',
+        //       esModule: false
+        //     }
+        //   }
+        // ]
       }
     ]
   },

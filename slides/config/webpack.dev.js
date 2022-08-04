@@ -7,6 +7,9 @@ const common = require('./webpack.common.js')
 module.exports = merge(common, {
   // Set the mode to development or production
   mode: 'development',
+  stats: {
+    errorDetails: true
+  },
 
   // Control how source maps are generated
   devtool: 'inline-source-map',
@@ -31,8 +34,9 @@ module.exports = merge(common, {
         test:/\.(s[ac]ss)$/i,
         use: [
           'style-loader',
-           'css-loader',
-            'sass-loader'
+          'css-loader',
+          'resolve-url-loader', // Fix font paths
+          'sass-loader'
         ],
       },
       {

@@ -6,7 +6,7 @@ const common = require('./webpack.common.js')
 
 module.exports = merge(common, {
   mode: 'production',
-  devtool: false,
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/dissertation/slides/',
@@ -27,6 +27,8 @@ module.exports = merge(common, {
           //   },
           // },
             'css-loader',
+
+          'resolve-url-loader',
           // 'postcss-loader',
           'sass-loader',
         ],

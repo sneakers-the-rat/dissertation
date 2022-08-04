@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Slide,
-    Heading,
-    Text,
-    Markdown
-} from 'spectacle';
+import {Markdown} from 'spectacle';
 
 const Intro = (
 <Markdown title={"A Problem..."}>
@@ -18,19 +13,8 @@ const Intro = (
 </Markdown>
 );
 
-const Chair1 = (
-<Markdown>
-  {`
-  # Wittgenstein
-  
-  - Speech is like wittgenstein's game
-  - Example of a chair? idk think of a better example lol
-  `}
-</Markdown>
-)
-
 const Slides = [
-    Intro, Chair1
+    Intro
 ]
 
 export default Slides

@@ -3,8 +3,8 @@ import ld from './ld.jsx'
 import federation from './federation.jsx'
 
 const Slides = [
-    ...p2p,
     ...ld,
+    ...p2p,
     ...federation
 ]
 
