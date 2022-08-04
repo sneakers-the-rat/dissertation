@@ -181,8 +181,8 @@ export const InverseModel = (
 
 const Slides = [
     HaskinsModel,
-    Chair,
     NoCues,
+    Chair,
     InverseModel
 ]
 
