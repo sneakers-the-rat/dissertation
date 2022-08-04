@@ -6,19 +6,13 @@ import {
   Markdown
 } from 'spectacle';
 
+import {FancyHeading} from '../../components/styled.jsx';
 import {NetStepper} from '../../components/net_stepper.jsx'
 
 const Net = (
     <>
-      <Markdown>
-        {`
-        # Model History
-        
-        - Science is a conversation through history
-        - Method, Theory, Data are continuous
-        - Development of haskins lab idea, how different disciplines like philosophy of language interact
-        `}
-      </Markdown>
+      <FancyHeading>The Extended Universe...</FancyHeading>
+
 
     <NetStepper
         svgId={"expanded-model"}
@@ -26,23 +20,33 @@ const Net = (
         [
           {
             nodes:[
-              {id:1, group:0, size:10, label:'a'},
-              {id:2, group:1,size:10, label:'b'},
+              {id:'haskins', size:30, fill:"#ff0000", label:'Haskins Labs'},
+              {id:'cue', group:1,size:30, label:'Cue Paradigm'},
+              {id:'synth', group:1,size:30, label:'Synthesized Speech'},
+              {id:'motor', group:1,size:30, label:"Motor Theory"}
             ],
             links: [
-              {source:1, target:2}
+              {source:'haskins', target:'cue'},
+              {source:'haskins', target:'synth'},
+              {source:'haskins', target:'motor'},
+              {source:'cue', target:'motor'}
             ]
           },
           {
             nodes:[
-              {id:1, group:0, size:10, label:'a'},
-              {id:2, group:1,size:10, label:'b'},
-              {id:3, group:1,size:10, label:'c'},
+              {id:'haskins', size:30, fill:"#ff0000", label:'Haskins Labs'},
+              {id:'cue', group:1,size:30, label:'Cue Paradigm'},
+              {id:'synth', group:1,size:30, label:'Synthesized Speech'},
+              {id:'motor', group:1,size:30, label:"Motor Theory"},
+              {id:'dev', group:2,size:30, label:"Developmental Psych", initx:1000, inity:20}
             ],
             links: [
-              {source:2, target:3}
+              {source:'haskins', target:'cue'},
+              {source:'haskins', target:'synth'},
+              {source:'haskins', target:'motor'},
+              {source:'cue', target:'motor'}
             ]
-          }
+          },
         ]
       }
     >

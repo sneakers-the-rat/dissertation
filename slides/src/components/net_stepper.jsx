@@ -34,11 +34,12 @@ export function NetStepper(
     .attr("cy", d => d.y)
 
     d3.selectAll(".netstep-label")
-    .attr("x", d => d.x+d.size)
-    .attr("y", d => d.y+d.size)
+    .attr("x", d => d.x+(d.size*1.2))
+    .attr("y", d => d.y+(d.size*1.2))
 
     try {
       d3.selectAll(".netstep-link").
+          data(links).
           attr("x1", d => d.source.x).
           attr("y1", d => d.source.y).
           attr("x2", d => d.target.x).
@@ -52,12 +53,12 @@ export function NetStepper(
     // console.log('init', nodes, links)
     svg.current = d3.select("#"+svgId);
     simulation.current = d3.forceSimulation()
-        .force("link", d3.forceLink().id(d => d.id).distance(100))
-        .force("charge", d3.forceManyBody().strength(-100))
-        .force("x", d3.forceX(d => d.x).strength(0.1))
-        .force("y", d3.forceY(d => d.y).strength(0.1))
-        .force('center', d3.forceCenter(width/2, height/2).strength(1))
-        .force("collisionForce", d3.forceCollide().radius(d=>d.size*1.2))
+    .force("charge", d3.forceManyBody().strength(-200))
+        .force("link", d3.forceLink().id(d => d.id).distance(200))
+        // .force("x", d3.forceX(d => d.x).strength(0.1))
+        // .force("y", d3.forceY(d => d.y).strength(0.1))
+        .force('center', d3.forceCenter(width/2, height/2).strength(0.01))
+        // .force("collisionForce", d3.forceCollide().radius(d=>d.size*1.2))
         .on('tick', ticked);
     // updateGraph(netSteps[stepIndex])
   }, [graph])
@@ -89,7 +90,7 @@ export function NetStepper(
     } else {
       console.log('oldnode',oldnode)
     const old = new Map(oldnode.filter(d => d !== undefined).map(d => [d.id, d]));
-    nodes = graph.nodes.map(d => Object.assign(old.get(d.id) || {x: width/2, y:height/2}, d));
+    nodes = graph.nodes.map(d => Object.assign(old.get(d.id) || {x: (d.initx ? d.initx : width/2), y: (d.inity ? d.inity :  height/2)}, d));
         links = graph.links.map(d => Object.assign({}, d));
     // links = graph.links;
       console.log('data',nodes, links)
@@ -113,8 +114,10 @@ export function NetStepper(
 
     d3.selectAll(".netstep-label")
     .data(nodes)
-    .attr("x", d => d.x)
-    .attr("y", d => d.y)
+    .attr("x", d => d.x+(d.size*1.5))
+    .attr("y", d => d.y+(d.size*1.5))
+    setLinks(links);
+    setNodes(nodes);
   }
 
   useEffect(() => {
@@ -172,13 +175,17 @@ export function NetStepper(
                     id={node.id}
                     className={"netstep-node"}
                     group={node.group}
-                    r={node.size}
-                    fill={node.color}  />
+                      cx={node.x}
+                      cy={node.y}
+                    r={node.size ? node.size : 30}
+                    fill={node.fill}  />
             <text
               key={'node-label-'+node.id}
               id={node.id + '-label'}
-              className={'netstep-label'}
+              className={'netstep-label' + " " + node.group}
               group={node.group}
+              stroke-width={"5"}
+              stroke={"#ffffff"}
 
             >{node.label ? node.label : node.id}</text>
             </>

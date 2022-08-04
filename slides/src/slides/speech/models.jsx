@@ -13,6 +13,7 @@ import soundwave from '../../img/soumdwave.png';
 import vot from '../../img/vot.png';
 import qb from '../../img/cuebased-01.svg';
 import mtf from '../../img/mtf.png';
+import naturalspeech from '../../img/naturalspeech-01.svg';
 
 import mtf3hz from '../../assets/sound/mtf_3Hz.mp3';
 import mtf12hz from '../../assets/sound/mtf_12Hz.mp3';
@@ -39,6 +40,51 @@ export const HaskinsModel = (
     </div>
 )
 
+export const NoCues = (
+    <div>
+      <FlexBox>
+
+      <Box width={2/5} margin={'40px 40px'} >
+        <Quote fontSize={"3em"} fontFamily={"Source Serif Pro"} fontWeight={200} fontStyle={"italic"}>
+          "Question: Which acoustic elements are essential for the perception of speech?"<br/>
+          "Answer: None"<br/>
+          <Text fontSize={"0.5em"}>Philip Rubin, Robert Remez, Jennifer Pardo of
+            <Link fontSize={"1em"}  href={"https://web.archive.org/web/20200809223413/http://www.haskins.yale.edu/featured/sws/sws.html"}>
+              Haskins Labs
+            </Link>
+          </Text>
+        </Quote>
+      </Box>
+      <FancyHeading fontWeight={800} fontStyle={"normal"}>
+        Uh oh.
+      </FancyHeading>
+      </FlexBox>
+      <Box margin={"auto"}>
+        <Image style={{display: 'block', margin:"auto"}} src={mtf}></Image>
+      </Box>
+      <audio controls style={{position:"absolute", top:"50%", right:"20px"}}>
+        <source src={mtf3hz} type={"audio/mpeg"}/>
+      </audio>
+      <audio controls style={{position:"absolute", top:"75%", right:"20px"}}>
+        <source src={mtf12hz} type={"audio/mpeg"}/>
+      </audio>
+      <audio controls style={{position:"absolute", top:"50%", left:"20px"}}>
+        <source src={mtf05cyc} type={"audio/mpeg"}/>
+      </audio>
+      <audio controls style={{position:"absolute", top:"75%", left:"20px"}}>
+        <source src={mtf4cyc} type={"audio/mpeg"}/>
+      </audio>
+      <Citations>
+      <Citation author={"Elliott & Theunissen"}
+      title={"The Modulation transfer function for speech intelligibility"}
+      link={"https://doi.org/10.1371/journal.pcbi.1000302"}
+      year={"2009"}/>
+      </Citations>
+
+    </div>
+)
+
+
 export const Chair = (
     <div title={"Family Resemblances"}>
       <FancyHeading fontWeight={700} fontStyle={"normal"}>
@@ -61,10 +107,10 @@ export const Chair = (
         </PositionedHeading>
       </Appear>
       <Appear stepIndex={3}>
-      <PositionedHeading x={1400} y={400}>
-        Rumbly = Chair
-      </PositionedHeading>
-      <Image src={baby_rumbly} width={"700px"} left={"1200px"} top={"500px"} position={"absolute"}/>
+        <PositionedHeading x={1400} y={400}>
+          Rumbly = Chair
+        </PositionedHeading>
+        <Image src={baby_rumbly} width={"700px"} left={"1200px"} top={"500px"} position={"absolute"}/>
         {/*<Image src={soproud} position={"absolute"} top={0} left={-100} zIndex={999}></Image>*/}
       </Appear>
 
@@ -121,56 +167,16 @@ export const Chair = (
     </div>
 );
 
-export const NoCues = (
-    <div>
-      <Box width={2/5} margin={'40px 40px'}>
-        <Quote fontSize={"3em"} fontFamily={"Source Serif Pro"} fontWeight={200} fontStyle={"italic"}>
-          "Question: Which acoustic elements are essential for the perception of speech?"<br/>
-          "Answer: None"<br/>
-          <Text fontSize={"0.5em"}>Philip Rubin, Robert Remez, Jennifer Pardo of
-            <Link fontSize={"1em"}  href={"https://web.archive.org/web/20200809223413/http://www.haskins.yale.edu/featured/sws/sws.html"}>
-              Haskins Labs
-            </Link>
-          </Text>
-        </Quote>
-      </Box>
-      <Box margin={"auto"}>
-        <Image style={{display: 'block', margin:"auto"}} src={mtf}></Image>
-      </Box>
-      <audio controls style={{position:"absolute", top:"50%", right:"20px"}}>
-        <source src={mtf3hz} type={"audio/mpeg"}/>
-      </audio>
-      <audio controls style={{position:"absolute", top:"75%", right:"20px"}}>
-        <source src={mtf12hz} type={"audio/mpeg"}/>
-      </audio>
-      <audio controls style={{position:"absolute", top:"50%", left:"20px"}}>
-        <source src={mtf05cyc} type={"audio/mpeg"}/>
-      </audio>
-      <audio controls style={{position:"absolute", top:"75%", left:"20px"}}>
-        <source src={mtf4cyc} type={"audio/mpeg"}/>
-      </audio>
-      <Citations>
-      <Citation author={"Elliott & Theunissen"}
-      title={"The Modulation transfer function for speech intelligibility"}
-      link={"https://doi.org/10.1371/journal.pcbi.1000302"}
-      year={"2009"}/>
-      </Citations>
-
-    </div>
-)
 
 export const InverseModel = (
-    <Markdown>
-      {`
-      # Inverse Model
-      
-      - This isn't the problem that the auditory system faces!
-      - It needs to *discover* the features
-      - We actually don't *care* about what the features are, we want to know how the auditory system perceives phonemes
-      - If we prespecify the features, then we are studying the *features* not the problem
-      - We need to preserve the complexity, (figure of inverting the model)
-      `}
-    </Markdown>
+    <div title={"Natural Speech Training"}>
+      <PositionedHeading x={50} y={20}>Cue Based Models Isolate Individual Features...</PositionedHeading>
+
+      <PositionedHeading x={50} y={325}>But the Problem is Backwards!</PositionedHeading>
+
+      <PositionedHeading x={50} y={900} fontWeight={700}>How does the auditory system learn to adapt to many simultaneous imperfect cues?</PositionedHeading>
+      <Image style={{top:"0"}} position={"absolute"} src={naturalspeech}></Image>
+    </div>
 )
 
 const Slides = [
