@@ -90,7 +90,7 @@ const InfraOverview = (
 
 
 const Integration = (
-    <div backgroundColor={"#CF005D"} style={{height:"100%"}}>
+    <div backgroundColor={"#CF005D"} style={{height:"100%"}} title={"Swarm Principle: Integration"}>
       <FancyHeading color={"#eee"}>It's time for another....</FancyHeading>
       <FlexBox margin={"100px auto auto auto"} flexDirection={"column"}>
         <Box margin={"auto"}>
@@ -113,7 +113,7 @@ const Integration = (
 
 const Pipelines = (
 
-<div>
+<div title={"Analysis Pipelines"}>
     <SvgAnimator
 svgUrl={Analysis1}
 steps={[

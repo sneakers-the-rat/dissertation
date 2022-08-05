@@ -89,7 +89,7 @@ const Topologies = (
 
 
 const DataModels = (
-    <div title={"Autopilot Overview"}>
+    <div title={"Autopilot Data"}>
       <Heading fontFamily={"Source Serif Pro"} fontWeight={200} fontSize={60}
                fontStyle={"italic"} textAlign={"left"}>
         Clean Data & Full Provenance at Acquisition: Ripe for the Linkin'
@@ -101,7 +101,7 @@ const DataModels = (
 )
 
 const Summary = (
-    <div>
+    <div title={"Schematic Overview 2"}>
       <SvgAnimator
           svgUrl={overview}
           steps = {[

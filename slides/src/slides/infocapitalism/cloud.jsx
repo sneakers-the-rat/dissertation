@@ -41,7 +41,7 @@ export const NSFNET = (
 )
 
 export const Cloud = (
-    <div>
+    <div title={"Creating the Cloud"}>
       <FancyHeading>Creating the Cloud</FancyHeading>
       <Box width={2/5} margin={'40px 40px'} >
         <Quote fontSize={"3em"} fontFamily={"Source Serif Pro"} fontWeight={200} fontStyle={"italic"}>

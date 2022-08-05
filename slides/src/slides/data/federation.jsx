@@ -16,7 +16,7 @@ const Federation = (
 )
 
 const Summary = (
-    <div>
+    <div title={"Schematic Overview 1"}>
       <SvgAnimator
         svgUrl={overview}
         steps = {[

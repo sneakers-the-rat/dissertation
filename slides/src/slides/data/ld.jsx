@@ -10,7 +10,7 @@ import OtherFormat from '../../img/schema/otherformat.json';
 import {FancyHeading} from '../../components/styled.jsx';
 
 const Triplets = (
-<div style={{display:"flex", flexDirection:"column", height:"100%"}}>
+<div style={{display:"flex", flexDirection:"column", height:"100%"}} title={"Triplet Links"}>
   <Heading>Linked Data: Triplet Links</Heading>
   <Box width={2/3} marginRight={'auto'} marginLeft={'auto'}>
     <Quote  fontSize={"2em"} fontFamily={"Source Serif Pro"} fontWeight={200} fontStyle={"italic"}>
@@ -29,7 +29,7 @@ const Triplets = (
 )
 
 const Rumbly = (
-<div>
+<div title={"Linked Rumbly"}>
     <FlexBox flexDirection={'row'} justifyContent={'flex-start'} marginLeft={"50px"}>
       <Text fontFamily={'monospace'} fontSize={"60pt"} fontWeight={'bold'} style={{marginRight:"50px", color: "#ff0000", filter: "drop-shadow(30px 30px 0px #CCCCCC"}}>
         A 2-real example
@@ -105,7 +105,7 @@ const MultiLD = (
 )
 
 const Heterogeneity = (
-<div backgroundColor={"#2f0987"} style={{height:"100%"}}>
+<div backgroundColor={"#2f0987"} style={{height:"100%"}} title={"Swarm Principle: Heterogeneity"}>
   <FancyHeading color={"#eee"}>So we should make all the data the same format, right?</FancyHeading>
   <FancyHeading color={"#eee"}>...not so fast!</FancyHeading>
   <FlexBox margin={"100px auto auto auto"} flexDirection={"column"}>
