@@ -13,6 +13,7 @@ export function SchemaTree(
         height=1080,
         fillLight="#999",
         fillDark="#555",
+        fontSize=10,
         x=0,
         y=0,
         rotation=0
@@ -31,7 +32,7 @@ export function SchemaTree(
     // root.dx = 10;
     root.dy = width / (root.height + 1);
 
-    root.dx=25;
+    root.dx=height;
     // root.dy=20;
     return d3.tree().nodeSize([root.dx, root.dy])(root);
   }
@@ -52,7 +53,7 @@ export function SchemaTree(
 
     const g = svg.append("g")
     .attr("font-family", "sans-serif")
-    .attr("font-size", 10)
+    .attr("font-size", fontSize)
     .attr("transform", `translate(${root.dy / 3},${root.dx - x0})`);
 
     const link = g.append("g")

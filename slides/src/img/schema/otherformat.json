@@ -1,0 +1,27 @@
+{
+  "name": "@otherformat",
+  "children": [
+    {
+      "name": "datums",
+      "children": [
+        {
+          "name": "Positions",
+          "children": [
+            {
+              "name": "lat"
+            },
+            {
+              "name": "long"
+            },
+            {
+              "name": "altitude"
+            },
+            {
+              "name": "time"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

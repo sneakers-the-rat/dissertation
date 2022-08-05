@@ -25,13 +25,13 @@ const LinkEverything = (
 </Box>
 
 <SchemaContainer>
-  <SchemaTree x={120} y={400} width={166*3} height={500} fillDark={"#2f0987"} fillLight={"#784ed2"} srcJson={DataFormat}/>
-  <SchemaTree x={120} y={700} width={166*3} height={500} fillDark={"#2f0987"} fillLight={"#784ed2"} srcJson={DataExtension}/>
-  <SchemaTree x={600} y={850} width={166*4} height={500} fillDark={"#CF005D"} fillLight={"#ef59a4"} srcJson={Tool}/>
-  <SchemaTree x={600} y={250} width={166*4} height={500} fillDark={"#CF005D"} fillLight={"#ef59a4"} srcJson={Analysis1}/>
-  <SchemaTree x={600} y={200} width={166*1.6} height={500} fillDark={"#CF005D"} fillLight={"#ef59a4"} srcJson={Analysis2}/>
-  <SchemaTree x={1100} y={500} width={166*4.5} height={500} fillDark={"#2a66c3"} fillLight={"#45B6D9"} srcJson={WikiHardware}/>
-  <SchemaTree x={1300} y={100} width={166*3} height={500} fillDark={"#2a66c3"} fillLight={"#45B6D9"} srcJson={WikiTheory}/>
+  <SchemaTree x={120} y={400} width={166*3} height={25} fillDark={"#2f0987"} fillLight={"#784ed2"} srcJson={DataFormat}/>
+  <SchemaTree x={120} y={700} width={166*3} height={25} fillDark={"#2f0987"} fillLight={"#784ed2"} srcJson={DataExtension}/>
+  <SchemaTree x={600} y={850} width={166*4} height={25} fillDark={"#CF005D"} fillLight={"#ef59a4"} srcJson={Tool}/>
+  <SchemaTree x={600} y={250} width={166*4} height={25} fillDark={"#CF005D"} fillLight={"#ef59a4"} srcJson={Analysis1}/>
+  <SchemaTree x={600} y={200} width={166*1.6} height={25} fillDark={"#CF005D"} fillLight={"#ef59a4"} srcJson={Analysis2}/>
+  <SchemaTree x={1100} y={500} width={166*4.5} height={25} fillDark={"#2a66c3"} fillLight={"#45B6D9"} srcJson={WikiHardware}/>
+  <SchemaTree x={1300} y={100} width={166*3} height={25} fillDark={"#2a66c3"} fillLight={"#45B6D9"} srcJson={WikiTheory}/>
 </SchemaContainer>
 </div>
 )

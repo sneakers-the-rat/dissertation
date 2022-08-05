@@ -12,6 +12,7 @@ import {distance} from '../../components/utils';
 import relx from '../../img/personaldata.png';
 import tracking from '../../img/brembs_tracking.png';
 import overview from '../../img/infra-overview-01.svg'
+import publishers from '../../img/publisher_cloud-01.png'
 
 const RELX = (
 <div title={"RELX"}>
@@ -48,13 +49,9 @@ const Tracking = (
 )
 
 const Harms = (
-  <Markdown title={"Harms"}>
-  {`
-  # Harms
-  
-  - (this regime defines the operation of science)
-  `}
-  </Markdown>
+<div title={"Publisher Surveillance Products"}>
+    <Image src={publishers} position={"absolute"} top={0} left={0} width={"100%"} height={"100%"}/>
+</div>
 )
 
 const InfraOverview = (

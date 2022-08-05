@@ -1,24 +1,16 @@
 import React from 'react';
-import {Markdown} from 'spectacle'
+import {Markdown, Heading, Image} from 'spectacle'
 import SvgAnimator from '../../components/svg_animator';
 import overview from '../../img/schematic-diagram.svg';
 import {SentimentVeryDissatisfied} from '@mui/icons-material';
+import federation from '../../img/ld_federation-01.png';
 
 
 const Federation = (
-    <Markdown title={"P2P Federation"}>
-      {`
-  # Federation
-  
-  - Centralization -> Federation
-  - Fediverse model is like...
-  - Comparison
-    - I  keep my stuff
-    - but choose to federate with another peer
-    - they can help me rehost it
-    - and they can host other stuff like webzones and etc.
-  `}
-    </Markdown>
+   <div title={"P2P Federation"}>
+     <Heading>P2P Federation: LD Can Describe Actions!</Heading>\
+     <Image src={federation} position={"absolute"} width={"100%"} height={"100%"} top={0} left={0}></Image>
+   </div>
 )
 
 const Summary = (

@@ -63,7 +63,7 @@ function Presentation(){
       <HideSlide
         key={`slide-${i}`}
         slideNum={i}
-        backgroundColor={'background'}
+        backgroundColor={slide.slide.props.backgroundColor ? slide.slide.props.backgroundColor :'background'}
         bufferSlides={2}
         transition={transition}
         >
