@@ -22,6 +22,7 @@ export const spectacle_theme = {
     knowledgeDark: '#2a66c3',
     data: '#2f0987',
     dataLight: '#784ed2',
+    infocapitalism: '#5ABF7D'
   },
   fonts: {
     header: '"Helvetica Neue", Helvetica, Arial, sans-serif',

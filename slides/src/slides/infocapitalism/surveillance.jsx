@@ -24,7 +24,17 @@ const RELX = (
 
 const Tracking = (
    <div>
-       <FancyHeading>Process Monopolization is The Logic of Surveillance Capitalism</FancyHeading>
+       <FancyHeading
+            fontWeight={700}
+            fontStyle={"normal"}
+            fontSize={"64px"}
+       >
+           Process Monopolization, The Logic of Surveillance Capitalism</FancyHeading>
+       <FancyHeading
+           fontSize={"42px"}
+       >
+           Platforms & Services are a means of capturing data. More platforms = More data = More money.</FancyHeading>
+
        <Image src={tracking} style={{height:"100%", position:"relative", margin:"auto", display:"block"}}/>
        <Citations>
            <Citation

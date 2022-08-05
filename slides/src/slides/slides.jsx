@@ -1,6 +1,7 @@
 import React from 'react';
 
 import cover from './cover.jsx';
+import intro from './intro.jsx';
 import speech from './speech/speech.jsx';
 import infocapitalism from './infocapitalism/infocapitalism.jsx';
 import data from './data/data.jsx';
@@ -13,6 +14,7 @@ console.log('slides', infocapitalism)
 
 let all_slides = [
     [cover],
+    intro,
   speech,
     infocapitalism,
     data,
@@ -26,6 +28,11 @@ export const toc_slides = [
     name: 'cover',
     display: "Cover",
     slides: [cover]
+  },
+  {
+    name: 'intro',
+    display: "Introduction",
+    slides: intro
   },
   {
     name: 'speech',

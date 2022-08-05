@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import * as d3 from 'd3'
 
+import * as R from 'ramda';
+
 import { SlideContext, useSteps } from "spectacle";
 
 export function NetStepper(
@@ -19,27 +21,42 @@ export function NetStepper(
     stepIndex,
   });
 
-  const [nodes, setNodes] = React.useState(netSteps[stepIndex].nodes);
-  const [links, setLinks] = React.useState(netSteps[stepIndex].links);
+  const [renderNodes, setNodes] = React.useState(netSteps[stepIndex].nodes);
+  const [renderLinks, setLinks] = React.useState(netSteps[stepIndex].links);
   const [graph, setGraph] = React.useState(netSteps[stepIndex]);
+  const mousedownNode = React.useRef()
+  const mouseupNode = React.useRef()
 
   const simulation = React.useRef();
   const svg = React.useRef();
+
+  const clampX = R.clamp(0, width);
+  const clampY = R.clamp(0, height);
   // --------------------------------------
   // initial render network
 
   function ticked() {
     d3.selectAll(".netstep-node")
-    .attr("cx", d => d.x)
-    .attr("cy", d => d.y)
+    // .data(renderNodes)
+    .attr("cx", d => clampX(d.x))
+    .attr("cy", d => clampY(d.y))
+    .call(drag(simulation.current))
+    .on('click', (event, d) => {
+      delete d.fx;
+      delete d.fy;
+      console.log('dragclick', event)
+      event.currentTarget.classList.remove('fixed')
+      simulation.current.alpha(1).restart();
+    })
 
     d3.selectAll(".netstep-label")
+    // .data(renderNodes)
     .attr("x", d => d.x+(d.size*1.2))
     .attr("y", d => d.y+(d.size*1.2))
 
     try {
       d3.selectAll(".netstep-link").
-          data(links).
+          // data(renderLinks).
           attr("x1", d => d.source.x).
           attr("y1", d => d.source.y).
           attr("x2", d => d.target.x).
@@ -51,27 +68,12 @@ export function NetStepper(
 
   useEffect(() => {
     // console.log('init', nodes, links)
-    svg.current = d3.select("#"+svgId);
-    simulation.current = d3.forceSimulation()
-    .force("charge", d3.forceManyBody().strength(-200))
-        .force("link", d3.forceLink().id(d => d.id).distance(200))
-        // .force("x", d3.forceX(d => d.x).strength(0.1))
-        // .force("y", d3.forceY(d => d.y).strength(0.1))
-        .force('center', d3.forceCenter(width/2, height/2).strength(0.01))
-        // .force("collisionForce", d3.forceCollide().radius(d=>d.size*1.2))
-        .on('tick', ticked);
+    // svg.current = d3.select("#"+svgId);
+
     // updateGraph(netSteps[stepIndex])
   }, [graph])
 
-  // pause when not mounted
-  useEffect(() => {
-    if (isSlideActive === true){
-      simulation.current.restart()
-    } else {
-      console.log('stopping net sim');
-      simulation.current.stop();
-    }
-  }, [isSlideActive])
+
 
   // --------------------------------------
   // Update network
@@ -79,14 +81,23 @@ export function NetStepper(
     if (graph === undefined){
       return
     }
+    simulation.current = d3.forceSimulation()
+    .force("charge", d3.forceManyBody().strength(-200).distanceMax(500))
+    .force("link", d3.forceLink().id(d => d.id).distance(200))
+        // .force("x", d3.forceX(d => d.x).strength(0.1))
+        // .force("y", d3.forceY(d => d.y).strength(0.1))
+        .force('center', d3.forceCenter(width/2, height/2).strength(0.01))
+        // .force("collisionForce", d3.forceCollide().radius(d=>d.size*1.2))
+        .on('tick', ticked);
+
     let oldnode =  d3.selectAll(".netstep-node").data();
     let nodes, links;
 
     // nodes = graph.nodes;
     // links = graph.links;
     if (oldnode[0] === undefined){
-      nodes = graph.nodes;
-      links = graph.links;
+      nodes = graph.nodes.map(d => Object.assign({}, d));
+      links = graph.links.map(d => Object.assign({}, d));;
     } else {
       console.log('oldnode',oldnode)
     const old = new Map(oldnode.filter(d => d !== undefined).map(d => [d.id, d]));
@@ -154,8 +165,44 @@ export function NetStepper(
     // setNodes(netSteps[stepIdx].nodes);
   }
 
+  const drag = (simulation) => {
+    function dragstarted(event) {
+      if (!event.active) simulation.alphaTarget(0.3).restart();
+      event.subject.fx = event.subject.x;
+      event.subject.fy = event.subject.y;
+      d3.select(this).classed('fixed', true);
+    }
+
+    function dragged(event) {
+      event.subject.fx = event.x;
+      event.subject.fy = event.y;
+    }
+
+    function dragended(event) {
+      if (!event.active) simulation.alphaTarget(0);
+      // event.subject.fx = null;
+      // event.subject.fy = null;
+
+    }
+
+    return d3.drag()
+    .on("start", dragstarted)
+    .on("drag", dragged)
+    .on("end", dragended);
+  }
+
+  // pause when not mounted
+  useEffect(() => {
+    if (isSlideActive === true){
+      simulation.current.restart()
+    } else {
+      console.log('stopping net sim');
+      simulation.current.stop();
+    }
+  }, [isSlideActive])
+
   return(
-      <svg id={svgId} width={width} height={height} viewBox={[0,0, width, height]}>
+      <svg id={svgId} width={width} height={height} viewBox={[0,0, width, height]} ref={svg}>
         {placeholder}
         <g id={svgId + "-links"} className={"netstep-links"}>
           {graph && graph.links.map((link, i) => (
