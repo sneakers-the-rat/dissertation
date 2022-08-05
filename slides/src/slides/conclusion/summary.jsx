@@ -1,18 +1,17 @@
 import React from 'react';
-import {Markdown} from 'spectacle';
+import {Markdown, Box, Quote} from 'spectacle';
 
-const Cloud = (
-  <Markdown title={"Cloud"}>
-  {`
-  # Look at what we gone and done
-  
-  - We went and made tools that fix some of the fundamental problems with scientific infrastructure
-  `}
-  </Markdown>
+const BlankSlide = (
+<Box width={2/3} margin={'auto'}>
+  <Quote fontSize={"2em"} fontFamily={"Source Serif Pro"} fontWeight={200} fontStyle={"italic"}>
+    It would be easy to make some sweeping recommendations about what should be done, especially by governments. But to be compatible with the goal of a participatory communication system, the methods should be participatory too. The following ideas are meant to encourage discussion.
+    - Brian Martin, 1998, <a fontSize={"1em"} href={"https://documents.uow.edu.au/~bmartin/pubs/98il/ilall.html"}>Information Liberation</a>
+  </Quote>
+</Box>
 )
 
 const Slides = [
-  Cloud
+  BlankSlide
 ]
 
 export default Slides

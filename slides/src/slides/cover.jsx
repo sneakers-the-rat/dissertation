@@ -3,7 +3,7 @@ import { Box, Heading, Text, Quote } from 'spectacle';
 
 
 export const Cover = (
-<Fragment title={"Cover"}>
+<div title={"Cover"}>
     <Box width={2/3}>
       <Heading
           fontFamily={'headerSerif'}
@@ -45,7 +45,13 @@ export const Cover = (
     - Brian Martin, 1998, <a fontSize={"1em"} href={"https://documents.uow.edu.au/~bmartin/pubs/98il/ilall.html"}>Information Liberation</a>
   </Quote>
 </Box>
-  </Fragment>
+  <Box width={2/3} margin={'20px 0'}>
+    <Quote fontSize={"2em"} fontFamily={"Source Serif Pro"} fontWeight={200} fontStyle={"italic"}>
+      "We reject: kings, presidents and voting. We believe in: rough consensus and running code"<br/>
+      -David Clark, <a fontSize={"1em"}  href={"https://www.ietf.org/proceedings/24.pdf"}>A Cloudy Crystal Ball (1992)</a>
+    </Quote>
+  </Box>
+  </div>
 )
 
 export default Cover;

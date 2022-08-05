@@ -3,6 +3,7 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import {Text, Heading, SlideContext, useSteps} from 'spectacle';
 import {makeStyles} from '@mui/styles';
+import Paper from '@mui/material/Paper';
 
 export function PositionedHeading(
     {
@@ -53,3 +54,28 @@ export function PositionedHeading(
       </div>
   )
 }
+
+
+export function IFrame({
+                         src,
+                         paper,
+                         style={width:"100%", height:"100%"}
+                       }){
+  const { activeStepIndex, isSlideActive } = React.useContext(SlideContext);
+
+
+  const renderthis = paper ?
+      <Paper elevation={1} style={style}>
+        {isSlideActive && <iframe frameBorder={'0'} className={'iframe-component'} width={"100%"} height={"100%"}  loading={"lazy"} src={src}/>}
+      </Paper>
+      :
+      <>{isSlideActive && <iframe frameBorder={'0'} className={'iframe-component'} width={"100%"} height={"100%"}  loading={"lazy"} src={src}/>}</>
+
+  return(
+      {...renderthis}
+  )
+}
+IFrame.defaultProps = {
+  paper:true
+}
+

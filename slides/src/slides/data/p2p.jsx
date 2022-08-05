@@ -101,7 +101,10 @@ const P2PScaling = (
           in a p2p system, everyone is the server.
         </Text>
         <Text fontFamily={'monospace'}>
-          (add info from academic torrents vs. AWS)
+          AcademicTorrents.com: 16PB served. Cost to run $0
+        </Text>
+        <Text fontFamily={'monospace'}>
+          AWS, cost of 16PB of bandwidth (without storage): $900,000
         </Text>
       </Box>
 
