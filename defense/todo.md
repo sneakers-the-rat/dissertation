@@ -1,0 +1,20 @@
+- [x] Overview Slide
+- [ ] Extended universe slide
+	- [ ] Make it clear that what we're going to be talking about is a way of making the extended network possible
+- [ ] Harms slide	
+	- [ ] Selling your data to government and ICE
+	- [ ] Pharmaceutical
+	- [ ] Algorithmic employment decisions
+	- [ ] Granting decisions
+- [ ] NWB Format slide
+- [ ] Slide after rumbly LD introducing the notion of linking multiple schemas together
+	- [ ] NWB
+	- [ ] Other disciplinary Schema
+	- [ ] Using HDF library as an I/O system
+	- [ ] Activitystreams as a segue to ..
+- [ ] Federation slide
+- [ ] Document interface introduction with word doc
+- [ ] Document types summary
+- [ ] Signposting slides throughout
+- [ ] Future directinos of organizing
+- [ ] Make swarm principles clearer!

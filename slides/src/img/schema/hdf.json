@@ -1,0 +1,42 @@
+{
+  "name": "@hdf",
+  "children": [
+    {
+      "name": "io",
+      "children": [
+        {
+          "name": "read",
+          "children": [
+            {"name": "H5Dread" }
+          ]
+        },
+        {
+          "name": "write",
+          "children": [
+            {"name":  "H5Dwrite"}
+          ]
+        },
+        {
+          "name": "new",
+          "children": [
+            {"name":  "H5Fcreate"}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "source",
+      "children": [
+        {
+          "name": "https://github.com/..."
+        },
+        {
+          "name": "compiledWith",
+          "children": [
+            {"name":  "@cmake"}
+          ]
+        }
+      ]
+    }
+  ]
+}

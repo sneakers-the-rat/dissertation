@@ -125,4 +125,22 @@ id={'cloud-svg'}/>
       </div>
 );
 
-console.log('cloud slide', Cloud)
+export const KnowledgeOrganization = (
+    <div title={"Knowledge Disorganization"} style={{height:"100%"}}>
+      <FancyHeading  fontWeight={700}>Platforms Create Their Own Need</FancyHeading>
+      <FancyHeading fontStyle={"normal"} fontSize={"50px"}>Knowledge Disorganization is Profitable:</FancyHeading>
+      <FancyHeading fontStyle={"normal"} fontSize={"50px"}>
+        Publish as many papers as possible,<br/>Control discovery<br/>Turn disciplines into prestige fiefdoms
+      </FancyHeading>
+      <Box width={2/3} marginTop={"50px"} marginLeft={"auto"} marginRight={"auto"} >
+        <Quote fontSize={"3em"} fontFamily={"Source Serif Pro"} fontWeight={200} fontStyle={"italic"}>
+          Elsevier looks to enhance quality by building on its premium brands and <strong>grow article volume through new journal launches, the expansion of open access journals,</strong> [...] and add value to core platforms by implementing capabilities such as <strong>advanced recommendations on ScienceDirect</strong> and social collaboration through reference manager and collaboration tool Mendeley.<Text fontSize={"0.5em"}>
+          RELX (2019)
+            <Link fontSize={"1em"}  href={"https://www.relx.com/~/media/Files/R/RELX-Group/documents/reports/annual-reports/2019-annual-report.pdf"}>
+              Annual Shareholders Report
+            </Link>
+          </Text>
+        </Quote>
+      </Box>
+    </div>
+)
