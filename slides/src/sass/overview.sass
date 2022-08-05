@@ -1,0 +1,54 @@
+.main-overview
+  display: flex
+  flex-direction: column
+  height: 100%
+  gap: 20px
+
+  .overview-section
+    border: 1px solid
+    border-radius: 10px
+    flex-grow: 1
+    padding: 30px
+
+    h2
+      font-size: 4em
+      font-family: $font-serif
+      margin: 0
+
+    span
+      font:
+        size: 2em
+        family: $font-sans
+        weight: 200
+        style: italic
+
+
+    &.speech
+      border-color: $color-primary
+      box-shadow: 5px 5px $color-primary
+      h2
+        color: $color-primary
+
+    &.infocapitalism
+      border-color: $color-infocapitalism
+      box-shadow: 5px 5px $color-infocapitalism
+      h2
+        color: $color-infocapitalism
+
+    &.data
+      border-color: $color-data
+      box-shadow: 5px 5px $color-data
+      h2
+        color: $color-data
+
+    &.tools
+      border-color: $color-tools
+      box-shadow: 5px 5px $color-tools
+      h2
+        color: $color-tools
+
+    &.knowledge
+      border-color: $color-knowledge
+      box-shadow: 5px 5px $color-knowledge
+      h2
+        color: $color-knowledge

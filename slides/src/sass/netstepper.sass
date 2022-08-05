@@ -4,13 +4,18 @@
 .netstep-label
   font:
     size: 28pt
-    family: $font-serif
+    family: $font-sans
   paint-order: stroke fill
 
 .netstep-node
 
   *.group
     fill: #ff0000
+
+  &.fixed
+    stroke: $color-primary
+    stroke-width: 5px
+    stroke-dasharray: 5,5
 
 #expanded-model
   position: absolute

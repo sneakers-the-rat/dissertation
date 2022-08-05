@@ -16,7 +16,7 @@ export const Infra = (
     <div title={"Deinfrastructuring"}>
         <PositionedHeading x={100} y={100} fontWeight={700}>Why is Science Like This?</PositionedHeading>
         <PositionedHeading x={600} y={250} fontStyle={"italic"}>Severe Digital Infrastructural Deficits</PositionedHeading>
-        <Appear>
+        <Appear id={"surveillance-capitalism-appear"}>
         <PositionedHeading x={100} y={500} fontWeight={700}>Why do we have Infrastructural Deficits?</PositionedHeading>
         <PositionedHeading x={600} y={650} fontStyle={"italic"}>...the dominant mode of capitalism</PositionedHeading>
         </Appear>
