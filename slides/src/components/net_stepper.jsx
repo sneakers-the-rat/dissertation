@@ -82,7 +82,7 @@ export function NetStepper(
       return
     }
     simulation.current = d3.forceSimulation()
-    .force("charge", d3.forceManyBody().strength(-200).distanceMax(500))
+    .force("charge", d3.forceManyBody().strength(-200).distanceMax(200))
     .force("link", d3.forceLink().id(d => d.id).distance(200))
         // .force("x", d3.forceX(d => d.x).strength(0.1))
         // .force("y", d3.forceY(d => d.y).strength(0.1))
