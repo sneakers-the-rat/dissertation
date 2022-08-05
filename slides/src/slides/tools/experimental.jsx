@@ -7,7 +7,7 @@ import Parallax from '../../img/plax-01.svg';
 import {distance} from '../../components/utils';
 import Autopilot from '../../img/whole_system_black.png'
 import subject from '../../img/subject-01.png'
-import overview from '../../img/schematic-diagram.svg';
+import overview from '../../img/schematic-diagram-01.svg';
 
 const Parallaxin = (
 <div title={"Parallaxin"}>
@@ -104,8 +104,24 @@ const Summary = (
     <div>
       <SvgAnimator
           svgUrl={overview}
-          steps = {[[]]}
-          id={'overview-1'}
+          steps = {[
+              [
+
+            {
+              targets:'#schematic-2 #communication *',
+              opacity: [0,1],
+              strokeDashoffset: [anime.setDashoffset, 0],
+              duration: () => (anime.random(500, 1000)),
+              delay: () => (anime.random(0,1000))
+            },
+            {
+              targets:'#schematic-2 #knowledge *',
+              opacity: [0,1],
+              strokeDashoffset: [anime.setDashoffset, 0],
+              duration: () => (anime.random(500, 1000)),
+              delay: () => (anime.random(0,1000))
+            }]]}
+          id={'schematic-2'}
       />
     </div>
 )

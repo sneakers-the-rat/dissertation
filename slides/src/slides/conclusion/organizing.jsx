@@ -4,33 +4,25 @@ import {Markdown} from 'spectacle';
 const Organizing = (
   <Markdown title={"Organizing for Science"}>
   {`
-  # Organizing is Infrastructural
+  # Organize For Us, Organize for Everyone
   
-  - Organizing infrastructure has emergent and recursive effects
-  - Why is it that we have to cast about idly for shit
-  - Why is it that we often barely know about the working conditions of others
-  - Why can't we mount an effective scientific labor movement when our working conditions are obviously shit
-  - The cult of heroic individualism is a product of our credit systems, which are a product of our infrastructural systems
-  `}
-  </Markdown>
-)
-
-const Society = (
-  <Markdown title={"Organizing for Society"}>
-  {`
-  # For society...
-  
-  - Why can't we mount an effective climate movement?
-  - Why are the fascists eating our lunch?
-  - Why are we constantly outraged over shit that doesnt matter?
-  - We will *never* be able to solve problems like climate change as long as
-    the only way to communicate is on attention vaccums driven by viral outrage.
-  `}
+  - Reorganizing infrastructure as a basis for rebuilding a scientific left
+    - Rebuild credit systems against heroic individualism
+  - These technologies map onto the cloud at large
+    - Cloud Storage
+    - Social Media
+    - etc.
+  - We will never solve our largest problems with constant surveillance and attention-mining hellscapes our only means of communication
+  - Some Starts
+    - Organizing within existing projects: eg. miniscope
+    - Organize between existing projects: eg. neuromatch
+    - Organize locally: eg. ONICE
+   `}
   </Markdown>
 )
 
 const Slides = [
-  Organizing, Society
+  Organizing
 ]
 
 export default Slides

@@ -95,11 +95,11 @@ const Rumbly = (
 const MultiLD = (
     <div title={"Heterogeneous Links"} id={"ld-example"}>
       <FancyHeading fontStyle={"normal"} fontWeight={700}>Linked Data Can Be uh... Linked</FancyHeading>
-      <FancyHeading fontSize={"50px"}>Triplet Links Support Heterogeneity</FancyHeading>
+      <FancyHeading fontSize={"50px"}>Triplet Links Bridge Formats & Modalities</FancyHeading>
       <SchemaContainer>
         <SchemaTree x={150} y={400} width={166*10} height={50} fillDark={"#2f0987"} fillLight={"#784ed2"} srcJson={DataFormat}/>
         <SchemaTree x={150} y={750} width={166*10} height={30} fillDark={"#CF005D"} fillLight={"#ef59a4"} srcJson={HDF}/>
-        <SchemaTree x={150} y={200} width={166*10} height={30} fillDark={"#2a66c3"} fillLight={"#45B6D9"} srcJson={OtherFormat}/>
+        <SchemaTree x={200} y={225} width={166*10} height={30} fillDark={"#2a66c3"} fillLight={"#45B6D9"} srcJson={OtherFormat}/>
       </SchemaContainer>
     </div>
 )

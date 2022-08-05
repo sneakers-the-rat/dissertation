@@ -1,21 +1,26 @@
 import React from 'react'
-import {Markdown, Image, FlexBox, CodePane} from 'spectacle'
+import {Markdown, Box, Image, FlexBox, CodePane, Text} from 'spectacle';
 import funky from 'react-syntax-highlighter/dist/cjs/styles/prism/funky';
 
 import masto from '../../img/masto.png'
 import smile from '../../img/smile.png';
+import {FancyHeading} from '../../components/styled.jsx';
+
+import nesteddoc from '../../img/nesteddoc-01.png';
 
 
 const Mastodon = (
     <div style={{position:"absolute", width:"100%", height:"100%"}}>
+      <FancyHeading>Mastodon is just JSON-LD (MIJJLD)</FancyHeading>
+      <Text>JSON-LD that uses ActivityStreams to address posts, manage followers, etc.</Text>
 
-      <FlexBox position={"relative"} style={{height:"100%"}} flexDirection={"row"}>
-        <Image src={masto} style={{height:"80%"}}></Image>
-        <div style={{width:"50%", overflow:"hidden"}}>
-          <CodePane language={"json"} theme={funky} width={"50%"}
-                    highlightRanges={[
-                      [1]
-                    ]}>
+      <FlexBox className={"twocol"}>
+        <Box>
+        <Image src={masto} ></Image>
+        </Box>
+        <Box style={{width:"50%", overflow:"hidden"}}>
+          <CodePane language={"json"} theme={funky}
+                    >
             {`
 {
 "to":[
@@ -41,17 +46,22 @@ const Mastodon = (
 }
 `}
           </CodePane>
-        </div>
+        </Box>
       </FlexBox>
+    </div>
+)
+
+const NestedDoc = (
+    <div title={"Nested, Typed Documents"}>
+      <Image src={nesteddoc} position={"absolute"} width={"100%"} height={"100%"} left={0} top={0}/>
     </div>
 )
 
 
 
 
-
 const Slides = [
-  Mastodon
+  Mastodon, NestedDoc
 ]
 
 export default Slides

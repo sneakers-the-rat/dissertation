@@ -10,6 +10,40 @@ import Tool from '../../img/schema/tool.json'
 import WikiTheory from '../../img/schema/wiki_theory.json'
 import WikiHardware from '../../img/schema/wiki_hardware.json'
 
+import {FancyHeading} from '../../components/styled.jsx';
+import { IFrame } from '../../components/basics.jsx';
+import SvgAnimator from '../../components/svg_animator';
+import overview from '../../img/schematic-diagram-01.svg';
+import anime from 'animejs';
+
+const APWiki = (
+    <div title={"Autopilot Wiki"} style={{height:"100%"}}>
+      <FancyHeading>Contextual Knowledge & Programmatic Control</FancyHeading>
+
+<Box width={2/3} marginLeft={'auto'} marginRight={'auto'} height={"100%"}>
+    <Heading fontSize={'30pt'} textAlign={'center'} color={"tools"} fontWeight={200} fontStyle={"italic"}>
+    With Thanks to Ralph Emilio Peterson & Chris Rodgers
+</Heading>
+<Box flexDirection={'column'} height={"100%"}>
+  <IFrame paper={true} flexGrow={4} src={"https://wiki.auto-pi-lot.com/index.php/HiFiBerry_Amp2"}/>
+</Box>
+</Box>
+    </div>
+)
+
+const Governance = (
+    <div title={"Autopilot Wiki"} style={{height:"100%"}}>
+      <FancyHeading>Governance</FancyHeading>
+      <FancyHeading fontSize={'30pt'} color={"tools"} >DAOs without the "dogshit"</FancyHeading>
+
+      <Box width={2/3} marginLeft={'auto'} marginRight={'auto'} height={"100%"}>
+        <Box flexDirection={'column'} height={"100%"}>
+          <IFrame paper={true} flexGrow={4} src={"https://iblwiki.auto-pi-lot.com/index.php/IBL_Publication_Policy"}/>
+        </Box>
+      </Box>
+    </div>
+)
+
 const LinkEverything = (
 <div title={"Link Everything"}>
     <Heading textAlign={'left'} color={"tools"} fontWeight={200} fontStyle={"italic"} fontSize={50}>
@@ -36,23 +70,22 @@ const LinkEverything = (
 </div>
 )
 
-const Journals = (
-  <Markdown title={"Journals"}>
-  {`
-  # Where are the journals in all this?
-  
-  - Nowhere.
-  - We have fulfilled their basic function:
-    - Publication
-    - Organization
-    - Reviewing
-    - Credit assignment
-  `}
-  </Markdown>
+
+
+const Summary = (
+    <div>
+      <SvgAnimator
+          svgUrl={overview}
+          steps = {[
+            [
+]]}
+          id={'schematic-3'}
+      />
+    </div>
 )
 
 const Slides = [
-    LinkEverything, Journals
+    APWiki, Governance, LinkEverything, Summary
     ]
 
 export default Slides
