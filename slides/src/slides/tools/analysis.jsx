@@ -101,7 +101,7 @@ const Integration = (
         </Box>
         <UnorderedList color={"#ffffff"}>
           <ListItem><FancyHeading color={"#eee"}>
-            Lonely No More! Build together, Organize together!
+            Lonesome No More! Build together, Organize together!
           </FancyHeading></ListItem>
           <ListItem><FancyHeading color={"#eee"}>
             Emphasizes designing a larger ecosystem

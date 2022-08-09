@@ -1,13 +1,13 @@
 In rough order of priority...
 
 ## Must have, Need new figures:
-- [ ] Progressive system diagram
+- [x] Progressive system diagram
 - [ ] Autopilot Module overview
 - [ ] Autopilot Wiki -> Data models -> Output diagram
 	- Make part of system diagram?
 - [ ] Notebooks
 - [ ] Mastodon
-- [ ] Chair example for wittgenstein category
+- [x] Chair example for wittgenstein category
 
 ## Must have, mostly text:
 - [ ] LD Description
