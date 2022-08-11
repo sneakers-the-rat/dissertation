@@ -1,5 +1,8 @@
-<div class="title-container">
-<h1 class="home-title">{{ page.title }}</h1>
-<h2 class="home-subtitle">{{ page.subtitle }}</h2>
-<p class="home-subsubtitle"> {{ page.subsubtitle }}</p>
-</div>
+<header class="title-container">
+<h1 class="home-title" property="name">{{ page.title }}</h1>
+<h2 class="home-subtitle" property="alternativeHeadline">{{ page.subtitle }}</h2>
+<p class="home-subsubtitle">
+	A dissertation by <span property="author" resource="{{ page.authorFoaf }}">{{ page.author }}</span> - 
+	<time property="datePublished" datetime="{{ page.date }}">{{ page.date }}</time>
+</p>
+</header>

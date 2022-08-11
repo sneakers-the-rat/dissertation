@@ -1,6 +1,8 @@
 const width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 let height = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 
+var netSimRunning = true;
+
 const container = d3.select('.netbg');
 
 const svg = container.append("svg")
@@ -174,7 +176,16 @@ function updateGraph(){
 
   // console.log(graph)
   update(graph)
-  setTimeout(updateGraph, 100);
+  if (netSimRunning === true){
+    setTimeout(updateGraph, 100);
+  }
+}
+
+function toggleStart(){
+  netSimRunning = !netSimRunning;
+  if (netSimRunning === true){
+    updateGraph();
+  }
 }
 
 // const color = d3.scaleOrdinal(d3.schemeTableau10)
