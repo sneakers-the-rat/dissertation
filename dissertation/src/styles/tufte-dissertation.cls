@@ -166,7 +166,8 @@
   \fontsize{60}{60}\selectfont\par\noindent Swarmpunk\vspace{6pt}}\\
   \end{fullwidth}
 {\normalfont\fontsize{20}{32}\selectfont\textit{Rough Consensus and Running Code in Brains, Machines, and Society}\\}
-{\vspace{16pt}\\\fontsize{16}{16}\thedate}
+{\vspace{16pt}\\\fontsize{16}{16}Compiled: \thedate\\
+Version: \input{git-version.tex}}
 % \makebox[0pt][l]{%
 %   \raisebox{-27.1pc}[0pt][0pt]{%
 %     \hspace{15pc}\includegraphics[width=4.25in]{figures/autopilot_logo_titlepage.pdf}}}

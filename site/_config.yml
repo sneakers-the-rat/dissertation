@@ -41,6 +41,15 @@ plugins:
 minima:
   skin: dark
 
+static_files:
+  - ../dissertation/build/jls_dissertation/jls_dissertation.pdf
+
+defaults:
+  - scope:
+      path: "../dissertation/build/jls_dissertation/"
+    values:
+      diss: true
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

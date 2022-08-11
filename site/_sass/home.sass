@@ -24,7 +24,7 @@ $mobile-width: 400px
 			font-size: 3rem
 
 		@media (max-width: $mobile-width)
-			font-size: 2rem
+			font-size: 2.5rem
 
 	& h2
 		font:
@@ -37,12 +37,22 @@ $mobile-width: 400px
 		@media (max-width: $med-width)
 			font-size: 1.5rem
 
+
+
+
 .body-container
 	border: 1px solid $brand-color
 		radius: 5px
-	padding: 5%
-	margin-bottom: 20px
+	padding: 2rem
+	margin-top: 2rem
+	margin-bottom: 4rem
 	background-color: rgba(0,0,0,0.4)
+
+	@media (max-width: $med-width)
+		padding: 1.5rem
+
+	@media (max-width: $mobile-width)
+		padding: 1rem
 
 	a
 		color: $brand-color
@@ -54,6 +64,28 @@ $mobile-width: 400px
 			family: "Work Sans"
 			weight: 700
 			size: 2rem
+		border: 1px solid $brand-color
+		border-radius: 10px
+		padding: 10px 20px
+		background-color: $background-color
+		position: relative
+		top: -4rem
+		margin:
+			bottom: -1em
+		width: fit-content
+		box-shadow: 5px 5px $brand-color
+
+		@media (max-width: $mobile-width)
+			top: -3rem
+
+
+	h3
+		color: $brand-color
+
+		font:
+			family:  "Work Sans"
+			weight: 700
+			size: 1.5em
 
 .netbg
 	position: fixed
