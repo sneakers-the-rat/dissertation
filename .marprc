@@ -1,6 +1,0 @@
-html: true
-pdf: true
-inputDir: ./slides
-output: ./build
-theme: ./slides/haskell.css
-

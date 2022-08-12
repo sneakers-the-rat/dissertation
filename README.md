@@ -1,10 +1,22 @@
 [![Creative Commons Attribution-NonCommercial 4.0 International License](https://i.creativecommons.org/l/by-nc/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-# dissertation
-my dissertation!
+# Swarmpunk
+
+## Rough Consensus and Running Code in Brains, Machines, and Society
+
+A dissertation by Jonny Saunders
+
+- Submitted: 22-07-15
+- Defended: 22-08-05
+- Approved: TBD
+- Archived: TBD
+
+# Overview
 
 
-# Folders
+
+
+# Repository Structure
 
 ## `proposal`
 
