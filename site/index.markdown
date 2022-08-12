@@ -45,7 +45,7 @@ Though this is likely to change as I move my personal work off of GitHub <3
 - **Slides:** [rendered](/dissertation/slides/), source (coming soon)
 </section>
 
-<section class="boy-container" markdown="1">
+<section class="body-container" markdown="1">
 ## Chat
 
 To catch any stray questions or ideas, I made a very informal gitter chatroom - don't be shy :)
