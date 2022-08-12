@@ -21,6 +21,7 @@ A dissertation by Jonny Saunders
 	- Repository [PDF](dissertation/build/jls_dissertation/jls_dissertation.pdf)
 	- Archival PDF (TODO)
 	- Sections (TODO: HTML render for each)
+- Postdiss chat: [![Gitter](https://badges.gitter.im/jls-postdiss/community.svg)](https://gitter.im/jls-postdiss/community)
 
 
 # Repository Structure

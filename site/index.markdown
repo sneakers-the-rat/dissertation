@@ -38,4 +38,12 @@ homepage: true
 - **Slides:** [rendered](/dissertation/slides/), source (coming soon)
 </section>
 
+<section class="boy-container" markdown="1">
+## Chat
+
+To catch any stray questions or ideas, I made a very informal gitter chatroom - don't be shy :)
+
+[**Join Gitter Chat**](https://gitter.im/jls-postdiss/community)
+</section>
+
 
