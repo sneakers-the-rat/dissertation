@@ -27,6 +27,13 @@ homepage: true
 **22-08-10:** Pending a final, archival version I am making the versioned repository render of the dissertation public. Mind the version hash and render date :). This link is likely to change.
 - [swarmpunk - repository version]({{ "/assets/swarmpunk_repo.pdf" | relative_url }})
 
+### Source
+
+The repository for the dissertation, this site, and the slides, can be found at:
+
+[https://github.com/sneakers-the-rat/dissertation](https://github.com/sneakers-the-rat/dissertation)
+
+Though this is likely to change as I move my personal work off of GitHub <3
 </section>
 
 <section class="body-container" markdown="1">
