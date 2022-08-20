@@ -1,0 +1,65 @@
+%!TEX jobname = jls_dissertation_institutional
+%!TEX output_directory = ../build/jls_dissertation_institutional
+%!TEX root = _preamble_institutional.tex
+
+\input{prefatory/titlepage}
+\addtocounter{page}{1}
+% ----------------
+% Prefatory Material 
+
+\input{prefatory/approval}
+
+\input{prefatory/copyright}
+
+\input{prefatory/abstract}
+
+\chapter*{Acknowledgements}
+
+\input{interludes/gratitude}
+
+\tableofcontents%
+
+\listoffigures
+
+\listoftables
+%
+\mainmatter
+
+\chapter{Introduction}
+
+\input{interludes/0_intro}
+
+\input{prefatory/contributions}
+
+\part{Speech}
+
+\chapter{Mice Can Learn Phonetic Categories}
+\label{cha:mice_can_learn}
+
+\input{speech/manuscript/SaundersWehr_JASA2019_retypeset_institutional.tex}
+
+\input{interludes/1_games}
+
+\chapter{Phonemes are a Game the Brain Plays}
+
+\input{modeling/prelims_main.tex}
+
+\part{Autopilot}
+\label{part:autopilot}
+
+\input{interludes/2_autopilot}
+
+\clearpage
+
+\input{prefatory/ap_start}
+
+\input{autopilot/autopilot/src/autopilot.tex}
+
+\input{prefatory/ap_end}
+
+\part{Infrastructure}
+
+\input{interludes/3_infrastructure}
+
+\input{infrastructure/tex/infrastructure_dissertation_institutional.tex}
+

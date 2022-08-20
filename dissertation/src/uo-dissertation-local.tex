@@ -1,0 +1,189 @@
+%!TEX root = ./_preamble_institutional.tex
+% ---------
+% Compatibility with existing classes
+\newenvironment{acknowledgements}{}{}
+\newenvironment{fullwidth}{\restoregeometry}{}
+% \newenvironment{leftbar}{\begin{quote}}{\end{quote}}
+\newenvironment{marginfigure}[1][]{\begin{figure}[h]}{\end{figure}}
+\newenvironment{margintable}[1][]{\begin{table}}{\end{table}}
+
+\let\citep\cite
+% \let\sidenote\footnote
+\newcommand{\sidenote}[2][1]{\footnote{#2}}
+\let\marginnote\footnote
+\newcommand{\newthought}[1]{#1}
+\newcommand{\mainmatter}{}
+
+% --------
+% Additional Packages
+\usepackage{tabularx}
+\usepackage{mdframed}
+\usepackage[cache=true]{minted}
+\usepackage{enumitem}
+
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{fontspec}
+
+\usepackage{placeins}
+\usepackage{minibox}
+
+% ----------
+% Local imports
+\input{styles/highlight}
+
+% ----
+% Package Options
+
+\hypersetup{%
+	colorlinks = true,
+	urlcolor = DarkOrchid,
+	citecolor = DarkOrchid,
+	backref= section,
+	pdfauthor=Jonny L Saunders
+	pdfcreator={Jonny L Saunders}
+}
+
+\usetikzlibrary{tikzmark}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathreplacing}
+
+% ----
+% Environments
+
+\renewenvironment{abstract}{%
+\vspace{1em}
+\begin{mdframed}[
+     linewidth=1pt,
+     linecolor=black,
+     bottomline=false,topline=false,rightline=false,
+     innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt,
+     innerleftmargin=1em,% Distance between vertical rule & proof content
+     skipabove=0\baselineskip
+   ]
+}{%
+\end{mdframed}
+}
+
+\newcommand{\linkfigure}[3]{\begingroup
+\setbox0=\hbox{\includegraphics[height=0.75cm,keepaspectratio]{#1}}%
+\parbox{\wd0}{\box0}\endgroup \hspace{6pt} \href{#3}{\sffamily\large\textcolor{red}{#2}}}
+
+% right aligned tabularx
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+% Styling for code blocks
+\usemintedstyle{colorful}
+%\setminted{fontsize=\small}
+
+% set escape chars in listing
+\lstset{
+    language = Python,
+    breaklines=true,
+    escapeinside=||
+}
+
+\definecolor{aliceblue}{rgb}{0.98, 0.98, 0.99}
+
+
+\newminted{python}{
+  linenos=true,
+  frame=single,
+  framerule = 1pt,
+  labelposition = topline,
+  bgcolor=aliceblue,
+  escapeinside=||
+}
+
+\newminted{matlab}{
+  linenos=true,
+  frame=single,
+  framerule = 1pt,
+  labelposition = topline,
+  bgcolor=aliceblue,
+  escapeinside=||
+}
+
+% ------------------
+% Tufte mimics
+
+\newsavebox{\marginfloatbox}
+\newenvironment{marginfloat}[2][-1.2ex]%
+  {\FloatBarrier% process all floats before this point so the figure/table numbers stay in order.
+  \begin{lrbox}{\marginfloatbox}%
+  \begin{minipage}{\marginparwidth}%
+    % \@tufte@caption@font%
+    \def\@captype{#2}%
+    \hbox{}\vspace*{#1}%
+    % \@tufte@caption@justification%
+    % \@tufte@margin@par%
+    \renewcommand{\baselinestretch}{1}
+    \noindent%
+  }
+  {\end{minipage}%
+  \end{lrbox}%
+  \marginpar{\usebox{\marginfloatbox}}%
+  \renewcommand{\baselinestretch}{1.5}%
+  }
+
+% \setlength{\abovecaptionskip}{3pt plus 2pt minus 3pt}
+% \setlength{\belowcaptionskip}{0pt}
+\captionsetup[lstfloat]{skip=0pt}
+
+\lstset{aboveskip=0pt,belowskip=0pt}
+% \setlength\intextsep{2pt}
+
+
+
+% ------------------
+% Typography
+
+\setmainfont{EBGaramond}[
+	Path = fonts/garamond/ ,
+	Extension = .ttf ,
+	UprightFont = *-Regular ,
+	BoldFont = *-Bold ,
+	ItalicFont = *-Italic ,
+	BoldItalicFont = *-BoldItalic
+]
+% \setmainfont{Courier New}
+% \setmainfont{Courier New}[
+% 	Path = /System/Library/Fonts/Supplemental/ ,
+% 	Extension = .ttf ,
+% 	BoldFont = * Bold ,
+% 	ItalicFont = * Italic ,
+% 	BoldItalicFont = * Bold Italic
+% ]
+
+\setmonofont{FiraCode}[
+  Path = fonts/fira/ ,
+  Extension = .ttf ,
+  UprightFont = *-Retina ,
+  BoldFont = *-Bold ,
+  Scale=MatchLowercase
+]
+
+\setsansfont{WorkSans}[
+  Path = fonts/worksans/ ,
+  Extension = .otf ,
+  UprightFont = *-Regular ,
+  BoldFont = *-SemiBold ,
+  ItalicFont = *-Italic ,
+  BoldItalicFont = *-SemiBoldItalic
+]
+
+% --------
+% TOC 
+% enable changing toc depth mid-document
+% https://tex.stackexchange.com/a/395858
+\newcommand{\changelocaltocdepth}[1]{%
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{#1}}%
+  \setcounter{tocdepth}{#1}%
+}
+
+
+% ----
+% etc.
+
+\definecolor{RED}{HTML}{FF0000}

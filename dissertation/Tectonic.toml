@@ -2,7 +2,15 @@
 name = 'dissertation'
 bundle = 'https://data1.fullyjustified.net/tlextras-2021.3r1.tar'
 
+# [[output]]
+# name = 'jls_dissertation'
+# type = 'pdf'
+# shell_escape = true
+
 [[output]]
-name = 'jls_dissertation'
+name = 'jls_dissertation_institutional'
 type = 'pdf'
+preamble = '_preamble_institutional.tex'
+index = "index_institutional.tex"
+postamble = '_postamble_institutional.tex'
 shell_escape = true

@@ -1,0 +1,13 @@
+\newgeometry{
+  left=1in, % left margin
+  textwidth=26pc,
+  marginparsep=1pc, % gutter between main text block and margin notes
+  marginparwidth=13pc, % width of margin notes
+  bottom=1in
+}
+
+
+
+\renewenvironment{marginfigure}[1][-1.2ex]%
+  {\begin{marginfloat}[#1]{figure}}
+  {\end{marginfloat}}
