@@ -1,6 +1,13 @@
 %!TEX jobname = jls_dissertation_institutional
 %!TEX output_directory = ../build/jls_dissertation_institutional
 %!TEX root = _preamble_institutional.tex
+\begingroup
+\hypersetup{%
+	linkcolor = Black,
+	urlcolor = Black,
+	citecolor = Black,
+}
+
 
 \input{prefatory/titlepage}
 \addtocounter{page}{1}
@@ -13,16 +20,21 @@
 
 \input{prefatory/abstract}
 
-\chapter*{Acknowledgements}
+\clearpage
+\begin{center}
+ACKNOWLEDGEMENTS
+\end{center}
 
 \input{interludes/gratitude}
 
-\tableofcontents%
+\tableofcontents
 
 \listoffigures
 
 \listoftables
 %
+\endgroup
+
 \mainmatter
 
 \chapter{Introduction}

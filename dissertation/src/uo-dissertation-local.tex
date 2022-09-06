@@ -27,6 +27,7 @@
 
 \usepackage{placeins}
 \usepackage{minibox}
+\usepackage{fancyhdr}
 
 % ----------
 % Local imports
@@ -183,6 +184,16 @@
   \addtocontents{toc}{\protect\setcounter{tocdepth}{#1}}%
   \setcounter{tocdepth}{#1}%
 }
+
+% ----------
+% Footnotes
+% Make globally centered footnotes 0.75" from the bottom
+
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{1pt}
+\pagestyle{fancy}
+% \fancyfoot[C]{\hspace{\marginparwidth} d \thepage}
 
 
 % ----
