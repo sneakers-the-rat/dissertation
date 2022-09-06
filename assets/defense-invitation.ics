@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+CLASS:PUBLIC
+DESCRIPTION:Jonny's Dissertation Defense\nDate and Time - Aug 5\, 2022 1:00 PM to 2:00 PM\nPlease RSVP to jonny (j@nny.fyi) for location or link to the zoom call :)\n
+DTSTART:20220805T200000Z
+DTEND:20220805T210000Z
+SUMMARY;LANGUAGE=en-us:Jonny's Dissertation Defense
+END:VEVENT
+END:VCALENDAR
